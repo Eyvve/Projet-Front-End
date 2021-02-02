@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(62, 63, 71);
+    background-size: 100%;
+}
+
+#click_game_zone {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 700px;
+}
+.game_window {
+    width:400px;
+    height:600px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 700px;
+    background-color: white;
+}
+.click_boutton {
+    position: absolute;
+    margin: auto;
+    top: 100px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    
+}
+#click_boutton_on {
+    display: none;
+}
+#score {
+    font-size: 40px;
+}
+.score_window {
+    position: absolute;
+    width:500px;
+    height:200px;
+    padding: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 700px;
+    left: 0;
+    border: 5px solid #fff;
+    background-color: white;
+}
+.score_window img {
+    width: 100px;
+    margin: 50px;
+}
+#score_flex{
+    display: flex;
+    align-items: center;
+}
