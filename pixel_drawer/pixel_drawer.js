@@ -5,7 +5,6 @@
 var color_picked = "black";
 const cases_color = "white";
 var activatedpicker = false;
-var inputxt = document.querySelector("#txtcolor").value;
 
 
 const repere = document.querySelector("#colordiv");
@@ -17,15 +16,10 @@ var classchaser = document.querySelectorAll(".cases").style;
 
 
 function changeColor(){
-    if (inputxt == ""){
         var color = document.getElementById("palette").value;
         color_picked = color;
         repere.style.backgroundColor = color_picked
-        console.log(color_picked) 
-    }else{
-        color_picked = inputxt
-    }
-    
+        console.log(color_picked)
 }
 
 
@@ -51,7 +45,6 @@ function colorchange(x){
         x.style.backgroundColor = color_picked;
         repere.style.backgroundColor = color_picked
         console.log(color_picked)
-        
     }else{
         var picked = x.style.backgroundColor
         console.log(picked)
