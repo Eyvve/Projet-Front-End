@@ -1,0 +1,140 @@
+body {
+    background-color: rgb(62, 63, 71);
+    background-size: 100%;
+}
+#game_page {
+    background-color: #50514F;
+    width:2000px;
+    height:1000px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    margin: auto;
+    border-radius: 15px;
+
+}
+
+.game_choix {
+    width:400px;
+    height:600px;
+    position: absolute;
+    margin: auto;
+    top: 240px;
+    bottom: 0;
+    right: 1000px;
+    left: 0;
+    background-color: white;
+}
+.game_window {
+    width:400px;
+    height:840px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+}
+.game_reponse{
+    width:400px;
+    height:840px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 1000px;
+    background-color: white;
+}
+.game_score{
+    width:400px;
+    height:100px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 740px;
+    right: 1000px;
+    left: 0;
+    background-color: white;
+}
+#choix_colors img {
+    width: 100px;
+}
+#choix_colors {
+    display: grid;
+    grid-template-columns: 195px 195px;
+    grid-gap: 10px;
+    justify-content: center;
+    
+}
+#jeton_titre{
+    display: flex;
+    flex-direction: column;
+    padding-left: 90px;
+}
+#jeton_rouge{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    padding-left: 55px;
+    padding-right: 35px;
+}
+#jeton_bleu{
+    grid-column: 2;
+    padding-left: 35px;
+    padding-right: 55px;
+}
+#jeton_marron{
+    grid-column: 1;
+    padding-left: 55px;
+    padding-right: 35px;
+}
+#jeton_vert{
+    grid-column: 2;
+    padding-left: 35px;
+    padding-right: 55px;
+}
+#jeton_rose{
+    grid-column: 1;
+    padding-left: 55px;
+    padding-right: 35px;
+}
+#jeton_violet{
+    grid-column: 2;
+    padding-left: 35px;
+    padding-right: 55px;
+}
+#jeton_orange{
+    grid-column: 1;
+    padding-left: 55px;
+    padding-right: 35px;
+}
+#jeton_jaune{
+    grid-column: 2;
+    padding-left: 35px;
+    padding-right: 55px;
+}
+#color_select img {
+    width: 50px;
+    margin: 10px;
+}
+#black_white img {
+    width: 50px;
+    margin: 10px;
+}
+#color_select {
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px;
+    justify-content: center;
+}
+#black_white {
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px;
+    justify-content: center;
+}
+
