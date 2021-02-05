@@ -21,10 +21,10 @@ function ia_select_color() {
         colors_ia[i] = Math.floor(Math.random() * 8) + 1  
     };
 };
-function ia_verif() {
+function ia_verif(colors_ia_copy) {
     console.log(colors_player);
     console.log(colors_ia + "ia post");
-    let colors_ia_copy = colors_ia;
+    // let colors_ia_copy = colors_ia;
     console.log(colors_ia + "ia apres");
     console.log(colors_ia_copy + "copy apres");
 
@@ -104,7 +104,7 @@ function print_choix_color_fonc(color, id) {
     compteur ++;
     
     if( compteur == 5 ){
-        ia_verif()
+        ia_verif(colors_ia)
 
         if(verif[0] == 5){
             win_mastermind();
@@ -119,7 +119,6 @@ function print_choix_color_fonc(color, id) {
     }
     
 } 
-document.get
 
 rouge.onclick = function() {
     console.log("rouge")
