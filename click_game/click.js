@@ -17,7 +17,12 @@ const print_score = document.getElementById("score");
 const bare_boost_vert = document.getElementById("boost_barre_vert");
 const plus1 = document.getElementsByClassName('plus1');
 const fuse = document.getElementById('fuse_button')
+const fuse_off = document.getElementById('img_fuse')
+const star = document.getElementById('star')
 var myVar;
+var myVar2;
+star.style.visibility = "hidden"
+
 function remouveElementPlus1() {
   var remouveID = document.getElementById(`plus${compteur_score}`)
   compteur_score ++
@@ -33,11 +38,17 @@ function addElement () {
   div.insertBefore(newSpan, currentspan);
 
 };
+function hidden_star() {
+  star.style.visibility = "hidden"
+  if(bonus_timer <= 0.4 ){
+    clearInterval(myVar2);
+  };
+};
 function boost_compteur(){
   bonus_timer -= 0.2;
   bare_boost_vert.style.height = `${bonus_timer}%` 
   bonus = 4 
-  if(bonus_timer <= 0.4 ){
+  if(bonus_timer <= 0.5 ){
     clearInterval(myVar);
     bonus_timer = 0;
     bonus = 0
@@ -53,9 +64,10 @@ button.onmousedown = function() {
   score += bonus;
   print_score.innerText = score;
   // addElement()
-  bonus_timer += 0.2;
+  bonus_timer += 0.5;
   if(bonus_timer >= 100) {
     bonus_timer = 100
+    star.style.visibility = ""
   }
   bare_boost_vert.style.height = `${bonus_timer}%` ;
 
@@ -72,12 +84,18 @@ button.onmouseleave = function() {
 
 fuse.onmousedown = function() {
   if(bonus_timer == 100){
+    star.style.visibility = "hidden"
     fuse.className = "fuse_fire";
     setTimeout(function(){ fuse.className = "fuse_return";}, 1000);
     setTimeout(function(){ fuse.className = "";}, 3000);
     myVar = setInterval(boost_compteur, 50);
+    myVar2 = setInterval(hidden_star, 0);
     
     
+  }
+  else{
+    fuse_off.style.animation = "shake 0.5s";
+    setTimeout(function(){ fuse_off.style.animation = "";}, 1000);
   }
   
 };
