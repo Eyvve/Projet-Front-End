@@ -8,7 +8,7 @@ body {
     height: 98vh;
     grid-template-columns: 5% 90% 5%;
     grid-template-rows: 5% 90% 5%;
-    grid-template-areas: " . . . "" . jeu . "" . . . ";
+    grid-template-areas: " . jeu . "" . jeu . "" . jeu . ";
 }
 
 .gamecontainer{
@@ -133,8 +133,54 @@ body {
 }
 
 .fuse {
+    visibility: visible;
     grid-area: fuse;
     margin: 10%;
     justify-self: center;
     align-self: center;
+    position: relative;
+    width: 150px;
+    height: 100%;
+
 }
+.fuse img{
+    height: 300px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+.img_fuse {
+    position: absolute;
+    bottom: 0;
+}
+
+.fuse_fire {
+    position: absolute;
+    bottom : 0;
+    left :0;
+    transform: translateY( -3500px );
+    transition: transform 1s ease-out;
+    animation-delay: 1s;
+    opacity: 1;
+  }
+.fuse_return {
+    position: absolute;
+    top : 6500px;
+    left :0;
+    transform: translateY( -6803px );
+    transition: transform 1s ease-out;
+    animation-delay: 1s;
+    opacity: 1;
+  }
+  
+.plus1 {
+    position: absolute;
+    bottom : 100px;
+    left :245px;
+    transform: translateY( -300px );
+    transition: transform 1s ease-out;
+    animation-delay: 0.5s;
+    opacity: 1;
+  }
