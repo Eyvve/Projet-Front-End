@@ -5,6 +5,7 @@
 var color_picked = "black";
 const cases_color = "white";
 var activatedpicker = false;
+let click = false;
 
 
 const repere = document.querySelector("#colordiv");
@@ -39,29 +40,43 @@ function reset(){
 //////////// fonction pour changer la couleur de la case sélecionnée ///////////
 
 
-function colorchange(x){
-    console.log(activatedpicker)
+// merci Damien !
+
+
+document.querySelectorAll( ".cases" ).forEach( div => {
+div.addEventListener( "click", () => {
     if(activatedpicker == false){
-        x.style.backgroundColor = color_picked;
+        div.style.backgroundColor = color_picked;
         repere.style.backgroundColor = color_picked
-        console.log(color_picked)
-    }else{
-        var picked = x.style.backgroundColor
-        console.log(picked)
-        color_picked = picked
+    } else{
+        color_picked = div.style.backgroundColor 
         repere.style.backgroundColor = color_picked
-        activatedpicker = false;
+        activatedpicker = false
     }
     
-    
-};
+} )
+div.addEventListener( "mouseover", () => {
+    console.log(click);
+    if ( click ) div.style.backgroundColor = color_picked;
+} )
+} )
+
+document.querySelector( "html" ).addEventListener( "mousedown", () => {
+    click = true;
+} )
+document.querySelector( "html" ).addEventListener( "mouseup", () => {
+    click = false;
+} )
+
 
 
 ////////////////////////// fonction de pipette /////////////////////////////////
 
-
 function pipette(){
     activatedpicker = true;
+    click = false
+    console.log("activatedpicker = " + activatedpicker)
+    console.log(click)
 }
 
 
@@ -73,7 +88,7 @@ function manualrouge(){
     console.log("nouvelle couleur !")
 }
 
-function violet(){
+function manualviolet(){
     color_picked = "violet";
     repere.style.backgroundColor = color_picked
     console.log("nouvelle couleur !")
@@ -137,4 +152,35 @@ function manualnoir(){
     repere.style.backgroundColor = color_picked
     color_picked = "black"
     console.log("nouvelle couleur !")
+}
+
+
+//////////////////////////// fonctions slider ///////////////////////////////////
+
+var image = "link"
+
+function boutonGhover(){
+    var img = document.getElementById(FG)
+    console.log("check")
+    FG.setAttribute("src", "flecheGV.png")
+
+}
+
+function boutonGout(){
+    var img = document.getElementById(FG)
+    console.log("check")
+    FG.setAttribute("src", "flecheGB.png")
+}
+
+function boutonDhover(){
+    var img = document.getElementById(FD)
+    console.log("check")
+    FD.setAttribute("src", "flecheDV.png")
+
+}
+
+function boutonDout(){
+    var img = document.getElementById(FD)
+    console.log("check")
+    FD.setAttribute("src", "flecheDB.png")
 }
