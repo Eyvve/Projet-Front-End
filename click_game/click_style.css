@@ -29,9 +29,6 @@ body {
       align-self: center;
     }
 
-#click_game_zone {
-    
-}
 .game_window {
     grid-area: bouton;
     background: #50514F;
