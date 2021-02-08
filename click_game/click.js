@@ -1,11 +1,5 @@
 "use strict"
 
-// function echoScoreClick(){
-//     MouseEvent("click", {
-        
-//       });
-// };
-
 var score = 0;
 var bonus = 0;
 var point = 1;
@@ -70,8 +64,6 @@ button.onmousedown = function() {
     star.style.visibility = ""
   }
   bare_boost_vert.style.height = `${bonus_timer}%` ;
-
-  
 };
 button.onmouseup = function() {
   button.setAttribute("src", "./click_images/boutton_off.png")

@@ -1,64 +1,100 @@
 body {
-    background-color: rgb(62, 63, 71);
+    background-color: #272C2C;
     background-size: 100%;
 }
+.gridgamecontainer{
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . jeu . "
+        " . . . ";
+}
+
 #game_page {
-    background-color: #50514F;
-    width:2000px;
-    height:1000px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    position: absolute;
-    margin: auto;
-    border-radius: 15px;
+    grid-area: jeu;
+
+    background-color: #272C2C;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.1fr 0.2fr 0.1fr 0.2fr 0.1fr 0.2fr 0.1fr;
+    grid-template-rows: 0.1fr 0.2fr 0.1fr 2fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      " . . . . . . . "
+      " . score . choix_code . vrai_faux . "
+      " . . . choix_code . vrai_faux . "
+      " . choix_colors . choix_code . vrai_faux . "
+      " . . . . . . . ";
+      align-self: center;
+      justify-self: center;
 
 }
 
 .game_choix {
-    width:400px;
-    height:600px;
-    position: absolute;
-    margin: auto;
-    top: 240px;
-    bottom: 0;
-    right: 1000px;
-    left: 0;
-    background-color: white;
+    width: 400px;
+    height: 700px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: choix_colors;
+    align-self:flex-end;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 20% 70% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . titre_choix  . "
+        " . jeton_choix ."
+        " . . . ";
 }
 .game_window {
     width:400px;
     height:840px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: white;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: choix_code;
+    align-self:flex-end;
+    justify-self: center;
 }
 .game_reponse{
     width:400px;
     height:840px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
     left: 1000px;
-    background-color: white;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: vrai_faux;
+    align-self:flex-end;
+    justify-self: center;
 }
-.game_score{
+.score_window{
+    display: grid;
+    grid-template-rows:25% 50px ;
+    grid-template-areas:
+      " . "
+      " score_point "
+      " . ";
+    grid-area: score;
+    background: #50514F;
+    border: 2px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
     width:400px;
     height:100px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 740px;
-    right: 1000px;
-    left: 0;
-    background-color: white;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: score;
+    align-self:flex-end;
+    justify-self: center;
 }
 #choix_colors img {
     width: 100px;
@@ -68,12 +104,23 @@ body {
     grid-template-columns: 195px 195px;
     grid-gap: 10px;
     justify-content: center;
+    grid-area: jeton_choix;
+    justify-content: center;
+    align-self:center;
     
 }
 #jeton_titre{
     display: flex;
     flex-direction: column;
-    padding-left: 90px;
+    grid-area: titre_choix;
+    align-self: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 30px;
+    line-height: 25px;
+    color: white;
 }
 #jeton_rouge{
     display: flex;
@@ -138,3 +185,17 @@ body {
     justify-content: center;
 }
 
+#score_flex {
+    display: flex;
+    grid-area: score_point;
+    margin-left: 20px;
+    align-self: center;
+    align-items: center;
+}
+#score_flex img{
+    height: 30px;
+}
+#score {
+    margin-left: 10px;
+    color: white;
+}

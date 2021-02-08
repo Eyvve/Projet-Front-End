@@ -9,22 +9,26 @@ const orange = document.getElementById("jeton_orange");
 const jaune = document.getElementById("jeton_jaune");
 const print_choix_color = document.getElementById("color_select");
 const print_choix_vrai_faux = document.getElementById("black_white");
+const print_score = document.getElementById("score");
 var compteur = 0; // compteur pour verifier tout les 5 jetons
 var vie = 12;//nombre de vie
 var verif = [0,0,0]; // liste [nombre de jeton validé, nombre de jeton mal plasé, nombre de jeton nul]
 var colors_player = [0,0,0,0,0];
 var colors_ia = [0,0,0,0,0];
 var copy = [0,0,0,0,0];
-
+var score = 0;
+var vie_copy = 0;
+    
 function ia_select_color() {
     for(let i = 0; i <= 4; i++){
         colors_ia[i] = Math.floor(Math.random() * 8) + 1  
     };
 };
-function ia_verif(colors_ia_copy) {
+function ia_verif() {
     console.log(colors_player);
     console.log(colors_ia + "ia post");
-    // let colors_ia_copy = colors_ia;
+    let colors_ia_copy = [].concat(colors_ia) // NEW
+    let colors_player_copy = [].concat(colors_player) // NEW
     console.log(colors_ia + "ia apres");
     console.log(colors_ia_copy + "copy apres");
 
@@ -91,6 +95,7 @@ function lose_mastermind(){
     document.location.reload();
 };
 function win_mastermind(){
+    vie_copy = [].concat(vie)
     alert("vous avez gagné")
     document.location.reload();
 }
@@ -104,7 +109,7 @@ function print_choix_color_fonc(color, id) {
     compteur ++;
     
     if( compteur == 5 ){
-        ia_verif(colors_ia)
+        ia_verif()
 
         if(verif[0] == 5){
             win_mastermind();
@@ -153,6 +158,9 @@ jaune.onclick = function() {
     print_choix_color_fonc("jaune", 8)
 }
 
+
+score = 1000 * vie_copy;
+print_score.innerText = score;
+
 ia_select_color();
 console.log(colors_ia);
-copy = colors_ia;
