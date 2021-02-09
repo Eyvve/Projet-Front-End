@@ -931,7 +931,6 @@ bouton7.addEventListener("click", function(){
 
 ////////////// bouton reset ////////////////
 
-
 boutonreset.addEventListener("click", function(){
     const totaltiles = document.querySelectorAll(".fond")
     totaltiles.forEach((tiles) => {
@@ -1462,10 +1461,10 @@ function wincheck(){
         winred()
     }
 
-    if(D4color == "green" && D6color == "green" && D6color == "green" && D7color == "green"){
+    if(D4color == "green" && D5color == "green" && D6color == "green" && D7color == "green"){
         wingreen()
     }
-    if(D4color == "red" && D6color == "red" && D6color == "red" && D7color == "red")
+    if(D4color == "red" && D5color == "red" && D6color == "red" && D7color == "red")
     {
         winred()
     }
@@ -1542,99 +1541,106 @@ function wincheck(){
 
 /// A4 -> D7 ///
 
-    if(A4color == "green" && B5color == "green" & C6color == "green" && D7color == "green"){wingreen()}
+    if(A4color == "green" && B5color == "green" && C6color == "green" && D7color == "green"){wingreen()}
 
-    if(A4color == "red" && B5color == "red" & C6color == "red" && D7color == "red"){winred()}
+    if(A4color == "red" && B5color == "red" && C6color == "red" && D7color == "red"){winred()}
 
 /// A3 -> E7 ///    
 
-    if(A3color == "green" && B4color == "green" & C5color == "green" && D6color == "green"){wingreen()}
-    if(B4color == "green" && C5color == "green" & D6color == "green" && E7color == "green"){winred()}
+    if(A3color == "green" && B4color == "green" && C5color == "green" && D6color == "green"){wingreen()}
+    if(B4color == "green" && C5color == "green" && D6color == "green" && E7color == "green"){winred()}
 
-    if(A3color == "red" && B4color == "red" & C5color == "red" && D6color == "red"){wingreen()}
-    if(B4color == "red" && C5color == "red" & D6color == "red" && E7color == "red"){winred()}
+    if(A3color == "red" && B4color == "red" && C5color == "red" && D6color == "red"){wingreen()}
+    if(B4color == "red" && C5color == "red" && D6color == "red" && E7color == "red"){winred()}
 
 /// A2 -> F7 ///    
 
-    if(A2color == "green" && B3color == "green" & C4color == "green" && D5color == "green"){wingreen()}
-    if(B3color == "green" && C4color == "green" & D5color == "green" && E6color == "green"){wingreen()}
-    if(C4color == "green" && D5color == "green" & E6color == "green" && F7color == "green"){wingreen()}
+    if(A2color == "green" && B3color == "green" && C4color == "green" && D5color == "green"){wingreen()}
+    if(B3color == "green" && C4color == "green" && D5color == "green" && E6color == "green"){wingreen()}
+    if(C4color == "green" && D5color == "green" && E6color == "green" && F7color == "green"){wingreen()}
 
-    if(A2color == "red" && B3color == "red" & C4color == "red" && D5color == "red"){winred()}
-    if(B3color == "red" && C4color == "red" & D5color == "red" && E6color == "red"){winred()}
-    if(C4color == "red" && D5color == "red" & E6color == "red" && F7color == "red"){winred()}
+    if(A2color == "red" && B3color == "red" && C4color == "red" && D5color == "red"){winred()}
+    if(B3color == "red" && C4color == "red" && D5color == "red" && E6color == "red"){winred()}
+    if(C4color == "red" && D5color == "red" && E6color == "red" && F7color == "red"){winred()}
 
 /// A1 -> G7 ///
 
-    if(A1color == "green" && B2color == "green" & C3color == "green" && D4color == "green"){wingreen()}
-    if(B2color == "green" && C3color == "green" & D4color == "green" && E5color == "green"){wingreen()}
-    if(C3color == "green" && D4color == "green" & E5color == "green" && F6color == "green"){wingreen()}
+    if(A1color == "green" && B2color == "green" && C3color == "green" && D4color == "green"){wingreen()}
+    if(B2color == "green" && C3color == "green" && D4color == "green" && E5color == "green"){wingreen()}
+    if(C3color == "green" && D4color == "green" && E5color == "green" && F6color == "green"){wingreen()}
 
-    if(A1color == "red" && B2color == "red" & C3color == "red" && D4color == "red"){winred()}
-    if(B2color == "red" && C3color == "red" & D4color == "red" && E5color == "red"){winred()}
-    if(C3color == "red" && D4color == "red" & E5color == "red" && F6color == "red"){winred()}
+    if(A1color == "red" && B2color == "red" && C3color == "red" && D4color == "red"){winred()}
+    if(B2color == "red" && C3color == "red" && D4color == "red" && E5color == "red"){winred()}
+    if(C3color == "red" && D4color == "red" && E5color == "red" && F6color == "red"){winred()}
 
 /// B1 -> F5 ///
 
-    if(B1color == "green" && C2color == "green" & D3color == "green" && E4color == "green"){wingreen()}
-    if(C2color == "green" && D3color == "green" & E4color == "green" && F5color == "green"){wingreen()}
+    if(B1color == "green" && C2color == "green" && D3color == "green" && E4color == "green"){wingreen()}
+    if(C2color == "green" && D3color == "green" && E4color == "green" && F5color == "green"){wingreen()}
 
-    if(B1color == "red" && C2color == "red" & D3color == "red" && E4color == "red"){winred()}
-    if(C2color == "red" && D3color == "red" & E4color == "red" && F5color == "red"){winred()}
+    if(B1color == "red" && C2color == "red" && D3color == "red" && E4color == "red"){winred()}
+    if(C2color == "red" && D3color == "red" && E4color == "red" && F5color == "red"){winred()}
 
 /// C1 -> F4 ///
 
-    if(C1color == "green" && D2color == "green" & E3color == "green" && F4color == "green"){wingreen()}
+    if(C1color == "green" && D2color == "green" && E3color == "green" && F4color == "green"){wingreen()}
 
-    if(C1color == "red" && D2color == "red" & E3color == "red" && F4color == "red"){winred()}
+    if(C1color == "red" && D2color == "red" && E3color == "red" && F4color == "red"){winred()}
 
 /// D1 -> A4 ///
 
-    if(D1color == "green" && C2color == "green" & B3color == "green" && A4color == "green"){wingreen()}
+    if(D1color == "green" && C2color == "green" && B3color == "green" && A4color == "green"){wingreen()}
 
-    if(D1color == "red" && C2color == "red" & B3color == "red" && A4color == "red"){winred()}
+    if(D1color == "red" && C2color == "red" && B3color == "red" && A4color == "red"){winred()}
 
 /// E1 -> A5 ///
 
-    if(E1color == "green" && D2color == "green" & C3color == "green" && B4color == "green"){wingreen()}
-    if(D2color == "green" && C3color == "green" & B4color == "green" && A5color == "green"){wingreen()}
+    if(E1color == "green" && D2color == "green" && C3color == "green" && B4color == "green"){wingreen()}
+    if(D2color == "green" && C3color == "green" && B4color == "green" && A5color == "green"){wingreen()}
 
-    if(E1color == "red" && D2color == "red" & C3color == "red" && B4color == "red"){winred()}
-    if(D2color == "red" && C3color == "red" & B4color == "red" && A5color == "red"){winred()}
+    if(E1color == "red" && D2color == "red" && C3color == "red" && B4color == "red"){winred()}
+    if(D2color == "red" && C3color == "red" && B4color == "red" && A5color == "red"){winred()}
 
 ///  F1 -> A6 ///
 
-    if(F1color == "green" && E2color == "green" & D3color == "green" && C4color == "green"){wingreen()}
-    if(E2color == "green" && D3color == "green" & C4color == "green" && B5color == "green"){wingreen()}
-    if(D3color == "green" && C4color == "green" & B5color == "green" && A6color == "green"){wingreen()}
+    if(F1color == "green" && E2color == "green" && D3color == "green" && C4color == "green"){wingreen()}
+    if(E2color == "green" && D3color == "green" && C4color == "green" && B5color == "green"){wingreen()}
+    if(D3color == "green" && C4color == "green" && B5color == "green" && A6color == "green"){wingreen()}
 
-    if(F1color == "red" && E2color == "red" & D3color == "red" && C4color == "red"){winred()}
-    if(E2color == "red" && D3color == "red" & C4color == "red" && B5color == "red"){winred()}
-    if(D3color == "red" && C4color == "red" & B5color == "red" && A6color == "red"){winred()}
+    if(F1color == "red" && E2color == "red" && D3color == "red" && C4color == "red"){winred()}
+    if(E2color == "red" && D3color == "red" && C4color == "red" && B5color == "red"){winred()}
+    if(D3color == "red" && C4color == "red" && B5color == "red" && A6color == "red"){winred()}
 
 /// F2 -> A7 ///
 
-    if(F2color == "green" && E3color == "green" & D4color == "green" && C5color == "green"){wingreen()}
-    if(E3color == "green" && D4color == "green" & C5color == "green" && B6color == "green"){wingreen()}
-    if(D4color == "green" && C5color == "green" & B6color == "green" && A7color == "green"){wingreen()}
+    if(F2color == "green" && E3color == "green" && D4color == "green" && C5color == "green"){wingreen()}
+    if(E3color == "green" && D4color == "green" && C5color == "green" && B6color == "green"){wingreen()}
+    if(D4color == "green" && C5color == "green" && B6color == "green" && A7color == "green"){wingreen()}
 
-    if(F2color == "red" && E3color == "red" & D4color == "red" && C5color == "red"){winred()}
-    if(E3color == "red" && D4color == "red" & C5color == "red" && B6color == "red"){winred()}
-    if(D4color == "red" && C5color == "red" & B6color == "red" && A7color == "red"){winred()}
+    if(F2color == "red" && E3color == "red" && D4color == "red" && C5color == "red"){winred()}
+    if(E3color == "red" && D4color == "red" && C5color == "red" && B6color == "red"){winred()}
+    if(D4color == "red" && C5color == "red" && B6color == "red" && A7color == "red"){winred()}
 
 /// F3 -> B7 ///
 
-    if(F3color == "green" && E4color == "green" & D5color == "green" && C6color == "green"){wingreen()}
-    if(E4color == "green" && D5color == "green" & C6color == "green" && B7color == "green"){wingreen()}
+    if(F3color == "green" && E4color == "green" && D5color == "green" && C6color == "green"){wingreen()}
+    if(E4color == "green" && D5color == "green" && C6color == "green" && B7color == "green"){wingreen()}
 
-    if(F3color == "red" && E4color == "red" & D5color == "red" && C6color == "red"){winred()}
-    if(E4color == "red" && D5color == "red" & C6color == "red" && B7color == "red"){winred()}
+    if(F3color == "red" && E4color == "red" && D5color == "red" && C6color == "red"){winred()}
+    if(E4color == "red" && D5color == "red" && C6color == "red" && B7color == "red"){winred()}
 
 /// F4 -> C7 ///
 
-    if(F4color == "green" && E5color == "green" & D6color == "green" && C7color == "green"){wingreen()}
+    if(F4color == "green" && E5color == "green" && D6color == "green" && C7color == "green"){wingreen()}
 
-    if(F4color == "red" && E5color == "red" & D6color == "red" && C7color == "red"){winred()}
+    if(F4color == "red" && E5color == "red" && D6color == "red" && C7color == "red"){winred()}
 
-    
+    if( A1verif == true && A2verif == true && A3verif == true && A4verif == true && A5verif == true && A6verif == true && A7verif == true && 
+        B1verif == true && B2verif == true && B3verif == true && B4verif == true && B5verif == true && B6verif == true && B7verif == true && 
+        C1verif == true && C2verif == true && C3verif == true && C4verif == true && C5verif == true && C6verif == true && C7verif == true && 
+        D1verif == true && D2verif == true && D3verif == true && D4verif == true && D5verif == true && D6verif == true && D7verif == true && 
+        E1verif == true && E2verif == true && E3verif == true && E4verif == true && E5verif == true && E6verif == true && E7verif == true && 
+        F1verif == true && F2verif == true && F3verif == true && F4verif == true && F5verif == true && F6verif == true && F7verif == true){
+            message.innerHTML = "Egalité, recommencez la manche"
+        }
 }
