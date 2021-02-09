@@ -1548,9 +1548,9 @@ function wincheck(){
 /// A3 -> E7 ///    
 
     if(A3color == "green" && B4color == "green" && C5color == "green" && D6color == "green"){wingreen()}
-    if(B4color == "green" && C5color == "green" && D6color == "green" && E7color == "green"){winred()}
+    if(B4color == "green" && C5color == "green" && D6color == "green" && E7color == "green"){wingreen()}
 
-    if(A3color == "red" && B4color == "red" && C5color == "red" && D6color == "red"){wingreen()}
+    if(A3color == "red" && B4color == "red" && C5color == "red" && D6color == "red"){winred()}
     if(B4color == "red" && C5color == "red" && D6color == "red" && E7color == "red"){winred()}
 
 /// A2 -> F7 ///    
