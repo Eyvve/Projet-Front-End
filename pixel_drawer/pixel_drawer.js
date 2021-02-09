@@ -39,7 +39,6 @@ function reset(){
 
 //////////// fonction pour changer la couleur de la case sélecionnée ///////////
 
-
 // merci Damien !
 
 
@@ -162,25 +161,25 @@ var image = "link"
 function boutonGhover(){
     var img = document.getElementById(FG)
     console.log("check")
-    FG.setAttribute("src", "flecheGV.png")
+    FG.setAttribute("src", "pixelImages/flecheGV.png")
 
 }
 
 function boutonGout(){
     var img = document.getElementById(FG)
     console.log("check")
-    FG.setAttribute("src", "flecheGB.png")
+    FG.setAttribute("src", "pixelImages/flecheGB.png")
 }
 
 function boutonDhover(){
     var img = document.getElementById(FD)
     console.log("check")
-    FD.setAttribute("src", "flecheDV.png")
+    FD.setAttribute("src", "pixelImages/flecheDV.png")
 
 }
 
 function boutonDout(){
     var img = document.getElementById(FD)
     console.log("check")
-    FD.setAttribute("src", "flecheDB.png")
+    FD.setAttribute("src", "pixelImages/flecheDB.png")
 }
