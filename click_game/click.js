@@ -1,5 +1,5 @@
 "use strict"
-
+var save_or_not = 0;
 var score = 0;
 var bonus = 0;
 var point = 1;
@@ -16,6 +16,14 @@ const star = document.getElementById('star')
 var myVar;
 var myVar2;
 star.style.visibility = "hidden"
+save_or_not = parseInt(localStorage.getItem('save_or_not_save'));
+if (save_or_not == 1) {
+  score = parseInt(localStorage.getItem('score_save'));
+  bonus_timer = parseInt(localStorage.getItem('bonus_time_save'));
+  print_score.innerText = score;
+  bare_boost_vert.style.height = `${bonus_timer}%` ;
+};
+
 
 function remouveElementPlus1() {
   var remouveID = document.getElementById(`plus${compteur_score}`)
@@ -57,8 +65,12 @@ button.onmousedown = function() {
   score += point;
   score += bonus;
   print_score.innerText = score;
+  localStorage.setItem('score_save', score);
   // addElement()
   bonus_timer += 0.5;
+  localStorage.setItem('bonus_time_save', bonus_timer);
+  save_or_not = 1
+  localStorage.setItem('save_or_not_save', save_or_not);
   if(bonus_timer >= 100) {
     bonus_timer = 100
     star.style.visibility = ""
@@ -91,3 +103,4 @@ fuse.onmousedown = function() {
   }
   
 };
+

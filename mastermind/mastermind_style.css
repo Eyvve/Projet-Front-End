@@ -1,6 +1,7 @@
 body {
     background-color: #272C2C;
     background-size: 100%;
+    margin: 0;
 }
 .gridgamecontainer{
     display: grid;
@@ -18,7 +19,7 @@ body {
     background-color: #272C2C;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 0.1fr 0.2fr 0.1fr 0.2fr 0.1fr 0.2fr 0.1fr;
+    grid-template-columns: 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
     grid-template-rows: 0.1fr 0.2fr 0.1fr 2fr 0.1fr;
     gap: 0px 0px;
     grid-template-areas:
@@ -98,6 +99,11 @@ body {
 }
 #choix_colors img {
     width: 100px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #choix_colors {
     display: grid;
@@ -128,49 +134,99 @@ body {
     grid-column: 1;
     padding-left: 55px;
     padding-right: 35px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #jeton_bleu{
     grid-column: 2;
     padding-left: 35px;
     padding-right: 55px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #jeton_marron{
     grid-column: 1;
     padding-left: 55px;
     padding-right: 35px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #jeton_vert{
     grid-column: 2;
     padding-left: 35px;
     padding-right: 55px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #jeton_rose{
     grid-column: 1;
     padding-left: 55px;
     padding-right: 35px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #jeton_violet{
     grid-column: 2;
     padding-left: 35px;
     padding-right: 55px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #jeton_orange{
     grid-column: 1;
     padding-left: 55px;
     padding-right: 35px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #jeton_jaune{
     grid-column: 2;
     padding-left: 35px;
     padding-right: 55px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #color_select img {
     width: 50px;
     margin: 10px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #black_white img {
     width: 50px;
     margin: 10px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #color_select {
     display: grid;
@@ -194,8 +250,115 @@ body {
 }
 #score_flex img{
     height: 30px;
+    
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
 }
 #score {
     margin-left: 10px;
     color: white;
+}
+
+#win_flex {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+}
+.win {
+    align-content: center;
+    width: 700px;
+    height: 400px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: choix_colors;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 40% 40% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . win_text . "
+        " . win_button . "
+        " . . . ";
+}
+.win_titre {
+    grid-area: win_text;
+    align-self: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 30px;
+    line-height: 25px;
+    color: white;
+}
+#button_win {
+    
+    grid-area: win_button;
+    align-self: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 20px;
+    line-height: 25px;
+}
+#defete_flex {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+}
+.defete {
+    align-content: center;
+    width: 700px;
+    height: 400px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: choix_colors;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 40% 40% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . defete_text . "
+        " . defete_button . "
+        " . . . ";
+}
+.defete_titre {
+    grid-area: defete_text;
+    align-self: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 30px;
+    line-height: 25px;
+    color: white;
+}
+#button_defete {
+    
+    grid-area: defete_button;
+    align-self: center;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 20px;
+    line-height: 25px;
 }

@@ -10,6 +10,10 @@ const jaune = document.getElementById("jeton_jaune");
 const print_choix_color = document.getElementById("color_select");
 const print_choix_vrai_faux = document.getElementById("black_white");
 const print_score = document.getElementById("score");
+const print_win = document.getElementById("win_flex");
+const continuer_button_win = document.getElementById("button_win");
+const print_defete = document.getElementById("defete_flex");
+const continuer_button_defete = document.getElementById("button_defete");
 var compteur = 0; // compteur pour verifier tout les 5 jetons
 var vie = 12;//nombre de vie
 var verif = [0,0,0]; // liste [nombre de jeton validé, nombre de jeton mal plasé, nombre de jeton nul]
@@ -18,6 +22,11 @@ var colors_ia = [0,0,0,0,0];
 var copy = [0,0,0,0,0];
 var score = 0;
 var vie_copy = 0;
+var save_or_not = parseInt(localStorage.getItem('save_or_not_save'));
+if (save_or_not == 1) {
+    score = parseInt(localStorage.getItem('score_save'));
+    print_score.innerText = score;
+};
     
 function ia_select_color() {
     for(let i = 0; i <= 4; i++){
@@ -25,13 +34,7 @@ function ia_select_color() {
     };
 };
 function ia_verif() {
-    console.log(colors_player);
-    console.log(colors_ia + "ia post");
-    let colors_ia_copy = [].concat(colors_ia) // NEW
-    let colors_player_copy = [].concat(colors_player) // NEW
-    console.log(colors_ia + "ia apres");
-    console.log(colors_ia_copy + "copy apres");
-
+    let colors_ia_copy = [].concat(colors_ia)
     for(let i = 0; i <= 4; i++){
         if(colors_ia[i] == colors_player[i]){
             verif[0] += 1;
@@ -91,14 +94,25 @@ function ia_verif() {
     
 };
 function lose_mastermind(){
-    alert("vous avez perdu")
-    document.location.reload();
+    print_defete.style.display = 'flex';
+    continuer_button_defete.onclick = function() {
+        print_defete.style.display = 'none';
+        document.location.reload();
+    };
 };
 function win_mastermind(){
     vie_copy = [].concat(vie)
-    alert("vous avez gagné")
-    document.location.reload();
-}
+    score += 100 * vie_copy;
+    print_score.innerText = score;
+    localStorage.setItem('score_save', score);
+    save_or_not = 1
+    localStorage.setItem('save_or_not_save', save_or_not);
+    print_win.style.display = 'flex';
+    continuer_button_win.onclick = function() {
+        print_win.style.display = 'none';
+        document.location.reload();
+    };
+};
 function print_choix_color_fonc(color, id) {
     let newIMG = document.createElement('img');
     newIMG.setAttribute('src', './images/' + color + '.png');
@@ -158,9 +172,4 @@ jaune.onclick = function() {
     print_choix_color_fonc("jaune", 8)
 }
 
-
-score = 1000 * vie_copy;
-print_score.innerText = score;
-
 ia_select_color();
-console.log(colors_ia);
