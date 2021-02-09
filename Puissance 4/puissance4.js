@@ -211,39 +211,39 @@ var m5 = false
 // animation boutons ///////////////////////
 
 
-bouton1.addEventListener("mouseover", function(){this.src = "boutonhover.png";});
-bouton1.addEventListener("mouseout", function(){this.src = "bouton.png";});
+bouton1.addEventListener("mouseover", function(){this.src = "P4Images/boutonhover.png";});
+bouton1.addEventListener("mouseout", function(){this.src = "P4Images/bouton.png";});
 
-bouton2.addEventListener("mouseover", function(){this.src = "boutonhover.png";});
-bouton2.addEventListener("mouseout", function(){this.src = "bouton.png";});
+bouton2.addEventListener("mouseover", function(){this.src = "P4Images/boutonhover.png";});
+bouton2.addEventListener("mouseout", function(){this.src = "P4Images/bouton.png";});
 
-bouton3.addEventListener("mouseover", function(){this.src = "boutonhover.png";});
-bouton3.addEventListener("mouseout", function(){this.src = "bouton.png";});
+bouton3.addEventListener("mouseover", function(){this.src = "P4Images/boutonhover.png";});
+bouton3.addEventListener("mouseout", function(){this.src = "P4Images/bouton.png";});
 
-bouton4.addEventListener("mouseover", function(){this.src = "boutonhover.png";});
-bouton4.addEventListener("mouseout", function(){this.src = "bouton.png";});
+bouton4.addEventListener("mouseover", function(){this.src = "P4Images/boutonhover.png";});
+bouton4.addEventListener("mouseout", function(){this.src = "P4Images/bouton.png";});
 
-bouton5.addEventListener("mouseover", function(){this.src = "boutonhover.png";});
-bouton5.addEventListener("mouseout", function(){this.src = "bouton.png";});
+bouton5.addEventListener("mouseover", function(){this.src = "P4Images/boutonhover.png";});
+bouton5.addEventListener("mouseout", function(){this.src = "P4Images/bouton.png";});
 
-bouton6.addEventListener("mouseover", function(){this.src = "boutonhover.png";});
-bouton6.addEventListener("mouseout", function(){this.src = "bouton.png";});
+bouton6.addEventListener("mouseover", function(){this.src = "P4Images/boutonhover.png";});
+bouton6.addEventListener("mouseout", function(){this.src = "P4Images/bouton.png";});
 
-bouton7.addEventListener("mouseover", function(){this.src = "boutonhover.png";});
-bouton7.addEventListener("mouseout", function(){this.src = "bouton.png";});
+bouton7.addEventListener("mouseover", function(){this.src = "P4Images/boutonhover.png";});
+bouton7.addEventListener("mouseout", function(){this.src = "P4Images/bouton.png";});
 
 boutonreset.addEventListener("mouseover", function(){
     if(finished == false){
-        this.src = "rejouerhover.png";
+        this.src = "P4Images/rejouerhover.png";
     }else{
-        this.src ="newgamehover.png";
+        this.src ="P4Images/newgamehover.png";
     } 
 });
 boutonreset.addEventListener("mouseout", function(){
     if(finished == false){
-        this.src = "rejouer.png";
+        this.src = "P4Images/rejouer.png";
     }else{
-        this.src ="newgame.png";
+        this.src ="P4Images/newgame.png";
     }
 });
 
@@ -337,10 +337,10 @@ bouton1.addEventListener("click", function(){
         }
         if(tour == true){
             message.innerHTML = tourvert
-            jeton.src = "jeton_vert.png"
+            jeton.src = "P4Images/jeton_vert.png"
         }else{
             message.innerHTML = tourrouge
-            jeton.src = "jeton_rouge.png"
+            jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
     }
@@ -434,10 +434,10 @@ bouton2.addEventListener("click", function(){
         }
         if(tour == true){
             message.innerHTML = tourvert
-            jeton.src = "jeton_vert.png"
+            jeton.src = "P4Images/jeton_vert.png"
         }else{
             message.innerHTML = tourrouge
-            jeton.src = "jeton_rouge.png"
+            jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
     }
@@ -531,10 +531,10 @@ bouton3.addEventListener("click", function(){
         }
         if(tour == true){
             message.innerHTML = tourvert
-            jeton.src = "jeton_vert.png"
+            jeton.src = "P4Images/jeton_vert.png"
         }else{
             message.innerHTML = tourrouge
-            jeton.src = "jeton_rouge.png"
+            jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
     }
@@ -628,10 +628,10 @@ bouton4.addEventListener("click", function(){
         }
         if(tour == true){
             message.innerHTML = tourvert
-            jeton.src = "jeton_vert.png"
+            jeton.src = "P4Images/jeton_vert.png"
         }else{
             message.innerHTML = tourrouge
-            jeton.src = "jeton_rouge.png"
+            jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
     }
@@ -725,10 +725,10 @@ bouton5.addEventListener("click", function(){
         }
         if(tour == true){
             message.innerHTML = tourvert
-            jeton.src = "jeton_vert.png"
+            jeton.src = "P4Images/jeton_vert.png"
         }else{
             message.innerHTML = tourrouge
-            jeton.src = "jeton_rouge.png"
+            jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
     }
@@ -822,10 +822,10 @@ bouton6.addEventListener("click", function(){
         }
         if(tour == true){
             message.innerHTML = tourvert
-            jeton.src = "jeton_vert.png"
+            jeton.src = "P4Images/jeton_vert.png"
         }else{
             message.innerHTML = tourrouge
-            jeton.src = "jeton_rouge.png"
+            jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
     }
@@ -919,10 +919,10 @@ bouton7.addEventListener("click", function(){
         }
         if(tour == true){
             message.innerHTML = tourvert
-            jeton.src = "jeton_vert.png"
+            jeton.src = "P4Images/jeton_vert.png"
         }else{
             message.innerHTML = tourrouge
-            jeton.src = "jeton_rouge.png"
+            jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
     }
@@ -1030,7 +1030,7 @@ boutonreset.addEventListener("click", function(){
     F6color = "";
     F7color = "";
     message.innerHTML = "Au tour du joueur vert de commencer"
-    jeton.src = "jeton_vert.png"
+    jeton.src = "P4Images/jeton_vert.png"
     game = true
     round.innerHTML = tourcount
     message.style.color = "#46c36c"
@@ -1066,27 +1066,27 @@ function wingreen(){
     wincount += 1
     if (m1 == false){
         manche1.display = "block"
-        jeton1.src = "jeton_vert.png"
+        jeton1.src = "P4Images/jeton_vert.png"
         m1 = true
     }
     else if (m2 == false){
         manche2.display = "block"
-        jeton2.src = "jeton_vert.png"
+        jeton2.src = "P4Images/jeton_vert.png"
         m2 = true
     }
     else if (m3 == false){
         manche3.display = "block"
-        jeton3.src = "jeton_vert.png"
+        jeton3.src = "P4Images/jeton_vert.png"
         m3 = true
     }
     else if (m4 == false){
         manche4.display = "block"
-        jeton4.src = "jeton_vert.png"
+        jeton4.src = "P4Images/jeton_vert.png"
         m4 = true
     }
     else if (m5 == false){
         manche5.display = "block"
-        jeton5.src = "jeton_vert.png"
+        jeton5.src = "P4Images/jeton_vert.png"
         m5 = true
     }
     if (wingreencount >= 3 || winredcount >= 3){
@@ -1096,7 +1096,7 @@ function wingreen(){
         }else if (winredcount >= 3){
             message.innerHTML = "Les rouges gagnent la partie";
         }
-        boutonreset.src = "newgame.png"
+        boutonreset.src = "P4Images/newgame.png"
         wincount = 0
         tourcount = 1
         finished = true
@@ -1114,27 +1114,27 @@ function winred(){
     wincount += 1
     if (m1 == false){
         manche1.display = "block"
-        jeton1.src = "jeton_rouge.png"
+        jeton1.src = "P4Images/jeton_rouge.png"
         m1 = true
     }
     else if (m2 == false){
         manche2.display = "block"
-        jeton2.src = "jeton_rouge.png"
+        jeton2.src = "P4Images/jeton_rouge.png"
         m2 = true
     }
     else if (m3 == false){
         manche3.display = "block"
-        jeton3.src = "jeton_rouge.png"
+        jeton3.src = "P4Images/jeton_rouge.png"
         m3 = true
     }
     else if (m4 == false){
         manche4.display = "block"
-        jeton4.src = "jeton_rouge.png"
+        jeton4.src = "P4Images/jeton_rouge.png"
         m4 = true
     }
     else if (m5 == false){
         manche5.display = "block"
-        jeton5.src = "jeton_rouge.png"
+        jeton5.src = "P4Images/jeton_rouge.png"
         m5 = true
     }
     if (wingreencount >= 3 || winredcount >= 3){
@@ -1144,7 +1144,7 @@ function winred(){
         }else if (winredcount >= 3){
             message.innerHTML = "Les rouges gagnent la partie";
         }
-        boutonreset.src = "newgame.png"
+        boutonreset.src = "P4Images/newgame.png"
         wincount = 0
         tourcount = 1
         finished = true
