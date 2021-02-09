@@ -1049,6 +1049,10 @@ boutonreset.addEventListener("click", function(){
         m3 = false
         m4 = false
         m5 = false
+        wingreencount = 0
+        winredcount = 0
+        wincount = 0
+        tourcount = 1
         finished = false
     }
 });
