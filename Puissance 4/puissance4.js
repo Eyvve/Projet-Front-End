@@ -233,15 +233,19 @@ bouton7.addEventListener("mouseover", function(){this.src = "P4Images/boutonhove
 bouton7.addEventListener("mouseout", function(){this.src = "P4Images/bouton.png";});
 
 boutonreset.addEventListener("mouseover", function(){
-    if(finished == false){
-        this.src = "P4Images/rejouerhover.png";
+    if(finished == false && game == true){
+        this.src = "P4Images/resethover.png";
+    }else if(finished == false && game == false){
+        this.src = "P4Images/rejouerhover.png"
     }else{
         this.src ="P4Images/newgamehover.png";
-    } 
+    }
 });
 boutonreset.addEventListener("mouseout", function(){
-    if(finished == false){
-        this.src = "P4Images/rejouer.png";
+    if(finished == false && game == true){
+        this.src = "P4Images/reset.png";
+    }else if(finished == false && game == false){
+        this.src = "P4Images/rejouer.png"
     }else{
         this.src ="P4Images/newgame.png";
     }
@@ -1064,6 +1068,7 @@ function wingreen(){
     console.log("les verts gagnent")
     message.innerHTML = "Manche remportée par le joueur Vert !"
     game = false
+    boutonreset.src = "P4Images/rejouer.png"
     wingreencount += 1;
     tourcount += 1
     wincount += 1
@@ -1112,6 +1117,7 @@ function winred(){
     console.log("les rouges gagnent")
     message.innerHTML = "Manche remportée par le joueur Rouge !"
     game = false
+    boutonreset.src = "P4Images/rejouer.png"
     winredcount += 1;
     tourcount += 1
     wincount += 1
