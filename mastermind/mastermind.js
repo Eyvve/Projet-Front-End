@@ -27,6 +27,7 @@ if (save_or_not == 1) {
     score = parseInt(localStorage.getItem('score_save'));
     print_score.innerText = score;
 };
+
     
 function ia_select_color() {
     for(let i = 0; i <= 4; i++){
@@ -173,3 +174,4 @@ jaune.onclick = function() {
 }
 
 ia_select_color();
+console.log(colors_ia)
