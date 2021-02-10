@@ -1,6 +1,13 @@
 
+html{
+    background-color: #262c2c;
+}
+
 body{
-    background-color: #262c2c;;
+    
+    background-image: url(../BG2.png);
+    background-repeat:repeat-y;
+    background-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -198,7 +205,7 @@ img{
 
 .interface{
     grid-area: interface;
-    background-color: #262c2c;
+    /* background-color: #262c2c; */
     display: grid;
     grid-template-columns: 1fr repeat(2, 3fr) 1fr repeat(2, 3fr) 1fr;
     grid-template-rows: 1.2fr 4fr 1fr 1fr 0.2fr;
@@ -375,6 +382,7 @@ img{
 .scorejeu{
     grid-area: score;
     border: 3px solid #46c36c;
+    background-color: #262c2c;
     border-radius: 15px;
     justify-self: center;
     width: 80%;
@@ -495,6 +503,7 @@ img{
 
 .tour-annonce { 
     grid-area: tour-annonce; 
+    background-color: #262c2c;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -534,7 +543,7 @@ img{
 
 .messages { 
     grid-area: Messages; 
-
+    background-color: #262c2c;
     width: 100%;
     height: auto;
     border: 3px solid #46c36c;
