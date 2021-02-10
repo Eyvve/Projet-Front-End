@@ -158,28 +158,65 @@ function manualnoir(){
 
 var image = "link"
 
-function boutonGhover(){
-    var img = document.getElementById(FG)
-    console.log("check")
-    FG.setAttribute("src", "pixelImages/flecheGV.png")
+var stuckright = false
+var stuckleft = false
 
+var slider = 0
+
+var slidingmodel = document.querySelector("#slidingmodel")
+var slidedroit = document.querySelector("#FD")
+var slidegauche = document.querySelector("#FG")
+
+slidedroit.addEventListener("click", () => {
+    console.log("slide droit")
+    if (slider >= 0 && slider <= 4){
+        slider += 1
+        console.log("slide n°" + slider)
+        if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
+        if (slider == 1){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
+        if (slider == 2){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
+        if (slider == 3){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
+        if (slider == 4){ slidingmodel.src = "pixelImages/Link.png"; stuckright = true}
+    }
+})
+
+slidegauche.addEventListener("click", () => {
+    console.log("slide gauche")
+    if (slider >= 1 && slider <= 4){
+        slider -= 1
+        console.log("slide n°" + slider)
+        if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
+        if (slider == 1){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
+        if (slider == 2){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
+        if (slider == 3){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
+        if (slider == 4){ slidingmodel.src = "pixelImages/Link.png"; stuckright = true}
+    }
+})
+
+function boutonGhover(){
+    if(stuckleft == false){
+        var img = document.querySelector("#FG")
+        // console.log("check")
+        FG.setAttribute("src", "pixelImages/flecheGV.png")
+    }
 }
 
 function boutonGout(){
-    var img = document.getElementById(FG)
-    console.log("check")
+    var img = document.querySelector("#FG")
+    // console.log("check")
     FG.setAttribute("src", "pixelImages/flecheGB.png")
 }
 
 function boutonDhover(){
-    var img = document.getElementById(FD)
-    console.log("check")
-    FD.setAttribute("src", "pixelImages/flecheDV.png")
-
+    if(stuckright == false){
+        var img = document.querySelector("#FD")
+        // console.log("check")
+        FD.setAttribute("src", "pixelImages/flecheDV.png")
+    }
 }
 
 function boutonDout(){
-    var img = document.getElementById(FD)
-    console.log("check")
+    var img = document.querySelector("#FD")
+    // console.log("check")
     FD.setAttribute("src", "pixelImages/flecheDB.png")
 }
