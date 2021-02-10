@@ -1,0 +1,224 @@
+body{
+    background-color: #262c2c;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* .fixed-div{
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+} */
+
+/* HEADER */
+
+.headerfont{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.header_nav{ 
+    z-index: 500;
+    position: fixed;
+    background: rgba(80, 81, 79, 1);
+    display: grid;
+    border-bottom: 5px solid #333;
+    top: 0%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: ". profil jeux logo a_propos aide coins";
+    width : 100%;
+    height: 80px;
+} 
+
+.profil_nav{
+    display: block;
+    grid-area: profil;
+    align-self: center;
+    justify-self: center;
+}
+.jeux {
+    display: block;
+    grid-area: jeux;
+    align-self: center;
+    justify-self: center;
+}
+
+.logo {
+    display: block;
+    grid-area: logo;
+    height: 58px;
+    align-self: center;
+    justify-self: center;
+}
+
+.a_propos_de {
+    display: block;
+    grid-area: a_propos;
+    align-self: center;
+    justify-self: center;
+}
+.aide { 
+    display: block;
+    grid-area: aide;
+    align-self: center;
+    justify-self: center;
+}
+.score {
+    display: block;
+    grid-area: coins;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "coin score";
+    align-self: center;
+    justify-self: center;
+
+}
+
+.coins {
+    display: block;
+    grid-area: coin;
+    width: 20px;
+    align-self: center;
+    justify-self: center;
+  
+}
+
+.score_gold{
+    display: block;
+    grid-area: score;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* MAIN */
+
+.popup.profilpopup{
+    display: none;
+}
+
+.profilpopup{
+    z-index: 150;
+    position: fixed;
+    top: 12%;
+    left: 25%;
+    right: 25%;
+    background-color: rgba(38, 44, 44, 0.96);
+    border: 3px solid #46C36C;
+    border-radius: 15px;
+    width: 50%;
+    height: 750px;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 2fr 2fr 0.5fr;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas:
+        ". . ."
+        ". imageprofil ."
+        ". nomprofil ."
+        ". coinsprofil ."
+        ". . .";
+}
+
+.imageprofil{
+    grid-area: imageprofil;
+    border: 3px solid #46C36C;
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(80, 81, 79, 1);
+}
+
+.nomprofil{
+    grid-area: nomprofil;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(80, 81, 79, 1);
+    width: 60%;
+    height: 80%;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 4em;
+}
+
+.coinsprofil{
+    grid-area: coinsprofil;
+    display: grid;
+    width: 40%;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "coinimage montantprofil";
+}
+
+.coinimage{
+    grid-area: coinimage;
+    justify-self: center;
+    align-self: center;
+    width: 40px;
+}
+
+.montantprofil{
+    grid-area: montantprofil;
+    /* justify-self: center; */
+    padding-left: 18%;
+    align-self: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+/* GRID MAIN */
+
+/* FOOTER */
+
+footer{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E5E5E5; 
+}
+
+.footer {  
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . . "
+    ". copyright ."
+    ". droit1 ."
+    ". . .";
+    height: 15vh;
+    width: 100%;
+    
+    background: rgba(80, 81, 79, 1);
+    grid-area: footer; }
+
+.copyright {
+    grid-area: copyright;
+}
+
+.droit1 {
+    grid-area: droit1;
+}
+
+
+    
+
