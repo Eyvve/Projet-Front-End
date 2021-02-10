@@ -1,0 +1,419 @@
+body{
+    background-color: #262c2c;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* .fixed-div{
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+} */
+
+/* HEADER */
+
+.headerfont{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.header_nav{ 
+    z-index: 500;
+    position: fixed;
+    background: rgba(80, 81, 79, 1);
+    display: grid;
+    border-bottom: 5px solid #333;
+    top: 0%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: ". profil jeux logo a_propos aide coins";
+    width : 100%;
+    height: 80px;
+} 
+
+.profil_nav{
+    display: block;
+    grid-area: profil;
+    align-self: center;
+    justify-self: center;
+}
+.jeux {
+    display: block;
+    grid-area: jeux;
+    align-self: center;
+    justify-self: center;
+}
+
+.logo {
+    display: block;
+    grid-area: logo;
+    height: 58px;
+    align-self: center;
+    justify-self: center;
+}
+
+.a_propos_de {
+    display: block;
+    grid-area: a_propos;
+    align-self: center;
+    justify-self: center;
+}
+.aide { 
+    display: block;
+    grid-area: aide;
+    align-self: center;
+    justify-self: center;
+}
+.score {
+    display: block;
+    grid-area: coins;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "coin score";
+    align-self: center;
+    justify-self: center;
+
+}
+
+.coins {
+    display: block;
+    grid-area: coin;
+    width: 20px;
+    align-self: center;
+    justify-self: center;
+  
+}
+
+.score_gold{
+    display: block;
+    grid-area: score;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* MAIN */
+
+/* GRID MAIN */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    grid-template-rows: 70px 600px 20px 1000px 50px 20px 800px 100px;
+    width : 100%;
+    height:auto;
+    gap: 45px 0px;
+    grid-template-areas:
+        ". . ."
+        ". pub ."
+        ". titre ."
+        ". nos_jeux ."
+        ". . ."
+        ". titre2 ."
+        "FG equipe FD"
+        ". . ."
+        
+}
+
+/* SLIDER + PLAYER */
+
+.pub { 
+    display: grid;
+    grid-area: pub; 
+    gap: 25px;
+    grid-template-rows: 0px 400px 80px ;
+    grid-template-columns: 1fr;
+
+    grid-template-areas: 
+    "..."
+    "slide"
+    "playermusical";
+}
+
+.slide {
+    grid-area: slide;
+    background: rgba(80, 81, 79, 1);
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    height: 100%;
+    
+    
+}
+
+.playermusical {
+    grid-area: playermusical;
+    background-color:  rgba(80, 81, 79, 1);
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+  
+}
+
+/* NOS JEUX */
+
+.titre { 
+    display: block;
+    grid-area: titre;
+    align-self: center;
+    justify-self: center;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+
+
+.titre2 {
+    text-transform: uppercase;
+    grid-area: titre2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    /* line-height: 25px; */
+    text-align: center;
+    color: white;
+}
+
+
+
+.nos_jeux { 
+    display: grid;
+    grid-area: nos_jeux; 
+    
+    
+    gap: 25px;
+    grid-template-columns: 1fr  1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr ;
+    grid-template-areas:
+    
+    
+    "jeu1  jeu2  foire foire"
+    "jeu3 jeu3  foire foire"
+    "jeu4  jeu5  jeu5 jeu5 "
+    ". . . ."
+    ;
+}
+
+.jeu1 { 
+     grid-area: jeu1;
+     height: 100%;
+     width: 100%;
+     border : 3px solid#46C36C;
+     border-radius: 10px;
+    
+    background-color:  rgba(80, 81, 79, 1);;
+    
+    
+}
+    
+.jeu2 { 
+     
+     grid-area: jeu2;
+     height: 100%;
+     width: 100%;
+     border : 3px solid#46C36C;
+     border-radius: 10px;
+    background-color:  rgba(80, 81, 79, 1);;
+   
+    
+}
+
+.jeu3 {
+    grid-area: jeu3;
+    height: 100%;
+    width: 100%;
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    background-color:  rgba(80, 81, 79, 1);
+}
+
+.jeu4 { grid-area: jeu4;
+    height: 100%;
+    width: 100%;
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    background-color:  rgba(80, 81, 79, 1);
+
+}
+.jeu5 { grid-area: jeu5;
+    height: 100%;
+    width: 100%;
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    background-color:  rgba(80, 81, 79, 1);
+
+}
+
+.foire_aux_jeux { 
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    grid-area:foire;
+    background-color:  rgba(80, 81, 79, 1);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-area: foire;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 5% 10% 5% auto 10%;
+    grid-template-areas: 
+    ". . ."
+    ". soustitres ."
+    ". . . "
+    ". txt1 ."
+    ". . ."
+    }
+    
+.soustitres{
+    grid-area: soustitres;
+    background-color: #46C36C;
+    height:100% ;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+
+    
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 3%;
+
+    color: #E5E5E5;
+
+
+}
+
+#txt1{  
+    grid-area: txt1;
+    width: 100%;
+    /* justify-self: center; */
+    /* border: 1px solid white; */
+
+}
+        
+.foiretxt{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+    
+    
+/* EQUIPE */
+
+.equipe { 
+    display: grid;
+    grid-area: equipe;
+    gap: 70px;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: 4fr 5fr 2fr;
+    grid-template-areas:
+    ". . ."
+    "profil1 profil2 profil3 "
+    ". . .";
+
+    width: 100%;
+    height: 100%;
+
+ 
+}
+/* PROFIL 1 */
+
+.profil { 
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr  1fr;
+    grid-template-areas:
+    ". photo ."
+    ". nom ."
+    ". txtprofil ."
+    ". role .";
+    height: 500px;
+    width: 100%;
+    border: 3px solid #46C36C;
+    border-radius: 15px;
+    background-color:  rgba(80, 81, 79, 1);
+}
+
+.profil{
+    grid-area: profil1;
+}
+
+.profil2{
+    grid-area: profil2;
+}
+
+.profil3{
+    grid-area: profil3;
+}
+
+.photo{
+    grid-area: photo;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border-radius: 100%;
+    background-color:  rgba(80, 81, 79, 1);
+    border: 3px solid #46C36C;
+    box-sizing: border-box;
+    top: -90px;
+    align-self: center;
+    justify-self: center;
+}
+
+.role{
+    grid-area: role;
+    background-color: #46C36C;
+}
+
+/* FOOTER */
+
+footer{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E5E5E5; 
+}
+
+.footer {  
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . . "
+    ". copyright ."
+    ". droit1 ."
+    ". . .";
+    height: 15vh;
+    width: 100%;
+    
+    background: rgba(80, 81, 79, 1);
+    grid-area: footer; }
+
+.copyright {
+    grid-area: copyright;
+}
+
+.droit1 {
+    grid-area: droit1;
+}
+
+
+    
+

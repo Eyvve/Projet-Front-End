@@ -1,1 +1,0 @@
-control.log("hello tout le monde")
