@@ -17,12 +17,71 @@ var myVar;
 var myVar2;
 star.style.visibility = "hidden"
 save_or_not = parseInt(localStorage.getItem('save_or_not_save'));
-if (save_or_not == 1) {
-  score = parseInt(localStorage.getItem('score_save'));
-  bonus_timer = parseInt(localStorage.getItem('bonus_time_save'));
-  print_score.innerText = score;
-  bare_boost_vert.style.height = `${bonus_timer}%` ;
+
+
+var pseudo;
+var save_or_not = 0;
+var photo_profil_player = 1;
+const profil = document.getElementById("button_profil");
+const profil_print = document.getElementById("profil_flex");
+const profil_inner = document.getElementById('profilpopup')
+var imgProfil = document.getElementById('imageprofil')
+var nomProfil = document.getElementById('nomProfil')
+var gold_nav = document.getElementById('gold_nav')
+var gold_profil = document.getElementById("gold_profil")
+var gold = 100;
+gold_nav.innerHTML = 100;
+gold_profil.innerHTML = 100;
+save_or_not = localStorage.getItem("save_or_not_save");
+
+
+if(save_or_not == 1){
+    gold = parseInt(localStorage.getItem("gold_save"));
+    photo_profil_player = parseInt(localStorage.getItem("photo_profil_player_save"));
+    test_profil_fonction();
+    nomProfil.innerHTML = localStorage.getItem("pseudo_save");
+    gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
+    gold_profil.innerHTML = parseInt(localStorage.getItem("gold_save"));
+
+}
+
+
+profil.addEventListener('click', event => {
+    profil_print.style.display = "flex";
+    console.log("profil afficher");
+});
+profil_print.addEventListener('click', function(e) {
+    if (profil_inner.contains(e.target)){
+        profil_print.style.display = "flex";
+        console.log("profil à l'interieur");
+    } else{
+        profil_print.style.display = "none";
+        console.log("profil à l'éxtèrieur");
+    }
+});
+
+function test_profil_fonction(){
+    if(photo_profil_player == 1){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', '../images/photo_profil_1.png');
+        newIMG.setAttribute('alt', 'img_profil1');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 2){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', '../images/photo_profil_2.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else {
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', '../images/photo_profil_3.png');
+        newIMG.setAttribute('alt', 'img_profil3');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    };
 };
+
 
 
 function remouveElementPlus1() {
@@ -65,10 +124,11 @@ button.onmousedown = function() {
   score += point;
   score += bonus;
   print_score.innerText = score;
-  localStorage.setItem('score_save', score);
+  gold += point;
+  gold += bonus;
+  localStorage.setItem('gold_save', gold);
   // addElement()
   bonus_timer += 0.5;
-  localStorage.setItem('bonus_time_save', bonus_timer);
   save_or_not = 1
   localStorage.setItem('save_or_not_save', save_or_not);
   if(bonus_timer >= 100) {
