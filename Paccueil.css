@@ -115,7 +115,7 @@ a{
     background-color: rgba(38, 44, 44, 0.96);
     border: 3px solid #46C36C;
     border-radius: 15px;
-    width: 50%;
+    width: 950px;
     height: 750px;
     display: grid;
     grid-template-rows: 0.5fr 3fr 2fr 2fr 0.5fr;
