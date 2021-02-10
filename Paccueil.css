@@ -102,6 +102,86 @@ a{
 
 /* MAIN */
 
+.popup.profilpopup{
+    display: none;
+}
+
+.profilpopup{
+    z-index: 150;
+    position: fixed;
+    top: 12%;
+    left: 25%;
+    right: 25%;
+    background-color: rgba(38, 44, 44, 0.96);
+    border: 3px solid #46C36C;
+    border-radius: 15px;
+    width: 50%;
+    height: 750px;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 2fr 2fr 0.5fr;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas:
+        ". . ."
+        ". imageprofil ."
+        ". nomprofil ."
+        ". coinsprofil ."
+        ". . .";
+}
+
+.imageprofil{
+    grid-area: imageprofil;
+    border: 3px solid #46C36C;
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(80, 81, 79, 1);
+}
+
+.nomprofil{
+    grid-area: nomprofil;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(80, 81, 79, 1);
+    width: 60%;
+    height: 80%;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 4em;
+}
+
+.coinsprofil{
+    grid-area: coinsprofil;
+    display: grid;
+    width: 40%;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "coinimage montantprofil";
+}
+
+.coinimage{
+    grid-area: coinimage;
+    justify-self: center;
+    align-self: center;
+    width: 40px;
+}
+
+.montantprofil{
+    grid-area: montantprofil;
+    /* justify-self: center; */
+    padding-left: 18%;
+    align-self: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    
+}
+
 /* GRID MAIN */
 
 .grid-container {
