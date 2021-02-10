@@ -1,3 +1,4 @@
+
 body{
     background-color: #262c2c;;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -132,8 +133,8 @@ a{
     grid-area: imageprofil;
     border: 3px solid #46C36C;
     border-radius: 100%;
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
     justify-self: center;
     align-self: center;
     background-color: rgba(80, 81, 79, 1);
@@ -184,6 +185,187 @@ a{
 
 /* GRID MAIN */
 
+.equipesection{
+    display: grid;
+    grid-template-columns: 1fr 1400px 1fr;
+    grid-template-rows: 100px auto 1px;
+    grid-template-areas: 
+    " . . . "
+    " . ekip . "
+    " . . . ";
+}
+
+.equipe { 
+    display: grid;
+    grid-area: ekip;
+    gap: 200px 50px;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 5fr 5fr 1fr;
+    grid-template-areas:
+    ". prez ."
+    "profil1 profil2 profil3 "
+    "profil4 profil5 profil6 "
+    ". . .";
+
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+}
+
+.titre2{
+    grid-area: prez;
+    display: block;
+    width: 100%;
+    height: 50%;
+    justify-self: center;
+    align-self: center;
+
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+/* PROFIL*/
+
+.profil { 
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr  1fr;
+    grid-template-areas:
+    ". photo ."
+    "nom nom nom"
+    ". txtprofil ."
+    ". role .";
+    height: 500px;
+    width: 100%;
+    border: 3px solid #46C36C;
+    border-radius: 15px;
+    background-color:  rgba(80, 81, 79, 1);
+}
+
+.profil{
+    grid-area: profil1;
+}
+
+.profil2{
+    grid-area: profil2;
+}
+
+.profil3{
+    grid-area: profil3;
+}
+
+.profil4{
+    grid-area: profil4;
+}
+
+.profil5{
+    grid-area: profil5;
+}
+
+.profil6{
+    grid-area: profil6;
+}
+
+.photo{
+    grid-area: photo;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border-radius: 100%;
+    background-color:  rgba(80, 81, 79, 1);
+    border: 3px solid #46C36C;
+    box-sizing: border-box;
+    top: -90px;
+    align-self: center;
+    justify-self: center;
+}
+
+.role{
+    grid-area: role;
+    background-color: #46C36C;
+    font-size: 25px;
+    width: 80%;
+    justify-self: center;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.nom{
+    position: relative;
+    top: -60px;
+    grid-area: nom ;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.txtprofil{
+    position: relative;
+    top: -50px;
+    grid-area: txtprofil;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.photo1{
+    background-image: url(photoamin.jpg);
+    background-position-x: center;
+    background-position-y: -10px;
+    background-size: 13em;
+    background-repeat: no-repeat;
+}
+
+.photo2{
+    background-image: url(photodorian.png);
+    background-position-x: center;
+    background-position-y: -10px;
+    background-size: 13em;
+    background-repeat: no-repeat;
+}
+
+.photo3{
+    background-image: url(photojulie.jpg);
+    background-position-x: center;
+    background-position-y: -10px;
+    background-size: 13em;
+    background-repeat: no-repeat;
+}
+
+.photo4{
+    background-image: url(photogabriel.png);
+    background-position-x: center;
+    background-size: 13em;
+    background-repeat: no-repeat;
+}
+
+.photo5{
+    background-image: url(photothomas.jpg);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 13em;
+    background-repeat: no-repeat;
+}
+
+.photo6{
+    background-image: url(photoamira.jpg);
+    background-position-x: center;
+    background-position-y: -10px;
+    background-size: 13em;
+    background-repeat: no-repeat;
+}
+
+
+
+
 /* FOOTER */
 
 footer{
@@ -196,9 +378,9 @@ footer{
     color: #E5E5E5; 
 }
 
-.footer {  
+.footer_nav {  
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     ". . . "
@@ -208,8 +390,12 @@ footer{
     height: 15vh;
     width: 100%;
     
-    background: rgba(80, 81, 79, 1);
-    grid-area: footer; }
+    background-color: rgba(80, 81, 79, 1);
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+
+}    
 
 .copyright {
     grid-area: copyright;
