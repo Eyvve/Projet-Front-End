@@ -251,7 +251,7 @@ button{
     background-color: rgba(38, 44, 44, 0.96);
     border: 3px solid #46C36C;
     border-radius: 15px;
-    width: 50%;
+    width: 950px;
     height: 750px;
     display: grid;
     grid-template-rows: 0.5fr 3fr 2fr 2fr 0.5fr;
@@ -337,7 +337,7 @@ button{
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto 60% auto;
+    grid-template-columns: auto 1200px auto;
     grid-template-rows: 70px 600px 20px 1000px 50px 20px 800px 100px;
     width : 100%;
     height:auto;
@@ -409,13 +409,10 @@ button{
 .titre2 {
     text-transform: uppercase;
     grid-area: titre2;
-    grid-column-start: 2;
-    grid-column-end: 2;
     
     font-style: normal;
     font-weight: bold;
     font-size: 25px;
-    /* line-height: 25px; */
     text-align: center;
     color: white;
 }
