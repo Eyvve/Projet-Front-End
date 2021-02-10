@@ -2,33 +2,51 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Paccueil.css">
+    <link rel="stylesheet" href="./Paccueil.css">
     <title>Document</title>
 </head>
 <body >
 
   <header>
     <nav class="header_nav">
-      <a class="profil_nav headerfont" href="">profil</a>
+      <div class="profil_nav headerfont" id="button_profil">profil</div>
       <a class="jeux headerfont" href="">jeux</a>
       <img class="logo" src="logo_site.png" alt=""><img>
       <a class="a_propos_de headerfont" href="">à propos</a>
       <a class="aide headerfont" href="">aide</a>
       <div class="score">
         <img class="coins" src="Hetic_coins.png" alt="hetic coins"></img>
-        <div class="score_gold headerfont">1000</div>
+        <div class="score_gold headerfont"></div>
       </div>
     </nav>
   </header>
 
   <main>
-
-    <div class="profilpopup popup" id="profilpopup">
-      <div class="imageprofil popup" id="imageprofil"></div>
-      <div class="nomprofil popup" id="nomprofil">Damien Boulay</div>
-      <div class="coinsprofil popup" id="coinsprofil">
-        <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
-        <div class="montantprofil popup" id="montantprofil">100</div>
+    <div id="connect_page_flex">
+      <div id="connect_page">
+          <div id="photo_profil">
+              <span class="connect_titre">Choisissez votre photo de profil</span>
+              <img id="img_profil1" src="./images/photo_profil_1.png" alt="img_profil_1">
+              <img id="img_profil2" src="./images/photo_profil_2.png" alt="img_profil_2">
+              <img id="img_profil3" src="./images/photo_profil_3.png" alt="img_profil_3">
+          </div>
+          <div id="pseudo_player">
+              <span class="connect_titre">Choisissez votre pseudo</span>
+              <input type="text" name="pseudo_player" maxlength="15" id="pseudo_player_texte">
+          </div>
+          <button id="inscrire">S'inscrire</button>
+      </div>
+    </div>
+    <div id="profil_flex">
+      <div class="profilpopup popup" id="profilpopup">
+        <div class="imageprofil popup" id="imageprofil"></div>
+        <div class="nomprofil popup" id="nomprofil">
+          <span id="nomProfil"></span>
+        </div>
+        <div class="coinsprofil popup" id="coinsprofil">
+          <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
+          <div class="montantprofil popup score_gold" id="gold"></div>
+        </div>
       </div>
     </div>
 
