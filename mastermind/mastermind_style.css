@@ -270,6 +270,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, .4);
+    z-index: 1000;
 }
 .win {
     align-content: center;
@@ -320,6 +321,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, .4);
+    z-index: 1000;
 }
 .defete {
     align-content: center;
