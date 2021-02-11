@@ -13,7 +13,6 @@ gold_nav.innerHTML = 100;
 gold_profil.innerHTML = 100;
 save_or_not = localStorage.getItem("save_or_not_save");
 
-
 var gold_score_deffine = 0;
 gold_score_deffine = localStorage.getItem("gold_scpre_deffine_save");
 
@@ -73,3 +72,43 @@ function test_profil_fonction(){
         imgProfil.appendChild(newIMG);
     };
 };
+
+var jeux1 = document.getElementById("jeu1");
+var jeux1_button = document.getElementById("jeu1_jouer");
+
+jeux1.addEventListener("mouseover", function() {
+    jeux1_button.style.display = 'flex';
+});
+jeux1.addEventListener("mouseout", function() {
+    jeux1_button.style.display = 'none';
+});
+
+var jeux2 = document.getElementById("jeu2");
+var jeux2_button = document.getElementById("jeu2_jouer");
+
+jeux2.addEventListener("mouseover", function() {
+    jeux2_button.style.display = 'flex';
+});
+jeux2.addEventListener("mouseout", function() {
+    jeux2_button.style.display = 'none';
+});
+
+var jeux3 = document.getElementById("jeu3");
+var jeux3_button = document.getElementById("jeu3_jouer");
+
+jeux3.addEventListener("mouseover", function() {
+    jeux3_button.style.display = 'flex';
+});
+jeux3.addEventListener("mouseout", function() {
+    jeux3_button.style.display = 'none';
+});
+
+var jeux4 = document.getElementById("jeu4");
+var jeux4_button = document.getElementById("jeu4_jouer");
+
+jeux4.addEventListener("mouseover", function() {
+    jeux4_button.style.display = 'flex';
+});
+jeux4.addEventListener("mouseout", function() {
+    jeux4_button.style.display = 'none';
+});

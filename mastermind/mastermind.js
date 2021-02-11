@@ -144,21 +144,21 @@ function ia_verif() {
 
     for(let i = 0; i <= verif[0]-1; i++){
         let newIMG = document.createElement('img');
-        newIMG.setAttribute('src', './images/noir.png');
+        newIMG.setAttribute('src', '../Images/noir.png');
         newIMG.setAttribute('alt', 'colors_noir');
         newIMG.setAttribute('id', 'noir');
         print_choix_vrai_faux.appendChild(newIMG);
     };
     for(let i = 0; i <= verif[1]-1; i++){
         let newIMG = document.createElement('img');
-        newIMG.setAttribute('src', './images/blanc.png');
+        newIMG.setAttribute('src', '../Images/blanc.png');
         newIMG.setAttribute('alt', 'colors_blanc');
         newIMG.setAttribute('id', 'blanc');
         print_choix_vrai_faux.appendChild(newIMG);
     };
     for(let i = 0; i <= verif[2]-1; i++){
         let newIMG = document.createElement('img');
-        newIMG.setAttribute('src', './images/vide.png');
+        newIMG.setAttribute('src', '../Images/vide.png');
         newIMG.setAttribute('alt', 'colors_vide');
         newIMG.setAttribute('id', 'vide');
         print_choix_vrai_faux.appendChild(newIMG);
@@ -193,7 +193,7 @@ function win_mastermind(){
 };
 function print_choix_color_fonc(color, id) {
     let newIMG = document.createElement('img');
-    newIMG.setAttribute('src', './images/' + color + '.png');
+    newIMG.setAttribute('src', '../Images/' + color + '.png');
     newIMG.setAttribute('alt', 'colors_' + color);
     newIMG.setAttribute('id', color);
     print_choix_color.appendChild(newIMG);
