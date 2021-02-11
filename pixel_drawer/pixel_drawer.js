@@ -245,14 +245,12 @@ var slidegauche = document.querySelector("#FG")
 
 slidedroit.addEventListener("click", () => {
     console.log("slide droit")
-    if (slider >= 0 && slider <= 4){
+    if (slider >= 0 && slider <= 1){
         slider += 1
         console.log("slide n°" + slider)
         if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
-        if (slider == 1){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
-        if (slider == 2){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
-        if (slider == 3){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
-        if (slider == 4){ slidingmodel.src = "pixelImages/Link.png"; stuckright = true}
+        if (slider == 1){ slidingmodel.src = "pixelImages/Megaman.png"; stuckright = false; stuckleft = false}
+        if (slider == 2){ slidingmodel.src = "pixelImages/Pokeball.png"; stuckright = true;}
     }
 })
 
@@ -262,10 +260,8 @@ slidegauche.addEventListener("click", () => {
         slider -= 1
         console.log("slide n°" + slider)
         if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
-        if (slider == 1){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
-        if (slider == 2){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
-        if (slider == 3){ slidingmodel.src = "pixelImages/Link.png"; stuckright = false; stuckleft = false}
-        if (slider == 4){ slidingmodel.src = "pixelImages/Link.png"; stuckright = true}
+        if (slider == 1){ slidingmodel.src = "pixelImages/Megaman.png"; stuckright = false; stuckleft = false}
+        if (slider == 2){ slidingmodel.src = "pixelImages/Pokeball.png"; stuckright = true;}
     }
 })
 
@@ -296,3 +292,9 @@ function boutonDout(){
     // console.log("check")
     FD.setAttribute("src", "pixelImages/flecheDB.png")
 }
+
+slidingmodel.addEventListener("click", () => {
+    if(slider == 0){}
+    if(slider == 1){}
+    if(slider == 2){}
+})

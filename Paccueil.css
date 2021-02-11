@@ -342,7 +342,7 @@ button{
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto 1200px auto;
+    grid-template-columns: auto 1300px auto;
     grid-template-rows: 70px 600px 20px 1000px 50px 20px 800px 100px;
     width : 100%;
     height:auto;
@@ -380,6 +380,7 @@ button{
     border : 3px solid#46C36C;
     border-radius: 10px;
     height: 100%;
+    background-image: url(./Images/pub_princedemon.png);
     
     
 }
@@ -443,15 +444,15 @@ button{
 }
 
 .jeu1 { 
-     grid-area: jeu1;
-     height: 100%;
-     width: 100%;
-     border : 3px solid#46C36C;
-     border-radius: 10px;
-    
-    background-color:  rgba(80, 81, 79, 1);;
-    
-    
+    grid-area: jeu1;
+    height: 100%;
+    width: 100%;
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    background-color:  rgba(80, 81, 79, 1);
+    background-image: url(./Images/miniature_clicker.png);
+    background-position: center;
+    background-size: 110%;
 }
     
 .jeu2 { 
@@ -461,7 +462,10 @@ button{
      width: 100%;
      border : 3px solid#46C36C;
      border-radius: 10px;
-    background-color:  rgba(80, 81, 79, 1);;
+    background-color:  rgba(80, 81, 79, 1);
+    background-image: url(./Images/miniature_pixel.png);
+    background-size: 110%;
+    background-position: center;
    
     
 }
@@ -481,6 +485,9 @@ button{
     border : 3px solid#46C36C;
     border-radius: 10px;
     background-color:  rgba(80, 81, 79, 1);
+    background-image: url(./Images/miniature_puissance4.png);
+    background-size: 110%;
+    background-position: center;
 
 }
 .jeu5 { grid-area: jeu5;
@@ -489,7 +496,9 @@ button{
     border : 3px solid#46C36C;
     border-radius: 10px;
     background-color:  rgba(80, 81, 79, 1);
-
+    background-image: url(./Images/pub_hectcor.png);
+    background-size: 100%;
+    background-position: center;
 }
 
 .foire_aux_jeux { 

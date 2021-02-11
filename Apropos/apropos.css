@@ -348,7 +348,7 @@ a{
 }
 
 .photo1{
-    background-image: url(photoamin.jpg);
+    background-image: url(../Images/photoamin.jpg);
     background-position-x: center;
     background-position-y: -10px;
     background-size: 13em;
@@ -356,7 +356,7 @@ a{
 }
 
 .photo2{
-    background-image: url(photodorian.png);
+    background-image: url(../Images/photodorian.png);
     background-position-x: center;
     background-position-y: -10px;
     background-size: 13em;
@@ -364,7 +364,7 @@ a{
 }
 
 .photo3{
-    background-image: url(photojulie.jpg);
+    background-image: url(../Images/photojulie.jpg);
     background-position-x: center;
     background-position-y: -10px;
     background-size: 13em;
@@ -372,14 +372,14 @@ a{
 }
 
 .photo4{
-    background-image: url(photogabriel.png);
+    background-image: url(../Images/photogabriel.png);
     background-position-x: center;
     background-size: 13em;
     background-repeat: no-repeat;
 }
 
 .photo5{
-    background-image: url(photothomas.jpg);
+    background-image: url(../Images/photothomas.jpg);
     background-position-x: center;
     background-position-y: center;
     background-size: 13em;
@@ -387,7 +387,7 @@ a{
 }
 
 .photo6{
-    background-image: url(photoamira.jpg);
+    background-image: url(../Images/photoamira.jpg);
     background-position-x: center;
     background-position-y: -10px;
     background-size: 13em;
