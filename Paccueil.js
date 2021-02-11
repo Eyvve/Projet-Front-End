@@ -127,25 +127,197 @@ var slidingmodel = document.querySelector("#slidingmodel")
 var slidedroit = document.querySelector("#FD")
 var slidegauche = document.querySelector("#FG")
 
+var photo1 = document.querySelector("#photo1")
+var photo2 = document.querySelector("#photo2")
+var photo3 = document.querySelector("#photo3")
+
+var nom1 = document.querySelector("#nom1")
+var nom2 = document.querySelector("#nom2")
+var nom3 = document.querySelector("#nom3")
+
+var txtprofil1 = document.querySelector("#txtprofil1")
+var txtprofil2 = document.querySelector("#txtprofil2")
+var txtprofil3 = document.querySelector("#txtprofil3")
+
+var role1 = document.querySelector("#role1")
+var role2 = document.querySelector("#role2")
+var role3 = document.querySelector("#role3")
+
 slidedroit.addEventListener("click", () => {
     console.log("slide droit")
-    if (slider >= 0 && slider <= 1){
+    if (slider >= 0 && slider <= 2){
         slider += 1
         console.log("slide n°" + slider)
-        if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
-        if (slider == 1){ slidingmodel.src = "pixelImages/Megaman.png"; stuckright = false; stuckleft = false}
-        if (slider == 2){ slidingmodel.src = "pixelImages/Pokeball.png"; stuckright = true;}
+        if (slider == 0){ 
+            photo1.style.backgroundImage = "url(./Images/photoamin.jpg)"; 
+            photo2.style.backgroundImage = "url(./Images/photodorian.png)";
+            photo3.style.backgroundImage = "url(./Images/photojulie.jpg)";
+
+            nom1.innerHTML = "Amin Bentani";
+            nom2.innerHTML = "Dorian Canonne";
+            nom3.innerHTML = "Julie Cesana";
+            
+            txtprofil1.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li><li>Meilleur tryharder 2021</li>";
+            txtprofil2.innerHTML = "<li>Direction de projet</li><li>Jeu : Puissance 4</li><li>Jeu : Pixel Drawer</li><li>Supervision, intégration & correction HTML/CSS</li>"
+            txtprofil3.innerHTML.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+
+            role1.innerHTML = "DESIGN / HTML / CSS"
+            role2.innerHTML = "JEUX / HTML / <br>CSS"
+            role3.innerHTML = "DESIGN / JAVASCRIPT"
+
+            stuckleft = true
+        }
+
+        if (slider == 1){ 
+            photo1.style.backgroundImage = "url(./Images/photodorian.png)"
+            photo2.style.backgroundImage = "url(./Images/photojulie.jpg)"
+            photo3.style.backgroundImage = "url(./Images/photogabriel.png)"
+
+            nom1.innerHTML = "Dorian Canonne"; 
+            nom2.innerHTML = "Julie Cesana";
+            nom3.innerHTML = "Gabriel Goldbronn";
+
+            txtprofil1.innerHTML = "<li>Direction de projet</li><li>Jeu : Puissance 4</li><li>Jeu : Pixel Drawer</li><li>Supervision, intégration & correction HTML/CSS</li>"
+            txtprofil2.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+            txtprofil3.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+
+            role1.innerHTML = "JEUX / HTML / <br>CSS"
+            role2.innerHTML = "DESIGN / JAVASCRIPT"
+            role3.innerHTML = "JEUX / JAVASCRIPT"
+
+            stuckright = false; 
+            stuckleft = false
+        }
+
+        if (slider == 2){ 
+            photo1.style.backgroundImage = "url(./Images/photojulie.jpg)"
+            photo2.style.backgroundImage = "url(./Images/photogabriel.png)"
+            photo3.style.backgroundImage = "url(./Images/photothomas.jpg)"
+
+            nom1.innerHTML = "Julie Cesana"; 
+            nom2.innerHTML = "Gabriel Goldbronn";
+            nom3.innerHTML = "Thomas Latour";
+
+            txtprofil1.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+            txtprofil2.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil3.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+
+            role1.innerHTML = "DESIGN / JAVASCRIPT"
+            role2.innerHTML = "JEUX / JAVASCRIPT"
+            role3.innerHTML = "DESIGN / JAVASCRIPT"
+
+            stuckright = false; 
+            stuckleft = false;
+        }
+
+        if (slider == 3){ 
+            photo1.style.backgroundImage = "url(./Images/photogabriel.png)"
+            photo2.style.backgroundImage = "url(./Images/photothomas.jpg)"
+            photo3.style.backgroundImage = "url(./Images/photoamira.jpg)"
+
+            nom1.innerHTML = "Gabriel Goldbronn";
+            nom2.innerHTML = "Thomas Latour";
+            nom3.innerHTML = "Amira Rechid";
+
+            txtprofil1.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil2.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+            txtprofil3.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li>"
+
+            role1.innerHTML = "JEUX / JAVASCRIPT"
+            role2.innerHTML = "DESIGN / JAVASCRIPT"
+            role3.innerHTML = "DESIGN / HTML / CSS"
+
+            stuckright = true
+        }
     }
 })
 
 slidegauche.addEventListener("click", () => {
     console.log("slide gauche")
-    if (slider >= 1 && slider <= 4){
+    if (slider >= 1 && slider <= 3){
         slider -= 1
         console.log("slide n°" + slider)
-        if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
-        if (slider == 1){ slidingmodel.src = "pixelImages/Megaman.png"; stuckright = false; stuckleft = false}
-        if (slider == 2){ slidingmodel.src = "pixelImages/Pokeball.png"; stuckright = true;}
+        if (slider == 0){ 
+            photo1.style.backgroundImage = "url(./Images/photoamin.jpg)"; 
+            photo2.style.backgroundImage = "url(./Images/photodorian.png)";
+            photo3.style.backgroundImage = "url(./Images/photojulie.jpg)";
+
+            nom1.innerHTML = "Amin Bentani";
+            nom2.innerHTML = "Dorian Canonne";
+            nom3.innerHTML = "Julie Cesana";
+            
+            txtprofil1.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li><li>Meilleur tryharder 2021</li>";
+            txtprofil2.innerHTML = "<li>Direction de projet</li><li>Jeu : Puissance 4</li><li>Jeu : Pixel Drawer</li><li>Supervision, intégration & correction HTML/CSS</li>"
+            txtprofil3.innerHTML.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+
+            role1.innerHTML = "DESIGN / HTML / CSS"
+            role2.innerHTML = "JEUX / HTML / <br>CSS"
+            role3.innerHTML = "DESIGN / JAVASCRIPT"
+
+            stuckleft = true
+        }
+
+        if (slider == 1){ 
+            photo1.style.backgroundImage = "url(./Images/photodorian.png)"
+            photo2.style.backgroundImage = "url(./Images/photojulie.jpg)"
+            photo3.style.backgroundImage = "url(./Images/photogabriel.png)"
+
+            nom1.innerHTML = "Dorian Canonne"; 
+            nom2.innerHTML = "Julie Cesana";
+            nom3.innerHTML = "Gabriel Goldbronn";
+
+            txtprofil1.innerHTML = "<li>Direction de projet</li><li>Jeu : Puissance 4</li><li>Jeu : Pixel Drawer</li><li>Supervision, intégration & correction HTML/CSS</li>"
+            txtprofil2.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+            txtprofil3.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+
+            role1.innerHTML = "JEUX / HTML / <br>CSS"
+            role2.innerHTML = "DESIGN / JAVASCRIPT"
+            role3.innerHTML = "JEUX / <br>JAVASCRIPT"
+
+            stuckright = false; 
+            stuckleft = false
+        }
+
+        if (slider == 2){ 
+            photo1.style.backgroundImage = "url(./Images/photojulie.jpg)"
+            photo2.style.backgroundImage = "url(./Images/photogabriel.png)"
+            photo3.style.backgroundImage = "url(./Images/photothomas.jpg)"
+
+            nom1.innerHTML = "Julie Cesana"; 
+            nom2.innerHTML = "Gabriel Goldbronn";
+            nom3.innerHTML = "Thomas Latour";
+
+            txtprofil1.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+            txtprofil2.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil3.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+
+            role1.innerHTML = "DESIGN / JAVASCRIPT"
+            role2.innerHTML = "JEUX / <br>JAVASCRIPT"
+            role3.innerHTML = "DESIGN / JAVASCRIPT"
+
+            stuckright = false; 
+            stuckleft = false;
+        }
+
+        if (slider == 3){ 
+            photo1.style.backgroundImage = "url(./Images/photogabriel.png)"
+            photo2.style.backgroundImage = "url(./Images/photothomas.jpg)"
+            photo3.style.backgroundImage = "url(./Images/photoamira.jpg)"
+
+            nom1.innerHTML = "Gabriel Goldbronn";
+            nom2.innerHTML = "Thomas Latour";
+            nom3.innerHTML = "Amira Rechid";
+
+            txtprofil1.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil2.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+            txtprofil3.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li>"
+
+            role1.innerHTML = "JEUX / <br>JAVASCRIPT"
+            role2.innerHTML = "DESIGN / JAVASCRIPT"
+            role3.innerHTML = "DESIGN / HTML / CSS"
+
+            stuckright = true
+        }
     }
 })
 
