@@ -179,7 +179,7 @@ slidedroit.addEventListener("click", () => {
 
             txtprofil1.innerHTML = "<li>Direction de projet</li><li>Jeu : Puissance 4</li><li>Jeu : Pixel Drawer</li><li>Supervision, intégration & correction HTML/CSS</li>"
             txtprofil2.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
-            txtprofil3.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil3.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li>"
 
             role1.innerHTML = "JEUX / HTML / <br>CSS"
             role2.innerHTML = "DESIGN / JAVASCRIPT"
@@ -199,11 +199,11 @@ slidedroit.addEventListener("click", () => {
             nom3.innerHTML = "Thomas Latour";
 
             txtprofil1.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
-            txtprofil2.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil2.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li>"
             txtprofil3.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
 
             role1.innerHTML = "DESIGN / JAVASCRIPT"
-            role2.innerHTML = "JEUX / JAVASCRIPT"
+            role2.innerHTML = "JEUX / <br> JAVASCRIPT"
             role3.innerHTML = "DESIGN / JAVASCRIPT"
 
             stuckright = false; 
@@ -219,7 +219,7 @@ slidedroit.addEventListener("click", () => {
             nom2.innerHTML = "Thomas Latour";
             nom3.innerHTML = "Amira Rechid";
 
-            txtprofil1.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil1.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li>"
             txtprofil2.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
             txtprofil3.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li>"
 
@@ -268,11 +268,11 @@ slidegauche.addEventListener("click", () => {
 
             txtprofil1.innerHTML = "<li>Direction de projet</li><li>Jeu : Puissance 4</li><li>Jeu : Pixel Drawer</li><li>Supervision, intégration & correction HTML/CSS</li>"
             txtprofil2.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
-            txtprofil3.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil3.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li>"
 
             role1.innerHTML = "JEUX / HTML / <br>CSS"
             role2.innerHTML = "DESIGN / JAVASCRIPT"
-            role3.innerHTML = "JEUX / <br>JAVASCRIPT"
+            role3.innerHTML = "JEUX / JAVASCRIPT"
 
             stuckright = false; 
             stuckleft = false
@@ -288,11 +288,11 @@ slidegauche.addEventListener("click", () => {
             nom3.innerHTML = "Thomas Latour";
 
             txtprofil1.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
-            txtprofil2.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil2.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li>"
             txtprofil3.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
 
             role1.innerHTML = "DESIGN / JAVASCRIPT"
-            role2.innerHTML = "JEUX / <br>JAVASCRIPT"
+            role2.innerHTML = "JEUX / <br> JAVASCRIPT"
             role3.innerHTML = "DESIGN / JAVASCRIPT"
 
             stuckright = false; 
@@ -308,11 +308,11 @@ slidegauche.addEventListener("click", () => {
             nom2.innerHTML = "Thomas Latour";
             nom3.innerHTML = "Amira Rechid";
 
-            txtprofil1.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li><li>Prof improvisé</li>"
+            txtprofil1.innerHTML = "<li>Jeu : Clicker</li><li>Jeu : Mastermind</li><li>Supervision & intégration JavaScript</li><li>Graphisme</li>"
             txtprofil2.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
             txtprofil3.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li>"
 
-            role1.innerHTML = "JEUX / <br>JAVASCRIPT"
+            role1.innerHTML = "JEUX / JAVASCRIPT"
             role2.innerHTML = "DESIGN / JAVASCRIPT"
             role3.innerHTML = "DESIGN / HTML / CSS"
 
