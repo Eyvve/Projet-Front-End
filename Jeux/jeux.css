@@ -271,10 +271,10 @@ a{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "jeux"
-    "jeux"
-    "jeux"
-    "jeux";
+    "jeux1"
+    "jeux2"
+    "jeux3"
+    "jeux4";
   }
   
 .jeux {
@@ -294,10 +294,10 @@ a{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "rules_jeux"
-    "rules_jeux"
-    "rules_jeux"
-    "rules_jeux";
+    "rules_jeux1"
+    "rules_jeux2"
+    "rules_jeux3"
+    "rules_jeux4";
   
   }
 
@@ -311,41 +311,33 @@ a{
   }
 
 .jeux1 { 
-    grid-area: games;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    background-image: url(../Images/miniature_clicker.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .jeux2 { 
-    grid-area: games;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    background-image: url(../Images/miniature_pixel.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .jeux3 { 
-    grid-area: games;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;  
+    background-image: url(../Images/miniature_mastermind.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
   
 .jeux4 { 
-    grid-area: games;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    background-image: url(../Images/miniature_puissance4.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 
 .rules_jeux { 
     display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
-    grid-template-rows: 6px 50px 0.5fr 3fr 0.5fr 1fr;
+    grid-template-columns: 0.5fr 7fr 0.5fr;
+    grid-template-rows: 6px 50px 0.4fr 3fr 3fr 0.1fr;
     grid-template-areas: 
     ". . ."
     ". markr ."
@@ -357,6 +349,7 @@ a{
   }
   
 .markr{ 
+    display: block;
     grid-area: markr;
     background-color:  #46C36C;
     border: 5px solid  #46C36C;
@@ -368,12 +361,15 @@ a{
     font-size: 23px;
     text-align: center;
     color: white;  
+    width: 40%;
+    justify-self: center;
    }
 
 .txt{
   grid-area: txt;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 19px;
+  /* align-self: center; */
   /* border: 1px solid white; */
   font-style: normal;
   color: white;
