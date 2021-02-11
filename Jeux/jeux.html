@@ -2,38 +2,99 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../favicon.png">
     <link rel="stylesheet" href="jeux.css">
-    <title>Document</title>
+    <title>H.MiniGames</title>
 </head>
 <body >
 
   <header>
+    <div id="profil_flex">
+      <div class="profilpopup popup" id="profilpopup">
+        <div class="imageprofil popup" id="imageprofil"></div>
+        <div class="nomprofil popup" id="nomprofil">
+          <span id="nomProfil"></span>
+        </div>
+        <div class="coinsprofil popup" id="coinsprofil">
+          <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
+          <div class="montantprofil popup score_gold" id="gold_profil"></div>
+        </div>
+      </div>
+    </div>
     <nav class="header_nav">
-      <a class="profil_nav headerfont" href="">profil</a>
-      <a class="jeux headerfont" href="">jeux</a>
+      <div class="profil_nav headerfont" id="button_profil">profil</div>
+      <a class="jeuxh headerfont" href="">jeux</a>
       <img class="logo" src="logo_site.png" alt=""><img>
       <a class="a_propos_de headerfont" href="">à propos</a>
       <a class="aide headerfont" href="">aide</a>
       <div class="score">
         <img class="coins" src="Hetic_coins.png" alt="hetic coins"></img>
-        <div class="score_gold headerfont">1000</div>
+        <div class="score_gold headerfont" id="gold_nav"></div>
       </div>
     </nav>
-  </header>
+</header>
 
   <main>
+    
+    <section class="grid-container">
 
-    <div class="profilpopup popup" id="profilpopup">
-      <div class="imageprofil popup" id="imageprofil"></div>
-      <div class="nomprofil popup" id="nomprofil">Damien Boulay</div>
-      <div class="coinsprofil popup" id="coinsprofil">
-        <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
-        <div class="montantprofil popup" id="montantprofil">100</div>
+      
+      
+     
+      <span class="titre" id="titre1">nos jeux</span>
+      <div class="nos_jeux">
+          
+        <div class="games">
+          <div class="jeux jeux1" id="jeu1"></div>
+          <div class="jeux jeux2" id="jeu2"></div>
+          <div class="jeux jeux3" id="jeu3"></div>
+          <div class="jeux jeux4" id="jeu4"></div>
+        </div>
+        <div class="rules_games">
+          <div class="rules_jeux rules_jeux1" id="rules_jeux1">
+            <div class="markr">
+              <div class="soustitres soustitres1" id="soustitres1"></div>
+              <p class="rulesjeuxtxt1">régles du jeu</p>
+            </div>
+            <div class="txt txta" id="txta">
+            </div>
+            
+          </div>
+          <div class="rules_jeux rules_jeux2" id="rules_jeux2">
+            <div class="markr">
+              <div class="soustitres soustitres2" id="soustitres2">
+
+                <p class="rulesjeuxtxt2">regles du jeu</p>
+              </div>
+            </div>
+            <div class="txt txtb" id="txtb">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore quidem quo excepturi repellendus assumenda labore nulla natus, perferendis, temporibus ex iusto modi quia ducimus quasi libero necessitatibus quibusdam non dolores.
+            </div>
+            
+          </div>
+          <div class="rules_jeux rules_jeux3" id="rules_jeux3">
+            <div class="markr">
+              <div class="soustitres soustitres3" id="soustitres3">
+
+                <p class="rulesjeuxtxt3">regles du jeu</p>
+              </div>
+            </div>
+            <div class="txt txtc" id="txtc">
+            </div>
+            
+          </div>
+          <div class="rules_jeux rules_jeux4" id="rules_jeux4">
+            <div class="markr"><p>régles du jeu</p></div>
+              <div class="txt txt4" id="txt4">
+              </div>
+              <p class="rulesjeuxtxt"></p>
+            </div>
+          </div>
+          
+        </div>
       </div>
-    </div>
-
-    
-    
+      </div>
+      </section>
   </main>
   <footer>
     <div class="footer">

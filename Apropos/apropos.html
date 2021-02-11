@@ -2,36 +2,39 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../favicon.png">
     <link rel="stylesheet" href="apropos.css">
-    <title>Document</title>
+    <title>H.MiniGames</title>
 </head>
 <body>
 
   <header>
+    <div id="profil_flex">
+      <div class="profilpopup popup" id="profilpopup">
+        <div class="imageprofil popup" id="imageprofil"></div>
+        <div class="nomprofil popup" id="nomprofil">
+          <span id="nomProfil"></span>
+        </div>
+        <div class="coinsprofil popup" id="coinsprofil">
+          <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
+          <div class="montantprofil popup score_gold" id="gold_profil"></div>
+        </div>
+      </div>
+    </div>
     <nav class="header_nav">
-      <a class="profil_nav headerfont" href="">profil</a>
+      <div class="profil_nav headerfont" id="button_profil">profil</div>
       <a class="jeux headerfont" href="">jeux</a>
       <img class="logo" src="logo_site.png" alt=""><img>
       <a class="a_propos_de headerfont" href="">à propos</a>
       <a class="aide headerfont" href="">aide</a>
       <div class="score">
         <img class="coins" src="Hetic_coins.png" alt="hetic coins"></img>
-        <div class="score_gold headerfont">1000</div>
+        <div class="score_gold headerfont" id="gold_nav"></div>
       </div>
     </nav>
-  </header>
+</header>
 
-  <main>
-
-    <div class="profilpopup popup" id="profilpopup">
-      <div class="imageprofil popup" id="imageprofil"></div>
-      <div class="nomprofil popup" id="nomprofil">Damien Boulay</div>
-      <div class="coinsprofil popup" id="coinsprofil">
-        <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
-        <div class="montantprofil popup" id="montantprofil">100</div>
-      </div>
-    </div>
-
+<main>
     <section class="equipesection">
 
     

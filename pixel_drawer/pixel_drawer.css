@@ -20,22 +20,23 @@ a{
 .headerfont{
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 16px;    
     text-transform: uppercase;
     color: white;
 }
 
 .header_nav{ 
     z-index: 500;
-    /* position: fixed; */
+    position: absolute;
     background: rgba(80, 81, 79, 1);
     display: grid;
     border-bottom: 5px solid #333;
     top: 0%;
+    right: 0px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: ". profil jeux logo a_propos aide coins";
-    width : 100%;
+    width : 100vw;
     height: 80px;
 } 
 
@@ -103,9 +104,17 @@ a{
 
 /* MAIN */
 
-.popup.profilpopup{
+#profil_flex{
+    position: fixed;
     display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1000000;
 }
+
 
 .profilpopup{
     z-index: 150;
@@ -130,20 +139,35 @@ a{
 }
 
 .imageprofil{
+    display: flex;
+    align-content: center;
+    justify-content: center;
     grid-area: imageprofil;
-    border: 3px solid #46C36C;
     border-radius: 100%;
     width: 220px;
     height: 220px;
     justify-self: center;
     align-self: center;
-    background-color: rgba(80, 81, 79, 1);
 }
-
-.nomprofil{
-    grid-area: nomprofil;
+.imageprofil img{
+    width: 220px;
+    border: 3px solid #46C36C;
+    border-radius: 100%;
+    
+}
+#nomProfil {
     justify-self: center;
     align-self: center;
+
+}
+.nomprofil{
+    grid-area: nomprofil;
+    
+    padding-bottom: 10px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
     background-color: rgba(80, 81, 79, 1);
     width: 60%;
     height: 80%;
@@ -190,7 +214,7 @@ a{
     width: 100%;
     height: 98vh;
     grid-template-columns: auto 1700px auto;
-    grid-template-rows: 2% 850px 5%;
+    grid-template-rows: 9% 850px 5%;
     grid-template-areas: " . . . "" . jeu . "" . . . ";
 }
 
@@ -224,7 +248,7 @@ a{
 }
 
 .boutons{
-    /* background-color: grey; */
+    background-color: #262c2c;
     /* min-width: 400px; */
     grid-area: boutons;
     display: grid;
@@ -244,7 +268,6 @@ a{
     margin-bottom: 30%;
     border: 4px solid #46C36C;
     border-radius: 15px;
-    /* background-color: #50514f; */
     height: 85%;
 }
 
@@ -256,7 +279,7 @@ a{
     margin-bottom: 30%;
     border: 4px solid #46C36C;
     border-radius: 15px;
-    /* background-color: #40413f; */
+    background-color: #262c2c;
     height: 85%;
 
     display: grid;
@@ -487,7 +510,7 @@ a{
 }
 
 .informations{
-    /* background-color: #50514f; */
+    background-color: #262c2c;
     grid-area: infos;
     justify-self: center;
     width: 85%;

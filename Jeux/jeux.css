@@ -1,5 +1,12 @@
+html{
+    background-color: #262c2c;
+}
+
 body{
-    background-color: #262c2c;;
+    
+    background-image: url(../BG2.png);
+    background-repeat:repeat-y;
+    background-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -19,7 +26,7 @@ a{
 .headerfont{
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 16px;    
     text-transform: uppercase;
     color: white;
 }
@@ -31,10 +38,11 @@ a{
     display: grid;
     border-bottom: 5px solid #333;
     top: 0%;
+    right: 0px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: ". profil jeux logo a_propos aide coins";
-    width : 100%;
+    width : 100vw;
     height: 80px;
 } 
 
@@ -44,7 +52,7 @@ a{
     align-self: center;
     justify-self: center;
 }
-.jeux {
+.jeuxh {
     display: block;
     grid-area: jeux;
     align-self: center;
@@ -100,11 +108,22 @@ a{
 }
 
 
+
+
+
 /* MAIN */
 
-.popup.profilpopup{
+#profil_flex{
+    position: fixed;
     display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1000000;
 }
+
 
 .profilpopup{
     z-index: 150;
@@ -115,7 +134,7 @@ a{
     background-color: rgba(38, 44, 44, 0.96);
     border: 3px solid #46C36C;
     border-radius: 15px;
-    width: 50%;
+    width: 950px;
     height: 750px;
     display: grid;
     grid-template-rows: 0.5fr 3fr 2fr 2fr 0.5fr;
@@ -129,20 +148,35 @@ a{
 }
 
 .imageprofil{
+    display: flex;
+    align-content: center;
+    justify-content: center;
     grid-area: imageprofil;
-    border: 3px solid #46C36C;
     border-radius: 100%;
     width: 220px;
     height: 220px;
     justify-self: center;
     align-self: center;
-    background-color: rgba(80, 81, 79, 1);
 }
-
-.nomprofil{
-    grid-area: nomprofil;
+.imageprofil img{
+    width: 220px;
+    border: 3px solid #46C36C;
+    border-radius: 100%;
+    
+}
+#nomProfil {
     justify-self: center;
     align-self: center;
+
+}
+.nomprofil{
+    grid-area: nomprofil;
+    
+    padding-bottom: 10px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
     background-color: rgba(80, 81, 79, 1);
     width: 60%;
     height: 80%;
@@ -184,6 +218,164 @@ a{
 
 /* GRID MAIN */
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 1100px auto;
+    grid-template-rows: 70px  20px 1300px  20px ;
+    width : 100%;
+    height:auto;
+    gap: 45px 0px;
+    grid-template-areas:
+        ". . ."
+        ". titre ."
+        ". nos_jeux ."
+        ". . ."
+}
+
+
+
+.titre { 
+    display: block;
+    grid-area: titre;
+    align-self: center;
+    justify-self: center;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+/* NOS JEUX */
+
+
+
+.nos_jeux { 
+    display: grid;
+    grid-area: nos_jeux; 
+    gap: 50px 30px;
+    grid-template-columns: 1fr  2fr;
+    grid-template-rows: 280px 280px 280px 280px;
+    grid-template-areas:
+    "games rules_games"
+    "games rules_games"
+    "games rules_games"
+    "games rules_games";
+  }
+  
+.games { 
+    display: grid;
+    grid-area: games;
+    row-gap: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "jeux"
+    "jeux"
+    "jeux"
+    "jeux";
+  }
+  
+.jeux {
+    background: rgba(80, 81, 79, 1);
+    width: 100%;
+    height: 100%;
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    background-color:  rgba(80, 81, 79, 1);
+
+  }
+  
+.rules_games { 
+    display: grid;
+    row-gap: 50px;
+    grid-area: rules_games;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "rules_jeux"
+    "rules_jeux"
+    "rules_jeux"
+    "rules_jeux";
+  
+  }
+
+.rules_jeux { 
+    background: rgba(80, 81, 79, 1);
+    width:100%;
+    height:100%;
+    border : 3px solid#46C36C;
+    border-radius: 10px;
+    background-color:  rgba(80, 81, 79, 1);
+  }
+
+.jeux1 { 
+    grid-area: games;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.jeux2 { 
+    grid-area: games;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.jeux3 { 
+    grid-area: games;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;  
+}
+  
+.jeux4 { 
+    grid-area: games;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+.rules_jeux { 
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-rows: 6px 50px 1fr 3fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". markr ."
+    ". . ."
+    ". txt ."
+    ". txt ."
+    ". . .";
+   
+  }
+  
+.markr{ 
+    grid-area: markr;
+    background-color:  #46C36C;
+    border: 5px solid  #46C36C;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    color: white;  
+   }
+
+.txt{
+  grid-area: txt;
+  border: 1px solid white;
+  font-style: normal;
+  color: white;
+}
+
 /* FOOTER */
 
 footer{
@@ -194,7 +386,7 @@ footer{
     text-align: center;
     text-transform: uppercase;
     color: #E5E5E5; 
-}
+  }
 
 .footer {  
     display: grid;

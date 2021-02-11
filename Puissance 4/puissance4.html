@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../favicon.png">
     <link rel="stylesheet" href="puissance4.css">
     <title>Puissance 4</title>
 </head>
@@ -15,139 +16,142 @@
 </head>
 <body>
 
-  <header>
-    <nav class="header_nav">
-      <a class="profil_nav headerfont" href="">profil</a>
-      <a class="jeux headerfont" href="">jeux</a>
-      <img class="logo" src="logo_site.png" alt=""><img>
-      <a class="a_propos_de headerfont" href="">à propos</a>
-      <a class="aide headerfont" href="">aide</a>
-      <div class="score">
-        <img class="coins" src="Hetic_coins.png" alt="hetic coins"></img>
-        <div class="score_gold headerfont">1000</div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-
-    <div class="profilpopup popup" id="profilpopup">
-      <div class="imageprofil popup" id="imageprofil"></div>
-      <div class="nomprofil popup" id="nomprofil">Damien Boulay</div>
-      <div class="coinsprofil popup" id="coinsprofil">
-        <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
-        <div class="montantprofil popup" id="montantprofil">100</div>
-      </div>
-    </div>
-
-    <section class="gridcontainer">
-        <div class="interface">
-            <div class="title-area">
-                <img class="title" src="P4Images/titre.png" alt="Puissance 4">
+    <header>
+        <div id="profil_flex">
+            <div class="profilpopup popup" id="profilpopup">
+            <div class="imageprofil popup" id="imageprofil"></div>
+            <div class="nomprofil popup" id="nomprofil">
+                <span id="nomProfil"></span>
             </div>
-            <div class="game-area">
-                <div id="A1" class="A1 fond"></div>
-                <div id="A2" class="A2 fond"></div>
-                <div id="A3" class="A3 fond"></div>
-                <div id="A4" class="A4 fond"></div>
-                <div id="A5" class="A5 fond"></div>
-                <div id="A6" class="A6 fond"></div>
-                <div id="A7" class="A7 fond"></div>
-                <div id="B1" class="B1 fond"></div>
-                <div id="B2" class="B2 fond"></div>
-                <div id="B3" class="B3 fond"></div>
-                <div id="B4" class="B4 fond"></div>
-                <div id="B5" class="B5 fond"></div>
-                <div id="B6" class="B6 fond"></div>
-                <div id="B7" class="B7 fond"></div>
-                <div id="C1" class="C1 fond"></div>
-                <div id="C2" class="C2 fond"></div>
-                <div id="C3" class="C3 fond"></div>
-                <div id="C4" class="C4 fond"></div>
-                <div id="C5" class="C5 fond"></div>
-                <div id="C6" class="C6 fond"></div>
-                <div id="C7" class="C7 fond"></div>
-                <div id="D1" class="D1 fond"></div>
-                <div id="D2" class="D2 fond"></div>
-                <div id="D3" class="D3 fond"></div>
-                <div id="D4" class="D4 fond"></div>
-                <div id="D5" class="D5 fond"></div>
-                <div id="D6" class="D6 fond"></div>
-                <div id="D7" class="D7 fond"></div>
-                <div id="E1" class="E1 fond"></div>
-                <div id="E2" class="E2 fond"></div>
-                <div id="E3" class="E3 fond"></div>
-                <div id="E4" class="E4 fond"></div>
-                <div id="E5" class="E5 fond"></div>
-                <div id="E6" class="E6 fond"></div>
-                <div id="E7" class="E7 fond"></div>
-                <div id="F1" class="F1 fond"></div>
-                <div id="F2" class="F2 fond"></div>
-                <div id="F3" class="F3 fond"></div>
-                <div id="F4" class="F4 fond"></div>
-                <div id="F5" class="F5 fond"></div>
-                <div id="F6" class="F6 fond"></div>
-                <div id="F7" class="F7 fond"></div>
+            <div class="coinsprofil popup" id="coinsprofil">
+                <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
+                <div class="montantprofil popup score_gold" id="gold_profil"></div>
             </div>
-            <div class="boutons">
-                <div class="b1">
-                    <img id="b1" class="bouton" src="P4Images/bouton.png" alt="bouton 1">
-                </div>
-                <div class="b2">
-                    <img id="b2" class="bouton" src="P4Images/bouton.png" alt="bouton 2">
-                </div>
-                <div class="b3">
-                    <img id="b3" class="bouton" src="P4Images/bouton.png" alt="bouton 3">
-                </div>
-                <div class="b4">
-                    <img id="b4" class="bouton" src="P4Images/bouton.png" alt="bouton 4">
-                </div>
-                <div class="b5">
-                    <img id="b5" class="bouton" src="P4Images/bouton.png" alt="bouton 5">
-                </div>
-                <div class="b6">
-                    <img id="b6" class="bouton" src="P4Images/bouton.png" alt="bouton 6">
-                </div>
-                <div class="b7">
-                    <img id="b7" class="bouton" src="P4Images/bouton.png" alt="bouton 7">
-                </div>
-            </div>
-            <div class="scorejeu">
-            <div class="manches">Tableau des victoires</div>
-            <div id="manche1" class="manche1 manchet">Manche 1 :</div>
-            <img id="jeton1" class="jeton1" src="" ></img>
-            <div id="manche2" class="manche2 manchet">Manche 2 :</div>
-            <img id="jeton2" class="jeton2" src="" ></img>
-            <div id="manche3" class="manche3 manchet">Manche 3 :</div>
-            <img id="jeton3" class="jeton3" src="" ></img>
-            <div id="manche4" class="manche4 manchet">Manche 4 :</div>
-            <img id="jeton4" class="jeton4" src="" ></img>
-            <div id="manche5" class="manche5 manchet">Manche 5 :</div>
-            <img id="jeton5" class="jeton5" src="" ></img>
-            </div>
-            <div class="resetdiv">
-                <img id="reset" class="reset" src="P4Images/reset.png" alt="rejouer">
-            </div>
-            <div class="tour-annonce">
-                <img id="tourannonce" class="tourannonce" src="P4Images/jeton_vert.png" alt="Jeton vert">
-                <div class="manche">Manche</div>
-                <div class="numero" id="roundnumber">1</div>
-            </div>
-            <div class="messages">
-                <h1 id="message" class="message">Au tour du joueur vert de commencer</h1>
-            </div>
-            <div class="watermark">
-                <img class="watermarkimg" src="P4Images/watermark.png" alt="EYVVE - 2021">
             </div>
         </div>
-    </section>
-</main>
-<footer>
-    <nav class="footer_nav">
-      <span class="copyright" id="copyright">profil | Jeux | à propos de | aide | mentions légales | paramétrer vos cookies</span>
-      <span class="droit1" id="droit1">©2021 - 2077 | groupe 6 - hetik | aucun droit réservé</span>
-  </nav>
-</footer>
+        <nav class="header_nav">
+            <div class="profil_nav headerfont" id="button_profil">profil</div>
+            <a class="jeux headerfont" href="">jeux</a>
+            <img class="logo" src="logo_site.png" alt=""><img>
+            <a class="a_propos_de headerfont" href="">à propos</a>
+            <a class="aide headerfont" href="">aide</a>
+            <div class="score">
+            <img class="coins" src="Hetic_coins.png" alt="hetic coins"></img>
+            <div class="score_gold headerfont" id="gold_nav"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section class="gridcontainer">
+            <div class="interface">
+                <div class="title-area">
+                    <img class="title" src="P4Images/titre.png" alt="Puissance 4">
+                </div>
+                <div class="game-area">
+                    <div id="A1" class="A1 fond"></div>
+                    <div id="A2" class="A2 fond"></div>
+                    <div id="A3" class="A3 fond"></div>
+                    <div id="A4" class="A4 fond"></div>
+                    <div id="A5" class="A5 fond"></div>
+                    <div id="A6" class="A6 fond"></div>
+                    <div id="A7" class="A7 fond"></div>
+                    <div id="B1" class="B1 fond"></div>
+                    <div id="B2" class="B2 fond"></div>
+                    <div id="B3" class="B3 fond"></div>
+                    <div id="B4" class="B4 fond"></div>
+                    <div id="B5" class="B5 fond"></div>
+                    <div id="B6" class="B6 fond"></div>
+                    <div id="B7" class="B7 fond"></div>
+                    <div id="C1" class="C1 fond"></div>
+                    <div id="C2" class="C2 fond"></div>
+                    <div id="C3" class="C3 fond"></div>
+                    <div id="C4" class="C4 fond"></div>
+                    <div id="C5" class="C5 fond"></div>
+                    <div id="C6" class="C6 fond"></div>
+                    <div id="C7" class="C7 fond"></div>
+                    <div id="D1" class="D1 fond"></div>
+                    <div id="D2" class="D2 fond"></div>
+                    <div id="D3" class="D3 fond"></div>
+                    <div id="D4" class="D4 fond"></div>
+                    <div id="D5" class="D5 fond"></div>
+                    <div id="D6" class="D6 fond"></div>
+                    <div id="D7" class="D7 fond"></div>
+                    <div id="E1" class="E1 fond"></div>
+                    <div id="E2" class="E2 fond"></div>
+                    <div id="E3" class="E3 fond"></div>
+                    <div id="E4" class="E4 fond"></div>
+                    <div id="E5" class="E5 fond"></div>
+                    <div id="E6" class="E6 fond"></div>
+                    <div id="E7" class="E7 fond"></div>
+                    <div id="F1" class="F1 fond"></div>
+                    <div id="F2" class="F2 fond"></div>
+                    <div id="F3" class="F3 fond"></div>
+                    <div id="F4" class="F4 fond"></div>
+                    <div id="F5" class="F5 fond"></div>
+                    <div id="F6" class="F6 fond"></div>
+                    <div id="F7" class="F7 fond"></div>
+                </div>
+                <div class="boutons">
+                    <div class="b1">
+                        <img id="b1" class="bouton" src="P4Images/bouton.png" alt="bouton 1">
+                    </div>
+                    <div class="b2">
+                        <img id="b2" class="bouton" src="P4Images/bouton.png" alt="bouton 2">
+                    </div>
+                    <div class="b3">
+                        <img id="b3" class="bouton" src="P4Images/bouton.png" alt="bouton 3">
+                    </div>
+                    <div class="b4">
+                        <img id="b4" class="bouton" src="P4Images/bouton.png" alt="bouton 4">
+                    </div>
+                    <div class="b5">
+                        <img id="b5" class="bouton" src="P4Images/bouton.png" alt="bouton 5">
+                    </div>
+                    <div class="b6">
+                        <img id="b6" class="bouton" src="P4Images/bouton.png" alt="bouton 6">
+                    </div>
+                    <div class="b7">
+                        <img id="b7" class="bouton" src="P4Images/bouton.png" alt="bouton 7">
+                    </div>
+                </div>
+                <div class="scorejeu">
+                <div class="manches">Tableau des victoires</div>
+                <div id="manche1" class="manche1 manchet">Manche 1 :</div>
+                <img id="jeton1" class="jeton1" src="" ></img>
+                <div id="manche2" class="manche2 manchet">Manche 2 :</div>
+                <img id="jeton2" class="jeton2" src="" ></img>
+                <div id="manche3" class="manche3 manchet">Manche 3 :</div>
+                <img id="jeton3" class="jeton3" src="" ></img>
+                <div id="manche4" class="manche4 manchet">Manche 4 :</div>
+                <img id="jeton4" class="jeton4" src="" ></img>
+                <div id="manche5" class="manche5 manchet">Manche 5 :</div>
+                <img id="jeton5" class="jeton5" src="" ></img>
+                </div>
+                <div class="resetdiv">
+                    <img id="reset" class="reset" src="P4Images/reset.png" alt="rejouer">
+                </div>
+                <div class="tour-annonce">
+                    <img id="tourannonce" class="tourannonce" src="P4Images/jeton_vert.png" alt="Jeton vert">
+                    <div class="manche">Manche</div>
+                    <div class="numero" id="roundnumber">1</div>
+                </div>
+                <div class="messages">
+                    <h1 id="message" class="message">Au tour du joueur vert de commencer</h1>
+                </div>
+                <div class="watermark">
+                    <img class="watermarkimg" src="P4Images/watermark.png" alt="EYVVE - 2021">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="footer_nav">
+        <span class="copyright" id="copyright">profil | Jeux | à propos de | aide | mentions légales | paramétrer vos cookies</span>
+        <span class="droit1" id="droit1">©2021 - 2077 | groupe 6 - hetik | aucun droit réservé</span>
+    </nav>
+    </footer>
 <script type="text/javascript" src="puissance4.js"></script>
 </body>
 </html>

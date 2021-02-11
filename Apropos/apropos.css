@@ -27,7 +27,7 @@ a{
 .headerfont{
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 16px;    
     text-transform: uppercase;
     color: white;
 }
@@ -39,10 +39,11 @@ a{
     display: grid;
     border-bottom: 5px solid #333;
     top: 0%;
+    right: 0px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: ". profil jeux logo a_propos aide coins";
-    width : 100%;
+    width : 100vw;
     height: 80px;
 } 
 
@@ -110,9 +111,17 @@ a{
 
 /* MAIN */
 
-.popup.profilpopup{
+#profil_flex{
+    position: fixed;
     display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1000000;
 }
+
 
 .profilpopup{
     z-index: 150;
@@ -137,20 +146,35 @@ a{
 }
 
 .imageprofil{
+    display: flex;
+    align-content: center;
+    justify-content: center;
     grid-area: imageprofil;
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+    justify-self: center;
+    align-self: center;
+}
+.imageprofil img{
+    width: 220px;
     border: 3px solid #46C36C;
     border-radius: 100%;
-    width: 300px;
-    height: 300px;
+    
+}
+#nomProfil {
     justify-self: center;
     align-self: center;
-    background-color: rgba(80, 81, 79, 1);
-}
 
+}
 .nomprofil{
     grid-area: nomprofil;
+    
+    padding-bottom: 10px;
     justify-self: center;
     align-self: center;
+    text-align: center;
+    justify-content: center;
     background-color: rgba(80, 81, 79, 1);
     width: 60%;
     height: 80%;
