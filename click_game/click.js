@@ -18,7 +18,7 @@ var myVar2;
 star.style.visibility = "hidden"
 save_or_not = parseInt(localStorage.getItem('save_or_not_save'));
 
-var gold_score_deffine = 0;
+
 var pseudo;
 var save_or_not = 0;
 var photo_profil_player = 1;
@@ -34,17 +34,26 @@ gold_nav.innerHTML = 100;
 gold_profil.innerHTML = 100;
 save_or_not = localStorage.getItem("save_or_not_save");
 
+var gold_score_deffine = 0;
+gold_score_deffine = localStorage.getItem("gold_scpre_deffine_save");
 
-if(save_or_not == 1){
-    photo_profil_player = parseInt(localStorage.getItem("photo_profil_player_save"));
-    test_profil_fonction();
-    nomProfil.innerHTML = localStorage.getItem("pseudo_save");
-    if(gold_score_deffine == 1){
-        gold = parseInt(localStorage.getItem("gold_save"));
-        gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
-        gold_profil.innerHTML = parseInt(localStorage.getItem("gold_save"));
+if (save_or_not != 1) {
+  connect_page.style.display = "flex";
+}else {
+  pseudo = localStorage.getItem("pseudo_save");
+  if(pseudo == null) {
+      pseudo = "Sans nom 1"
+  }
+  console.log(pseudo);
+  photo_profil_player = parseInt(localStorage.getItem("photo_profil_player_save"));
+  test_profil_fonction();
+  nomProfil.innerHTML = pseudo
+  if(gold_score_deffine == 1){
+      gold = parseInt(localStorage.getItem("gold_save"));
+      gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
+      gold_profil.innerHTML = parseInt(localStorage.getItem("gold_save"));
 
-    };
+  };
 
 }
 
