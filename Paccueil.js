@@ -26,12 +26,15 @@ gold_score_deffine = localStorage.getItem("gold_scpre_deffine_save");
 
 if (save_or_not != 1) {
     connect_page.style.display = "flex";
-    save_or_not = 1;
-    localStorage.setItem("save_or_not_save", save_or_not);
 }else {
+    pseudo = localStorage.getItem("pseudo_save");
+    if(pseudo == null) {
+        pseudo = "Sans nom 1"
+    }
+    console.log(pseudo);
     photo_profil_player = parseInt(localStorage.getItem("photo_profil_player_save"));
     test_profil_fonction();
-    nomProfil.innerHTML = localStorage.getItem("pseudo_save");
+    nomProfil.innerHTML = pseudo
     if(gold_score_deffine == 1){
         gold = parseInt(localStorage.getItem("gold_save"));
         gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
@@ -57,9 +60,9 @@ profil_print.addEventListener('click', function(e) {
 });
 
 
+// default img profil
 img_select1.className = "img_profil_select";
-pseudo = localStorage.getItem("pseudo_save");
-console.log(pseudo);
+photo_profil_player = 1;
 
 img_select1.addEventListener('click', event => {
     img_select1.className = "img_profil_select";
@@ -105,6 +108,8 @@ function test_profil_fonction(){
 boutton_inscription.addEventListener('click', event => {
     localStorage.setItem("pseudo_save",pseudo_player.value);
     localStorage.setItem("photo_profil_player_save", photo_profil_player);
+    save_or_not = 1;
+    localStorage.setItem("save_or_not_save", save_or_not);
     connect_page.style.display = "none";
     document.location.reload();
 });
