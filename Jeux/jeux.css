@@ -345,7 +345,7 @@ a{
 .rules_jeux { 
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
-    grid-template-rows: 6px 50px 1fr 3fr 1fr 1fr;
+    grid-template-rows: 6px 50px 0.5fr 3fr 0.5fr 1fr;
     grid-template-areas: 
     ". . ."
     ". markr ."
@@ -364,14 +364,17 @@ a{
     text-transform: uppercase;
     font-style: normal;
     font-weight: bold;
-    font-size: 13px;
+    line-height: 0em;
+    font-size: 23px;
     text-align: center;
     color: white;  
    }
 
 .txt{
   grid-area: txt;
-  border: 1px solid white;
+  font-weight: 700;
+  font-size: 20px;
+  /* border: 1px solid white; */
   font-style: normal;
   color: white;
 }
