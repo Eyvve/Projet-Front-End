@@ -506,6 +506,9 @@ button{
     border : 3px solid#46C36C;
     border-radius: 10px;
     background-color:  rgba(80, 81, 79, 1);
+    background-image: url(./Images/miniature_mastermind_grand.png);
+    background-size: 110%;
+    background-position: center;
 }
 
 .jeu4 { grid-area: jeu4;
@@ -585,6 +588,22 @@ button{
     
 /* EQUIPE */
 
+.flecheG{
+    grid-area: FG;
+    align-self: center;
+    justify-self: self-end;
+    margin-right: 40px;
+}
+
+.flecheD{
+    grid-area: FD;
+    align-self: center;
+    justify-self: self-start;
+    margin-left: 40px;
+}
+
+
+
 .equipe { 
     display: grid;
     grid-area: equipe;
@@ -592,9 +611,9 @@ button{
     grid-template-columns: 1fr 1fr 1fr  ;
     grid-template-rows: 4fr 5fr 2fr;
     grid-template-areas:
-    ". . ."
-    "profil1 profil2 profil3 "
-    ". . .";
+    " . . . "
+    " profil1 profil2 profil3 "
+    " . . . ";
 
     width: 100%;
     height: 100%;

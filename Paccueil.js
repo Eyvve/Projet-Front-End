@@ -1,3 +1,4 @@
+
 var img_select1 = document.getElementById("img_profil1");
 var img_select2 = document.getElementById("img_profil2");
 var img_select3 = document.getElementById("img_profil3");
@@ -115,3 +116,63 @@ boutton_inscription.addEventListener('click', event => {
 });
 
 
+// fonctions slider ////////////////////////////////////////////
+
+var stuckright = false
+var stuckleft = false
+
+var slider = 0
+
+var slidingmodel = document.querySelector("#slidingmodel")
+var slidedroit = document.querySelector("#FD")
+var slidegauche = document.querySelector("#FG")
+
+slidedroit.addEventListener("click", () => {
+    console.log("slide droit")
+    if (slider >= 0 && slider <= 1){
+        slider += 1
+        console.log("slide n°" + slider)
+        if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
+        if (slider == 1){ slidingmodel.src = "pixelImages/Megaman.png"; stuckright = false; stuckleft = false}
+        if (slider == 2){ slidingmodel.src = "pixelImages/Pokeball.png"; stuckright = true;}
+    }
+})
+
+slidegauche.addEventListener("click", () => {
+    console.log("slide gauche")
+    if (slider >= 1 && slider <= 4){
+        slider -= 1
+        console.log("slide n°" + slider)
+        if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
+        if (slider == 1){ slidingmodel.src = "pixelImages/Megaman.png"; stuckright = false; stuckleft = false}
+        if (slider == 2){ slidingmodel.src = "pixelImages/Pokeball.png"; stuckright = true;}
+    }
+})
+
+function boutonGhover(){
+    if(stuckleft == false){
+        var img = document.querySelector("#FG")
+        // console.log("check")
+        FG.setAttribute("src", "./pixel_drawer/pixelImages/flecheGV.png")
+    }
+}
+
+function boutonGout(){
+    var img = document.querySelector("#FG")
+    // console.log("check")
+    FG.setAttribute("src", "./pixel_drawer/pixelImages/flecheGB.png")
+}
+
+function boutonDhover(){
+    if(stuckright == false){
+        var img = document.querySelector("#FD")
+        // console.log("check")
+        FD.setAttribute("src", "./pixel_drawer/pixelImages/flecheDV.png")
+    }
+}
+
+function boutonDout(){
+    var img = document.querySelector("#FD")
+    // console.log("check")
+    FD.setAttribute("src", "./pixel_drawer/pixelImages/flecheDB.png")
+}
