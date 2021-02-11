@@ -184,12 +184,26 @@ button{
     justify-self: center;
 }
 
+
 .logo {
     display: block;
     grid-area: logo;
     height: 58px;
     align-self: center;
     justify-self: center;
+}
+.jeux:hover {
+    color:#46C36C;
+}
+.profil_nav:hover {
+    color:#46C36C;
+    cursor:  pointer;
+}
+.a_propos_de:hover {
+    color:#46C36C;
+}
+.aide:hover {
+    color:#46C36C;
 }
 
 .a_propos_de {
