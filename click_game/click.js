@@ -18,7 +18,7 @@ var myVar2;
 star.style.visibility = "hidden"
 save_or_not = parseInt(localStorage.getItem('save_or_not_save'));
 
-var gold_score_deffine = 0;
+
 var pseudo;
 var save_or_not = 0;
 var photo_profil_player = 1;
@@ -34,6 +34,8 @@ gold_nav.innerHTML = 100;
 gold_profil.innerHTML = 100;
 save_or_not = localStorage.getItem("save_or_not_save");
 
+var gold_score_deffine = 0;
+gold_score_deffine = localStorage.getItem("gold_scpre_deffine_save");
 
 if(save_or_not == 1){
     photo_profil_player = parseInt(localStorage.getItem("photo_profil_player_save"));

@@ -38,7 +38,9 @@ gold_nav.innerHTML = 100;
 gold_profil.innerHTML = 100;
 save_or_not = localStorage.getItem("save_or_not_save");
 print_score.innerHTML = parseInt(localStorage.getItem("gold_save"));
+
 var gold_score_deffine = 0;
+gold_score_deffine = localStorage.getItem("gold_scpre_deffine_save");
 
 if(save_or_not == 1){
     photo_profil_player = parseInt(localStorage.getItem("photo_profil_player_save"));
