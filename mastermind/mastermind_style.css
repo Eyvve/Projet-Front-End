@@ -388,10 +388,11 @@ a{
     display: grid;
     border-bottom: 5px solid #333;
     top: 0%;
+    right: 0px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: ". profil jeux logo a_propos aide coins";
-    width : 100%;
+    width : 98.5vw;
     height: 80px;
 } 
 
