@@ -40,7 +40,7 @@ save_or_not = localStorage.getItem("save_or_not_save");
 print_score.innerHTML = parseInt(localStorage.getItem("gold_save"));
 
 var gold_score_deffine = 0;
-gold_score_deffine = localStorage.getItem("gold_scpre_deffine_save");
+gold_score_deffine = localStorage.getItem("gold_score_deffine_save");
 
 if (save_or_not != 1) {
     connect_page.style.display = "flex";
