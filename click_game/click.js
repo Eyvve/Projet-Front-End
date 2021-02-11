@@ -132,7 +132,7 @@ window.addEventListener('mousedown', function (e) {
   // console.log(`x: ${ e.x } | y: ${ e.y }`)
   
 button.onmousedown = function() {
-  button.setAttribute("src", "./click_images/boutton_on.png");
+  button.setAttribute("src", "../Images/boutton_on.png");
   score += point;
   score += bonus;
   print_score.innerText = score;
@@ -152,10 +152,10 @@ button.onmousedown = function() {
   bare_boost_vert.style.height = `${bonus_timer}%` ;
 };
 button.onmouseup = function() {
-  button.setAttribute("src", "./click_images/boutton_off.png")
+  button.setAttribute("src", "../Images/boutton_off.png")
 };
 button.onmouseleave = function() {
-  button.setAttribute("src", "./click_images/boutton_off.png")
+  button.setAttribute("src", "../Images/boutton_off.png")
 };
 
 });
