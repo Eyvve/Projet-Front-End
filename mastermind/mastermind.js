@@ -31,20 +31,25 @@ const profil_print = document.getElementById("profil_flex");
 const profil_inner = document.getElementById('profilpopup')
 var imgProfil = document.getElementById('imageprofil')
 var nomProfil = document.getElementById('nomProfil')
+var gold = 100;
 var gold_nav = document.getElementById('gold_nav')
 var gold_profil = document.getElementById("gold_profil")
 gold_nav.innerHTML = 100;
 gold_profil.innerHTML = 100;
 save_or_not = localStorage.getItem("save_or_not_save");
 print_score.innerHTML = parseInt(localStorage.getItem("gold_save"));
+var gold_score_deffine = 0;
 
 if(save_or_not == 1){
-    gold = parseInt(localStorage.getItem("gold_save"));
     photo_profil_player = parseInt(localStorage.getItem("photo_profil_player_save"));
     test_profil_fonction();
     nomProfil.innerHTML = localStorage.getItem("pseudo_save");
-    gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
-    gold_profil.innerHTML = parseInt(localStorage.getItem("gold_save"));
+    if(gold_score_deffine == 1){
+        gold = parseInt(localStorage.getItem("gold_save"));
+        gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
+        gold_profil.innerHTML = parseInt(localStorage.getItem("gold_save"));
+
+    };
 
 }
 
@@ -167,6 +172,8 @@ function win_mastermind(){
     print_score.innerText = gold;
 
     localStorage.setItem('score_save', score);
+    gold_score_deffine = 1
+    localStorage.setItem('gold_score_deffine_save', gold_score_deffine);
     save_or_not = 1
     localStorage.setItem('save_or_not_save', save_or_not);
     print_win.style.display = 'flex';

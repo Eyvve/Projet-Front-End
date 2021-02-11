@@ -18,7 +18,7 @@ var myVar2;
 star.style.visibility = "hidden"
 save_or_not = parseInt(localStorage.getItem('save_or_not_save'));
 
-
+var gold_score_deffine = 0;
 var pseudo;
 var save_or_not = 0;
 var photo_profil_player = 1;
@@ -36,12 +36,15 @@ save_or_not = localStorage.getItem("save_or_not_save");
 
 
 if(save_or_not == 1){
-    gold = parseInt(localStorage.getItem("gold_save"));
     photo_profil_player = parseInt(localStorage.getItem("photo_profil_player_save"));
     test_profil_fonction();
     nomProfil.innerHTML = localStorage.getItem("pseudo_save");
-    gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
-    gold_profil.innerHTML = parseInt(localStorage.getItem("gold_save"));
+    if(gold_score_deffine == 1){
+        gold = parseInt(localStorage.getItem("gold_save"));
+        gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
+        gold_profil.innerHTML = parseInt(localStorage.getItem("gold_save"));
+
+    };
 
 }
 
@@ -129,6 +132,8 @@ button.onmousedown = function() {
   localStorage.setItem('gold_save', gold);
   // addElement()
   bonus_timer += 0.5;
+  gold_score_deffine = 1
+  localStorage.setItem('gold_score_deffine_save', gold_score_deffine);
   save_or_not = 1
   localStorage.setItem('save_or_not_save', save_or_not);
   if(bonus_timer >= 100) {
