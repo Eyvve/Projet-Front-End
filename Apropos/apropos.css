@@ -16,16 +16,39 @@ a{
     color: inherit;
 }
 
-a{
-    text-decoration: none;
+
+h1{
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    margin-top: 150px;
 }
 
-/* .fixed-div{
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-} */
+.greenunderline{
+    text-decoration-line: underline;
+    text-decoration-color: #46C36C;
+}
+
+hr{
+    width: 35%;
+}
+
+ul{
+    font-size: 20px;
+    text-transform: none;
+}
+
+.verthetic{
+    color: #46C36C;
+}
+
+p{
+    font-size: 20px;
+    text-transform: none;
+}
 
 /* HEADER */
 
@@ -128,6 +151,8 @@ a{
 
 
 /* MAIN */
+
+/* PROFIL */
 
 #profil_flex{
     position: fixed;
@@ -267,38 +292,7 @@ a{
 
 /* GRID MAIN */
 
-h1{
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    text-align: center;
-    color: white;
-    margin-top: 150px;
-}
-
-.greenunderline{
-    text-decoration-line: underline;
-    text-decoration-color: #46C36C;
-}
-
-hr{
-    width: 35%;
-}
-
-ul{
-    font-size: 20px;
-    text-transform: none;
-}
-
-.verthetic{
-    color: #46C36C;
-}
-
-p{
-    font-size: 20px;
-    text-transform: none;
-}
+/* section faq / aide */
 
 .aidesection{
     display: grid;
@@ -332,7 +326,7 @@ p{
     color: white;
 }
 
-
+/* section équipe */
 
 .equipesection{
     display: grid;

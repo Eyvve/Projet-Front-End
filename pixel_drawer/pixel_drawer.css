@@ -118,6 +118,8 @@ a{
 
 /* MAIN */
 
+/* page de profil */
+
 #profil_flex{
     position: fixed;
     display: none;
@@ -253,7 +255,10 @@ a{
 .inv img{
     width: 100px;
 }
+
 /* GRID MAIN */
+
+/* JEU */
 
 .gridgamecontainer{
     display: grid;

@@ -117,6 +117,8 @@ a{
 
 /* MAIN */
 
+/* PROFIL */
+
 #profil_flex{
     position: fixed;
     display: none;
@@ -257,6 +259,8 @@ a{
 
 /* GRID MAIN */
 
+/* Layout principal de la page*/
+
 .gridcontainer{
     display: grid;
     grid-template-columns: auto 1200px auto;
@@ -267,6 +271,8 @@ a{
     ". shop ."
     ". . .";
 }
+
+
 
 .shop{
     grid-area: shop;

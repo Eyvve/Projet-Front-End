@@ -7,7 +7,9 @@
     <title>Pixel-Drawer</title>
 </head>
 <body>
-    <header>
+    <header>    
+
+        <!-- div du profil -->
       <div id="profil_flex">
         <div class="profilpopup popup" id="profilpopup">
             <div class="imageprofil popup" id="imageprofil"></div>
@@ -27,6 +29,8 @@
             </div>
         </div>
       </div>
+
+    <!-- navbar header -->
       <nav class="header_nav">
           <div class="profil_nav headerfont" id="button_profil">profil</div>
           <a class="jeux headerfont" href="../Jeux/jeux.html">jeux</a>
@@ -42,6 +46,7 @@
         </nav>
     </header>
 
+    <!-- Layout principal de la page -->
     <main>
         <section class="gridgamecontainer">
             <div class="gamecontainer">
@@ -53,6 +58,7 @@
                     <input type="button" class="validcolor" id="validcolor" value="Changez la couleur" onclick="ChangeColor()">
                     <input class="boutondessin pipette" id="pipette" type="button" width="30" height="30" alt="pipette"  onclick="Pipette()">
                     <input class="boutondessin resetButton" id="resetButton" type="button" value="reset" onclick="Reset()">
+                    <!-- palette manuelle -->
                     <div class="palettemanuelle">
                         <div class="rouge" onclick="Manualrouge()"></div>
                         <div class="violet" onclick="Manualviolet()"></div>
@@ -68,6 +74,7 @@
                         <div class="noir" onclick="Manualnoir()"></div>
                     </div>
                 </div>
+                <!-- surface de dessin -->
                 <div class="encadre">
                     <div id="A1" class="cases"></div>
                     <div id="A2" class="cases"></div>
@@ -511,6 +518,8 @@
                     <div id="U20" class="cases"></div>
                     <div id="U21" class="cases"></div>
                 </div>
+
+                <!-- templates de couleur : fonctionnalité non présente -->
                 <div class="informations">
                     <div class="temp1" ></div>
                     <div class="temp2" ></div>
@@ -519,6 +528,7 @@
                     <div class="temp5" ></div>
                 </div>
                 <div class="template">
+                    <!-- slider des modèles -->
                     <div class="nommodele">Modèle numéroté</div>
                     <div class="flecheG">
                         <img id="FG" class="flecheGB" src="pixelImages/flecheGB.png" alt="Flèche Gauche" onmouseover="BoutonGaucheHover()" onmouseout="BoutonGaucheOut()">

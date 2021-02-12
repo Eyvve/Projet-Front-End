@@ -118,6 +118,8 @@ a{
 
 /* MAIN */
 
+/* PROFIL */
+
 #profil_flex{
     position: fixed;
     display: none;
@@ -265,6 +267,10 @@ img{
     -moz-user-drag: none; 
 }
 
+/* JEU */
+
+/* Grid principale */
+
 .gridcontainer{
     width: 100%;
     height: auto;
@@ -273,6 +279,8 @@ img{
     grid-template-rows: 85px 800px 100px;
     grid-template-areas: " . . . "" . interface . "" . . .";
 }
+
+/* Interface de jeu */
 
 .interface{
     grid-area: interface;
@@ -356,6 +364,7 @@ img{
     margin-top: 32px;
 }
 
+/* Plateau de jeu */
 
 .game-area{
     display: grid;
