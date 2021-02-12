@@ -4,381 +4,14 @@ body{
     background-repeat:repeat;
     background-size: 110%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #262c2c;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 a{
     text-decoration: none;
     color: inherit;
-}
-
-.gridgamecontainer{
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 5% 90% 5%;
-    grid-template-areas: 
-        " . . . "
-        " . jeu . "
-        " . . . ";
-}
-
-
-#game_page {
-    grid-area: jeu;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
-    grid-template-rows: 0.1fr 0.2fr 0.1fr 2fr 0.1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      " . . . . . . . "
-      " . score . choix_code . vrai_faux . "
-      " . . . choix_code . vrai_faux . "
-      " . choix_colors . choix_code . vrai_faux . "
-      " . . . . . . . ";
-      align-self: center;
-      justify-self: center;
-
-}
-
-.game_choix {
-    width: 400px;
-    height: 700px;
-    background: #50514F;
-    border: 1px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    grid-area: choix_colors;
-    align-self:flex-end;
-    justify-self: center;
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 5% 20% 70% 5%;
-    grid-template-areas: 
-        " . . . "
-        " . titre_choix  . "
-        " . jeton_choix ."
-        " . . . ";
-}
-.game_window {
-    width:400px;
-    height:840px;
-    background: #50514F;
-    border: 1px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    grid-area: choix_code;
-    align-self:flex-end;
-    justify-self: center;
-}
-.game_reponse{
-    width:400px;
-    height:840px;
-    left: 1000px;
-    background: #50514F;
-    border: 1px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    grid-area: vrai_faux;
-    align-self:flex-end;
-    justify-self: center;
-}
-.score_window{
-    display: grid;
-    grid-template-rows:25% 50px ;
-    grid-template-areas:
-      " . "
-      " score_point "
-      " . ";
-    grid-area: score;
-    background: #50514F;
-    border: 2px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    width:400px;
-    height:100px;
-    background: #50514F;
-    border: 1px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    grid-area: score;
-    align-self:flex-end;
-    justify-self: center;
-}
-#choix_colors img {
-    width: 100px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#choix_colors {
-    display: grid;
-    grid-template-columns: 195px 195px;
-    grid-gap: 10px;
-    justify-content: center;
-    grid-area: jeton_choix;
-    justify-content: center;
-    align-self:center;
-    
-}
-#jeton_titre{
-    display: flex;
-    flex-direction: column;
-    grid-area: titre_choix;
-    align-self: center;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 10;
-    font-size: 30px;
-    line-height: 25px;
-    color: white;
-}
-#jeton_rouge{
-    display: flex;
-    flex-direction: column;
-    grid-column: 1;
-    padding-left: 55px;
-    padding-right: 35px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#jeton_bleu{
-    grid-column: 2;
-    padding-left: 35px;
-    padding-right: 55px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#jeton_marron{
-    grid-column: 1;
-    padding-left: 55px;
-    padding-right: 35px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#jeton_vert{
-    grid-column: 2;
-    padding-left: 35px;
-    padding-right: 55px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#jeton_rose{
-    grid-column: 1;
-    padding-left: 55px;
-    padding-right: 35px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#jeton_violet{
-    grid-column: 2;
-    padding-left: 35px;
-    padding-right: 55px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#jeton_orange{
-    grid-column: 1;
-    padding-left: 55px;
-    padding-right: 35px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#jeton_jaune{
-    grid-column: 2;
-    padding-left: 35px;
-    padding-right: 55px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#color_select img {
-    width: 50px;
-    margin: 10px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#black_white img {
-    width: 50px;
-    margin: 10px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#color_select {
-    display: grid;
-    grid-template-columns: 70px 70px 70px 70px 70px;
-    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px;
-    justify-content: center;
-}
-#black_white {
-    display: grid;
-    grid-template-columns: 70px 70px 70px 70px 70px;
-    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px;
-    justify-content: center;
-}
-
-#score_flex {
-    display: flex;
-    grid-area: score_point;
-    margin-left: 20px;
-    align-self: center;
-    align-items: center;
-}
-#score_flex img{
-    height: 30px;
-    
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-#score {
-    margin-left: 10px;
-    color: white;
-}
-
-#win_flex {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, .4);
-    z-index: 1000;
-}
-.win {
-    align-content: center;
-    width: 700px;
-    height: 400px;
-    background: #50514F;
-    border: 1px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    grid-area: choix_colors;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 5% 40% 40% 5%;
-    grid-template-areas: 
-        " . . . "
-        " . win_text . "
-        " . win_button . "
-        " . . . ";
-}
-.win_titre {
-    grid-area: win_text;
-    align-self: center;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 10;
-    font-size: 30px;
-    line-height: 25px;
-    color: white;
-}
-#button_win {
-    
-    grid-area: win_button;
-    align-self: center;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 10;
-    font-size: 20px;
-    line-height: 25px;
-}
-#defete_flex {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, .4);
-    z-index: 1000;
-}
-.defete {
-    align-content: center;
-    width: 700px;
-    height: 400px;
-    background: #50514F;
-    border: 1px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 5% 40% 40% 5%;
-    grid-template-areas: 
-        " . . . "
-        " . defete_text . "
-        " . defete_button . "
-        " . . . ";
-}
-.defete_titre {
-    grid-area: defete_text;
-    align-self: center;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 10;
-    font-size: 30px;
-    line-height: 25px;
-    color: white;
-}
-#button_defete {
-    
-    grid-area: defete_button;
-    align-self: center;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 10;
-    font-size: 20px;
-    line-height: 25px;
-}
-
-
-body{
-    background-color: #262c2c;;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-a{
-    text-decoration: none;
 }
 
 /* HEADER */
@@ -617,6 +250,386 @@ a{
 }
 .inv img{
     width: 100px;
+}
+
+/* debut de la page principal */
+.gridgamecontainer{
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . jeu . "
+        " . . . ";
+}
+
+
+#game_page {
+    grid-area: jeu;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+    grid-template-rows: 0.1fr 0.2fr 0.1fr 2fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      " . . . . . . . "
+      " . score . choix_code . vrai_faux . "
+      " . . . choix_code . vrai_faux . "
+      " . choix_colors . choix_code . vrai_faux . "
+      " . . . . . . . ";
+      align-self: center;
+      justify-self: center;
+
+}
+/* fenetre des jetons a choisir */
+.game_choix {
+    width: 400px;
+    height: 700px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: choix_colors;
+    align-self:flex-end;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 20% 70% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . titre_choix  . "
+        " . jeton_choix ."
+        " . . . ";
+}
+
+#choix_colors img {
+    width: 100px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+
+#choix_colors {
+    display: grid;
+    grid-template-columns: 195px 195px;
+    grid-gap: 10px;
+    justify-content: center;
+    grid-area: jeton_choix;
+    justify-content: center;
+    align-self:center;
+    
+}
+
+/* definition de la taille des jetons boutons */
+#jeton_titre{
+    display: flex;
+    flex-direction: column;
+    grid-area: titre_choix;
+    align-self: center;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 30px;
+    line-height: 25px;
+    color: white;
+}
+#jeton_rouge{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    padding-left: 55px;
+    padding-right: 35px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+#jeton_bleu{
+    grid-column: 2;
+    padding-left: 35px;
+    padding-right: 55px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+#jeton_marron{
+    grid-column: 1;
+    padding-left: 55px;
+    padding-right: 35px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+#jeton_vert{
+    grid-column: 2;
+    padding-left: 35px;
+    padding-right: 55px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+#jeton_rose{
+    grid-column: 1;
+    padding-left: 55px;
+    padding-right: 35px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+#jeton_violet{
+    grid-column: 2;
+    padding-left: 35px;
+    padding-right: 55px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+#jeton_orange{
+    grid-column: 1;
+    padding-left: 55px;
+    padding-right: 35px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+#jeton_jaune{
+    grid-column: 2;
+    padding-left: 35px;
+    padding-right: 55px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+
+/* fenetre des jetons choisi */
+.game_window {
+    width:400px;
+    height:840px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: choix_code;
+    align-self:flex-end;
+    justify-self: center;
+}
+
+#color_select {
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px;
+    justify-content: center;
+}
+
+/* definition de la taille des jetons choisis */
+#color_select img {
+    width: 50px;
+    margin: 10px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+
+/* fenetre de la reponse de l'ia (jeton blanc,noir,vide) */
+.game_reponse{
+    width:400px;
+    height:840px;
+    left: 1000px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: vrai_faux;
+    align-self:flex-end;
+    justify-self: center;
+}
+#black_white {
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px 70px;
+    justify-content: center;
+}
+
+/* definition de la taille des jetons noir blanc et vide */
+#black_white img {
+    width: 50px;
+    margin: 10px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+
+/* fenetre des scores rejouté */
+.score_window{
+    display: grid;
+    grid-template-rows:25% 50px ;
+    grid-template-areas:
+      " . "
+      " score_point "
+      " . ";
+    grid-area: score;
+    background: #50514F;
+    border: 2px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width:400px;
+    height:100px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: score;
+    align-self:flex-end;
+    justify-self: center;
+}
+
+#score_flex {
+    display: flex;
+    grid-area: score_point;
+    margin-left: 20px;
+    align-self: center;
+    align-items: center;
+}
+#score_flex img{
+    height: 30px;
+    
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+#score {
+    margin-left: 10px;
+    color: white;
+}
+
+
+/* fenetre victoire du joueur */
+#win_flex {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1000;
+}
+.win {
+    align-content: center;
+    width: 700px;
+    height: 400px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    grid-area: choix_colors;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 40% 40% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . win_text . "
+        " . win_button . "
+        " . . . ";
+}
+.win_titre {
+    grid-area: win_text;
+    align-self: center;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 30px;
+    line-height: 25px;
+    color: white;
+}
+#button_win {
+    
+    grid-area: win_button;
+    align-self: center;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+/* fenetre de la defaite du joueur */
+#defaitee_flex {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1000;
+}
+.defaitee {
+    align-content: center;
+    width: 700px;
+    height: 400px;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 40% 40% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . defaitee_text . "
+        " . defaitee_button . "
+        " . . . ";
+}
+.defaitee_titre {
+    grid-area: defaitee_text;
+    align-self: center;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 30px;
+    line-height: 25px;
+    color: white;
+}
+#button_defaitee {
+    
+    grid-area: defaitee_button;
+    align-self: center;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 10;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 /* FOOTER */

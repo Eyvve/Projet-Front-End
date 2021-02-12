@@ -26,6 +26,7 @@ var inv = document.getElementById("inv");
 
 var gold_score_deffine = 0;
 gold_score_deffine = localStorage.getItem("gold_score_deffine_save");
+//detection des sauvegarde pour les charger ou non
 if(save_or_not == 1) {
     pseudo = localStorage.getItem("pseudo_save");
     if(pseudo == null) {
@@ -55,6 +56,7 @@ if(save_or_not == 1) {
 }
 
 
+//detection du clique sur la nav pour ouvrir le profil
 profil.addEventListener('click', event => {
     profil_print.style.display = "flex";
 });
@@ -79,6 +81,7 @@ var change_avatarH5 = document.getElementById("img_inv_H5")
 var change_avatarF6 = document.getElementById("img_inv_F6")
 var change_avatarH6 = document.getElementById("img_inv_H6")
 
+//rajout des photo de profile achete dans l'inventaire
 change_avatarF1.addEventListener('click', event => {
     photo_profil_player = 1
     localStorage.setItem("photo_profil_player_save", photo_profil_player);
@@ -152,6 +155,7 @@ if(avatarH2_vendu == 1){
     });
 }
 
+//fonction pour afficher la photo de profil choisi
 function test_profil_fonction(){
     if(photo_profil_player == 1){
         let newIMG = document.createElement('img');
@@ -227,6 +231,7 @@ function test_profil_fonction(){
         imgProfil.appendChild(newIMG);
     }
 };
+//rajout des images achete dans l'inventaire
 function test_inv_img_vendu(){
     if(avatarF2_vendu == 1){
         let newIMG = document.createElement('img');
@@ -331,14 +336,14 @@ avatarF2.addEventListener("mouseout", function() {
     avatarF2_achat.style.display = 'none';
 });
 button_achat_F2.addEventListener('click', event => {
-    if(gold >= 6500){
+    if(gold >= 4500){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarF2.png');
         newIMG.setAttribute('alt', 'img_profilF2');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 6500
+        gold -= 4500
         localStorage.setItem('gold_save', gold);
         avatarF2_vendu = 1;
         localStorage.setItem('avatarF2_vendu_save', avatarF2_vendu);
@@ -370,14 +375,14 @@ avatarH2.addEventListener("mouseout", function() {
     avatarH2_achat.style.display = 'none';
 });
 button_achat_H2.addEventListener('click', event => {
-    if(gold >= 7000){
+    if(gold >= 5000){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarH2.png');
         newIMG.setAttribute('alt', 'img_profilH2');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 7000
+        gold -= 5000
         localStorage.setItem('gold_save', gold);
         avatarH2_vendu = 1;
         localStorage.setItem('avatarH2_vendu_save', avatarH2_vendu);
@@ -408,14 +413,14 @@ avatarF3.addEventListener("mouseout", function() {
     avatarF3_achat.style.display = 'none';
 });
 button_achat_F3.addEventListener('click', event => {
-    if(gold >= 7000){
+    if(gold >= 5000){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarF3.png');
         newIMG.setAttribute('alt', 'img_profilF3');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 7000
+        gold -= 5000
         localStorage.setItem('gold_save', gold);
         avatarF3_vendu = 1;
         localStorage.setItem('avatarF3_vendu_save', avatarF3_vendu);
@@ -446,14 +451,14 @@ avatarH3.addEventListener("mouseout", function() {
     avatarH3_achat.style.display = 'none';
 });
 button_achat_H3.addEventListener('click', event => {
-    if(gold >= 7500){
+    if(gold >= 5500){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarH3.png');
         newIMG.setAttribute('alt', 'img_profilH3');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 7500
+        gold -= 5500
         localStorage.setItem('gold_save', gold);
         avatarH3_vendu = 1;
         localStorage.setItem('avatarH3_vendu_save', avatarH3_vendu);
@@ -484,14 +489,14 @@ avatarF4.addEventListener("mouseout", function() {
     avatarF4_achat.style.display = 'none';
 });
 button_achat_F4.addEventListener('click', event => {
-    if(gold >= 6500){
+    if(gold >= 4500){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarF4.png');
         newIMG.setAttribute('alt', 'img_profilF4');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 6500
+        gold -= 4500
         localStorage.setItem('gold_save', gold);
         avatarF4_vendu = 1;
         localStorage.setItem('avatarF4_vendu_save', avatarF4_vendu);
@@ -560,14 +565,14 @@ avatarF5.addEventListener("mouseout", function() {
     avatarF5_achat.style.display = 'none';
 });
 button_achat_F5.addEventListener('click', event => {
-    if(gold >= 6500){
+    if(gold >= 4500){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarF5.png');
         newIMG.setAttribute('alt', 'img_profilF5');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 6500
+        gold -= 4500
         localStorage.setItem('gold_save', gold);
         avatarF5_vendu = 1;
         localStorage.setItem('avatarF5_vendu_save', avatarF5_vendu);
@@ -598,14 +603,14 @@ avatarH5.addEventListener("mouseout", function() {
     avatarH5_achat.style.display = 'none';
 });
 button_achat_H5.addEventListener('click', event => {
-    if(gold >= 6500){
+    if(gold >= 4500){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarH5.png');
         newIMG.setAttribute('alt', 'img_profilH5');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 6500
+        gold -= 4500
         localStorage.setItem('gold_save', gold);
         avatarH5_vendu = 1;
         localStorage.setItem('avatarH5_vendu_save', avatarH5_vendu);
@@ -636,14 +641,14 @@ avatarF6.addEventListener("mouseout", function() {
     avatarF6_achat.style.display = 'none';
 });
 button_achat_F6.addEventListener('click', event => {
-    if(gold >= 7500){
+    if(gold >= 5500){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarF6.png');
         newIMG.setAttribute('alt', 'img_profilF6');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 7500
+        gold -= 5500
         localStorage.setItem('gold_save', gold);
         avatarF6_vendu = 1;
         localStorage.setItem('avatarF6_vendu_save', avatarF6_vendu);
@@ -674,14 +679,14 @@ avatarH6.addEventListener("mouseout", function() {
     avatarH6_achat.style.display = 'none';
 });
 button_achat_H6.addEventListener('click', event => {
-    if(gold >= 8000){
+    if(gold >= 6000){
         console.log("achetez")
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../avatars/avatarH6.png');
         newIMG.setAttribute('alt', 'img_profilH6');
         newIMG.setAttribute('class', 'img_profil');
         inv.appendChild(newIMG);
-        gold -= 8000
+        gold -= 6000
         localStorage.setItem('gold_save', gold);
         avatarH6_vendu = 1;
         localStorage.setItem('avatarH6_vendu_save', avatarH6_vendu);
