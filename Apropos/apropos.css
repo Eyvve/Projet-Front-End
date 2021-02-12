@@ -229,6 +229,73 @@ a{
 
 /* GRID MAIN */
 
+h1{
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+}
+
+.greenunderline{
+    text-decoration-line: underline;
+    text-decoration-color: #46C36C;
+}
+
+hr{
+    width: 35%;
+}
+
+ul{
+    font-size: 20px;
+    text-transform: none;
+}
+
+.verthetic{
+    color: #46C36C;
+}
+
+p{
+    font-size: 20px;
+    text-transform: none;
+}
+
+.aidesection{
+    display: grid;
+    grid-template-columns: 1fr 1000px 1fr;
+    grid-template-rows: 100px auto auto auto auto ;
+    grid-template-areas: 
+    " . . . "
+    " . FAQtitre . "
+    " . FAQtxt . "
+    " . resetcompte . "
+    " . . . ";
+}
+
+.faq_titre{
+    grid-area: FAQtitre;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+}
+
+.faq_txt{
+    grid-area: FAQtxt;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    /* text-align: center; */
+    color: white;
+}
+
+
+
 .equipesection{
     display: grid;
     grid-template-columns: 1fr 1400px 1fr;
