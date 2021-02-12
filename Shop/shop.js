@@ -327,15 +327,16 @@ if(avatarF2_vendu == 1){
     button_vendu_F2.style.display = "flex";
     
 }
+// fonction pour detecter si la souris et sur l'image a acheter
 avatarF2.addEventListener("mouseover", function() {
-    if(avatarF2_vendu != 1){
+    if(avatarF2_vendu != 1){//detection si l'image est deja achete
         avatarF2_achat.style.display = 'flex';
     }
 });
 avatarF2.addEventListener("mouseout", function() {
     avatarF2_achat.style.display = 'none';
 });
-button_achat_F2.addEventListener('click', event => {
+button_achat_F2.addEventListener('click', event => {//detection du clique sur le bouton acheter
     if(gold >= 4500){
         console.log("achetez")
         let newIMG = document.createElement('img');
