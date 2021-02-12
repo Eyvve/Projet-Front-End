@@ -72,6 +72,7 @@ if(save_or_not == 1) {
     nomProfil.innerHTML = pseudo;
     if(gold_score_deffine == 1){
         gold = parseInt(localStorage.getItem("gold_save"));
+        printScore.innerHTML = parseInt(localStorage.getItem("gold_save"));
         gold_nav.innerHTML = parseInt(localStorage.getItem("gold_save"));
         gold_profil.innerHTML = parseInt(localStorage.getItem("gold_save"));
         avatarF2_vendu = parseInt(localStorage.getItem("avatarF2_vendu_save"));
