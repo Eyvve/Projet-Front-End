@@ -456,7 +456,7 @@ button{
     display: inline-block;
     padding-right: 2em;
     white-space: nowrap;
-    animation: animation1 120s infinite linear;
+    animation: animation1 170s infinite linear;
   }
   
 @keyframes animation1 {
