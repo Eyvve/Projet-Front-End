@@ -549,11 +549,15 @@ var temp5 = document.querySelector("#temp5")
 var temp6 = document.querySelector("#temp6")
 var temp7 = document.querySelector("#temp7")
 var temp8 = document.querySelector("#temp8")
-
+var encadreNumOn = document.getElementById("encadre")
+var linkTemplateOn = document.getElementById("linktemplate")
 
 slidingModel.addEventListener("click", () => {
     console.log("selection")
     if(slider == 0){
+        encadreNumOn.style.opacity = "80%"
+        linkTemplateOn.style.display = "grid"
+
         temp1.style.backgroundColor = "#add8e6";
         temp1.innerHTML = "#add8e6";
 
@@ -627,23 +631,19 @@ slidingModel.addEventListener("click", () => {
 grivide.addEventListener("click", () => {
     console.log("vide")
     temp1.style.backgroundColor = "";
-        temp1.innerHTML = "";
-
-        temp2.style.backgroundColor = "";
-        temp2.innerHTML = "";
-
-        temp3.style.backgroundColor = "";
-        temp3.innerHTML = "";
-
-        temp4.style.backgroundColor = "";
-        temp4.innerHTML = "";
-
-        temp5.style.backgroundColor = "";
-        temp5.innerHTML = "";
-
-        temp6.style.backgroundColor = "";
-        temp6.innerHTML = "";
-
-        temp7.style.backgroundColor = "";
-        temp7.innerHTML = "";
+    temp1.innerHTML = "";
+    temp2.style.backgroundColor = "";
+    temp2.innerHTML = "";
+    temp3.style.backgroundColor = "";
+    temp3.innerHTML = "";
+    temp4.style.backgroundColor = "";
+    temp4.innerHTML = "";
+    temp5.style.backgroundColor = "";
+    temp5.innerHTML = "";
+    temp6.style.backgroundColor = "";
+    temp6.innerHTML = "";
+    temp7.style.backgroundColor = "";
+    temp7.innerHTML = "";
+    encadreNumOn.style.opacity = "100%"
+    linkTemplateOn.style.display = "none"
 })
