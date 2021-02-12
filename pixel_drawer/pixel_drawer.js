@@ -551,9 +551,15 @@ var temp7 = document.querySelector("#temp7")
 var temp8 = document.querySelector("#temp8")
 var encadreNumOn = document.getElementById("encadre")
 var linkTemplateOn = document.getElementById("linktemplate")
+var megamanTemplateOn = document.getElementById("megamantemplate")
+var pokeballTemplateOn = document.getElementById("pokeballtemplate")
 
 slidingModel.addEventListener("click", () => {
     console.log("selection")
+    linkTemplateOn.style.display = "none"
+    megamanTemplateOn.style.display = "none"
+    pokeballTemplateOn.style.display = "none"
+
     if(slider == 0){
         encadreNumOn.style.opacity = "80%"
         linkTemplateOn.style.display = "grid"
@@ -581,6 +587,8 @@ slidingModel.addEventListener("click", () => {
     }
 
     if(slider == 1){
+        encadreNumOn.style.opacity = "80%"
+        megamanTemplateOn.style.display = "grid"
         temp1.style.backgroundColor = "#ff8fab";
         temp1.innerHTML = "#ff8fab";
 
@@ -604,6 +612,9 @@ slidingModel.addEventListener("click", () => {
     }
 
     if(slider == 2){
+        encadreNumOn.style.opacity = "80%"
+        pokeballTemplateOn.style.display = "grid"
+
         temp1.style.backgroundColor = "#80f587";
         temp1.innerHTML = "#80f587";
 
@@ -645,5 +656,4 @@ grivide.addEventListener("click", () => {
     temp7.style.backgroundColor = "";
     temp7.innerHTML = "";
     encadreNumOn.style.opacity = "100%"
-    linkTemplateOn.style.display = "none"
 })
