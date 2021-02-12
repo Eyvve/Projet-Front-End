@@ -492,23 +492,25 @@ var grivide = document.querySelector("#grivide")
 
 slidedroit.addEventListener("click", () => {
     console.log("slide droit")
-    if (slider >= 0 && slider <= 1){
+    if (slider >= 0 && slider <= 3){
         slider += 1
+        if (slider == 3){slider = 0}
         console.log("slide n°" + slider)
-        if (slider == 0){ slidingModel.src = "pixelImages/Link.png"; stuckLeft = true}
+        if (slider == 0){ slidingModel.src = "pixelImages/Link.png"; stuckRight = false; stuckLeft = false}
         if (slider == 1){ slidingModel.src = "pixelImages/Megaman.png"; stuckRight = false; stuckLeft = false}
-        if (slider == 2){ slidingModel.src = "pixelImages/Pokeball.png"; stuckRight = true;}
+        if (slider == 2){ slidingModel.src = "pixelImages/Pokeball.png"; stuckRight = false; stuckLeft = false;}
     }
 })
 
 slidegauche.addEventListener("click", () => {
     console.log("slide gauche")
-    if (slider >= 1 && slider <= 4){
+    if (slider >= -1 && slider <= 2){
         slider -= 1
+        if(slider == -1){slider = 2}
         console.log("slide n°" + slider)
-        if (slider == 0){ slidingModel.src = "pixelImages/Link.png"; stuckLeft = true}
+        if (slider == 0){ slidingModel.src = "pixelImages/Link.png"; stuckRight = false; stuckLeft = false}
         if (slider == 1){ slidingModel.src = "pixelImages/Megaman.png"; stuckRight = false; stuckLeft = false}
-        if (slider == 2){ slidingModel.src = "pixelImages/Pokeball.png"; stuckRight = true;}
+        if (slider == 2){ slidingModel.src = "pixelImages/Pokeball.png"; stuckRight = false; stuckLeft = false;}
     }
 })
 
