@@ -5,225 +5,6 @@ body{
     background-repeat:repeat;
     background-size: 110%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-.gridgamecontainer{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 5% 90% 5%;
-    grid-template-areas: 
-        " . . . "
-        " . jeu . "
-        " . . . ";
-}
-
-.gamecontainer{
-    grid-area: jeu;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 0.1fr 0.5fr 0.9fr 1.1fr 2.3fr 0.1fr;
-    grid-template-rows: 5% 90% 5%;
-    gap: 0px 0px;
-    grid-template-areas:
-      " . . . . . . "
-      " . bonus_bare fuse score bouton . "
-      " . . . . . . ";
-      align-self: center;
-    }
-
-.game_window {
-    grid-area: bouton;
-    background: #50514F;
-    border: 1px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    justify-content: center;
-    width: 500px;
-    height: 800px;
-    align-self:center;
-    justify-self: center;
-    margin: 10%;
-    margin-top: 3%;
-    position: relative;
-}
-.bouton_window img {
-    width: 250px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-.bouton_window{
-    position: relative;
-    align-content: center;
-    text-align: center;
-    top: 60%;
-}
-#score_click img {
-    width: 50px;
-}
-#score_click{
-    color: white;
-    width: 500px;
-    height: 500px;
-
-}
-.click_boutton {
-    align-items: center;
-
-}
-#click_boutton_on {
-    display: none;
-}
-#score {
-    font-size: 40px;
-    color: white;
-}
-.score_window {
-    display: grid;
-    grid-template-rows:25% 50px ;
-    grid-template-areas:
-      " . "
-      " score_point "
-      " . ";
-    grid-area: score;
-    background: #50514F;
-    border: 2px solid #5FF070;
-    box-sizing: border-box;
-    border-radius: 15px;
-    
-    width: 300px;
-    height: 100px;
-    align-self: center;
-    justify-self: center;
-    margin: 10%;
-
-}
-.score_window img {
-    width: 50px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-    
-    margin-right: 10px;
-}
-#score_flex{
-    grid-area: score_point;
-    display: flex;
-    margin-left: 10px;
-}
-#boost_barre{
-    position: relative;
-    grid-area: bonus_bare;
-    background: #50514F;
-    border-radius: 20px;
-    width: 30px;
-    height: 800px;
-    align-self: center;
-    justify-self: center;
-}
-#boost_barre_vert{
-    grid-area: bonus_bare;
-    background:#26E8A1;
-    border-radius: 20px;
-    width: 30px;
-    height: 0%;
-    justify-self: center;
-    position: absolute;
-    bottom: 0;
-}
-
-.fuse {
-    visibility: visible;
-    grid-area: fuse;
-    margin: 10%;
-    justify-self: center;
-    align-self: center;
-    position: relative;
-    width: 150px;
-    height: 100%;
-
-}
-.fuse img{
-    height: 300px;
-    user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    -webkit-user-drag: none; -webkit-user-select: none; 
-    -moz-user-drag: none; 
-}
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
-#img_fuse {
-    position: absolute;
-    bottom: 0;
-}
-
-.fuse_fire {
-    position: absolute;
-    bottom : 0;
-    left :0;
-    transform: translateY( -3500px );
-    transition: transform 1s ease-out;
-    animation-delay: 1s;
-    opacity: 1;
-  }
-.fuse_return {
-    position: absolute;
-    top : 6500px;
-    left :0;
-    transform: translateY( -6803px );
-    transition: transform 1s ease-out;
-    animation-delay: 1s;
-    opacity: 1;
-  }
-  
-.plus1 {
-    position: absolute;
-    bottom : 100px;
-    left :245px;
-    transform: translateY( -300px );
-    transition: transform 1s ease-out;
-    animation-delay: 0.5s;
-    opacity: 1;
-  }
-
-  #star {
-    position: absolute;
-    bottom: 0;
-    left: -80px;
-    justify-self: center;
-    align-self: center;
-    
-    
-  }
-  #star img{
-      height: 300px;
-  }
-
-
-  body{
     background-color: #262c2c;;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -330,7 +111,6 @@ a{
     align-self: center;
     justify-self: center;
 }
-
 
 /* MAIN */
 
@@ -469,6 +249,233 @@ a{
 .inv img{
     width: 100px;
 }
+
+
+/* page principal grid-container */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.gridgamecontainer{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: 
+        " . . . "
+        " . jeu . "
+        " . . . ";
+}
+
+.gamecontainer{
+    grid-area: jeu;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.1fr 0.5fr 0.9fr 1.1fr 2.3fr 0.1fr;
+    grid-template-rows: 5% 90% 5%;
+    gap: 0px 0px;
+    grid-template-areas:
+      " . . . . . . "
+      " . bonus_bare fuse score bouton . "
+      " . . . . . . ";
+      align-self: center;
+    }
+
+/* fenettre du bouton*/
+.game_window {
+    grid-area: bouton;
+    background: #50514F;
+    border: 1px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    justify-content: center;
+    width: 500px;
+    height: 800px;
+    align-self:center;
+    justify-self: center;
+    margin: 10%;
+    margin-top: 3%;
+    position: relative;
+}
+.bouton_window img {
+    width: 250px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+.bouton_window{
+    position: relative;
+    align-content: center;
+    text-align: center;
+    top: 60%;
+}
+#score_click img {
+    width: 50px;
+}
+#score_click{
+    color: white;
+    width: 500px;
+    height: 500px;
+
+}
+.click_boutton {
+    align-items: center;
+
+}
+#click_boutton_on {
+    display: none;
+}
+#score {
+    font-size: 40px;
+    color: white;
+}
+
+/* fenettre des score */
+.score_window {
+    display: grid;
+    grid-template-rows:25% 50px ;
+    grid-template-areas:
+      " . "
+      " score_point "
+      " . ";
+    grid-area: score;
+    background: #50514F;
+    border: 2px solid #5FF070;
+    box-sizing: border-box;
+    border-radius: 15px;
+    
+    width: 300px;
+    height: 100px;
+    align-self: center;
+    justify-self: center;
+    margin: 10%;
+
+}
+.score_window img {
+    width: 50px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+    
+    margin-right: 10px;
+}
+#score_flex{
+    grid-area: score_point;
+    display: flex;
+    margin-left: 10px;
+}
+
+/* fenetre du boost vert */
+#boost_barre{
+    position: relative;
+    grid-area: bonus_bare;
+    background: #50514F;
+    border-radius: 20px;
+    width: 30px;
+    height: 800px;
+    align-self: center;
+    justify-self: center;
+}
+#boost_barre_vert{
+    grid-area: bonus_bare;
+    background:#26E8A1;
+    border-radius: 20px;
+    width: 30px;
+    height: 0%;
+    justify-self: center;
+    position: absolute;
+    bottom: 0;
+}
+
+/* fenetre du bouton fuse */
+.fuse {
+    visibility: visible;
+    grid-area: fuse;
+    margin: 10%;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    width: 150px;
+    height: 100%;
+
+}
+.fuse img{
+    height: 300px;
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none; 
+}
+
+/* animation de tramblement */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+#img_fuse {
+    position: absolute;
+    bottom: 0;
+}
+
+/* animation de la fuse qui decole */
+.fuse_fire {
+    position: absolute;
+    bottom : 0;
+    left :0;
+    transform: translateY( -3500px );
+    transition: transform 1s ease-out;
+    animation-delay: 1s;
+    opacity: 1;
+  }
+.fuse_return {
+    position: absolute;
+    top : 6500px;
+    left :0;
+    transform: translateY( -6803px );
+    transition: transform 1s ease-out;
+    animation-delay: 1s;
+    opacity: 1;
+  }
+  
+.plus1 {
+    position: absolute;
+    bottom : 100px;
+    left :245px;
+    transform: translateY( -300px );
+    transition: transform 1s ease-out;
+    animation-delay: 0.5s;
+    opacity: 1;
+  }
+
+#star {
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+  justify-self: center;
+  align-self: center;
+  
+  
+}
+#star img{
+    height: 300px;
+}
+
 
 /* FOOTER */
 

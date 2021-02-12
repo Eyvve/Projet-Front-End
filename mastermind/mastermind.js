@@ -14,8 +14,8 @@ const printChoixVraiFaux = document.getElementById("black_white");
 const printScore = document.getElementById("score");
 const printWin = document.getElementById("win_flex");
 const continueWinButton = document.getElementById("button_win");
-const printDefeat = document.getElementById("defete_flex");
-const continueDefeatButton = document.getElementById("button_defete");
+const printDefeat = document.getElementById("defaitee_flex");
+const continueDefeatButton = document.getElementById("button_defaitee");
 var Compteur = 0; // Compteur pour verifier tout les 5 jetons
 var vie = 12;//nombre de vie
 var verif = [0,0,0]; // liste [nombre de jeton validé, nombre de jeton mal plasé, nombre de jeton nul]
@@ -55,10 +55,13 @@ var avatarF6_vendu = 0;
 var avatarH6_vendu = 0;
 var inv = document.getElementById("inv");
 
-//profil
-
 var gold_score_deffine = 0;
-gold_score_deffine = localStorage.getItem("gold_score_deffine_save");
+gold_score_deffine = localStorage.getItem("gold_score_deffine_save")
+
+
+//profil;
+
+//detection des sauvegarde pour les charger ou non
 if(save_or_not == 1) {
     pseudo = localStorage.getItem("pseudo_save");
     if(pseudo == null) {
@@ -88,6 +91,7 @@ if(save_or_not == 1) {
 }
 
 
+//detection du clique sur la nav pour ouvrir le profil
 profil.addEventListener('click', event => {
     profil_print.style.display = "flex";
 });
@@ -112,6 +116,7 @@ var change_avatarH5 = document.getElementById("img_inv_H5")
 var change_avatarF6 = document.getElementById("img_inv_F6")
 var change_avatarH6 = document.getElementById("img_inv_H6")
 
+//rajout des photo de profile achete dans l'inventaire
 change_avatarF1.addEventListener('click', event => {
     photo_profil_player = 1
     localStorage.setItem("photo_profil_player_save", photo_profil_player);
@@ -185,6 +190,7 @@ if(avatarH2_vendu == 1){
     });
 }
 
+//fonction pour afficher la photo de profil choisi
 function test_profil_fonction(){
     if(photo_profil_player == 1){
         let newIMG = document.createElement('img');
@@ -260,6 +266,7 @@ function test_profil_fonction(){
         imgProfil.appendChild(newIMG);
     }
 };
+//rajout des images achete dans l'inventaire
 function test_inv_img_vendu(){
     if(avatarF2_vendu == 1){
         let newIMG = document.createElement('img');
@@ -346,12 +353,16 @@ function test_inv_img_vendu(){
 
 // fonctions jeu
     
+// selection du suite secrete
 function IaSelectColor() {
     for(let i = 0; i <= 4; i++){
         colorsIa[i] = Math.floor(Math.random() * 8) + 1  
     };
 };
+
+// verification des choix du joueur
 function IaVerif() {
+    // verification des pions noir (juste et bien plasse)
     let colorsIaCopy = [].concat(colorsIa)
     for(let i = 0; i <= 4; i++){
         if(colorsIa[i] == colorsPlayer[i]){
@@ -359,7 +370,8 @@ function IaVerif() {
         }; 
     };
 
-    
+    // verification des pions blanc (juste mais mal placé 
+    // (les pions noir detecte avant sont remit dans les blanc))
     for(let i = 0; i <= 4; i++){
         if(colorsPlayer[i] == colorsIaCopy[0]){
             verif[1] += 1;
@@ -380,28 +392,30 @@ function IaVerif() {
     };
 
     
-
+    // soustraction des pions noir au pions blancs pour eviter les doublons
     if(verif[1] != 0){
         verif[1] -= verif[0];
     };
+
+    // rajout des pions vide
     verif[2] = 5 - (verif[1]+verif[0]);
     
-
-    for(let i = 0; i <= verif[0]-1; i++){
+    // affichage des pions dans la fenetre des reponse de l'ia
+    for(let i = 0; i <= verif[0]-1; i++){ //pions noir
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../Images/noir.png');
         newIMG.setAttribute('alt', 'colors_noir');
         newIMG.setAttribute('id', 'noir');
         printChoixVraiFaux.appendChild(newIMG);
     };
-    for(let i = 0; i <= verif[1]-1; i++){
+    for(let i = 0; i <= verif[1]-1; i++){//pions blanc
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../Images/blanc.png');
         newIMG.setAttribute('alt', 'colors_blanc');
         newIMG.setAttribute('id', 'blanc');
         printChoixVraiFaux.appendChild(newIMG);
     };
-    for(let i = 0; i <= verif[2]-1; i++){
+    for(let i = 0; i <= verif[2]-1; i++){//pions vide
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../Images/vide.png');
         newIMG.setAttribute('alt', 'colors_vide');
@@ -411,6 +425,8 @@ function IaVerif() {
     
     
 };
+
+// defaite du joueur
 function LoseMastermind(){
     printDefeat.style.display = 'flex';
     continueDefeatButton.onclick = function() {
@@ -418,9 +434,10 @@ function LoseMastermind(){
         document.location.reload();
     };
 };
+// victoire du joueur
 function WinMastermind(){
     vieCopy = [].concat(vie)
-    score += 100 * vieCopy;
+    score += 700 * vieCopy;
     gold += score
     localStorage.setItem('gold_save', gold);
     printScore.innerText = gold;
@@ -436,6 +453,8 @@ function WinMastermind(){
         document.location.reload();
     };
 };
+
+// affichage des couleur choisis dans la fenettre des choix du joueur
 function PrintChoixColorFonc(color, id) {
     let newIMG = document.createElement('img');
     newIMG.setAttribute('src', '../Images/' + color + '.png');
@@ -445,23 +464,26 @@ function PrintChoixColorFonc(color, id) {
     colorsPlayer[Compteur] = id
     Compteur ++;
     
-    if( Compteur == 5 ){
+    if( Compteur == 5 ){ //verification de la victoire 
         IaVerif()
 
-        if(verif[0] == 5){
+        if(verif[0] == 5){ //si le joueur a 5 pions noir il gagne
             WinMastermind();
-        }else{
+        }else{ // sinon il perd une vie et recomence
             verif = [0,0,0]
             Compteur = 0;
             vie -= 1;
         }
     }
-    if(vie <= 0){
+    if(vie <= 0){ // si les vie tombe à 0 le joueur perd
         LoseMastermind()
     }
     
 } 
 
+
+
+// bouton jeton de couleur
 Rouge.onclick = function() {
     console.log("Rouge")
     PrintChoixColorFonc("Rouge", 1)
@@ -495,5 +517,6 @@ Jaune.onclick = function() {
     PrintChoixColorFonc("Jaune", 8)
 }
 
+
+// selection du code secret
 IaSelectColor();
-console.log(colorsIa)

@@ -42,10 +42,12 @@ var avatarF6_vendu = 0;
 var avatarH6_vendu = 0;
 var inv = document.getElementById("inv");
 
-//profil
-
 var gold_score_deffine = 0;
-gold_score_deffine = localStorage.getItem("gold_score_deffine_save");
+gold_score_deffine = localStorage.getItem("gold_score_deffine_save")
+
+
+//profil;
+//detection des sauvegarde pour les charger ou non
 if(save_or_not == 1) {
     pseudo = localStorage.getItem("pseudo_save");
     if(pseudo == null) {
@@ -75,6 +77,7 @@ if(save_or_not == 1) {
 }
 
 
+//detection du clique sur la nav pour ouvrir le profil
 profil.addEventListener('click', event => {
     profil_print.style.display = "flex";
 });
@@ -99,6 +102,7 @@ var change_avatarH5 = document.getElementById("img_inv_H5")
 var change_avatarF6 = document.getElementById("img_inv_F6")
 var change_avatarH6 = document.getElementById("img_inv_H6")
 
+//rajout des photo de profile achete dans l'inventaire
 change_avatarF1.addEventListener('click', event => {
     photo_profil_player = 1
     localStorage.setItem("photo_profil_player_save", photo_profil_player);
@@ -172,6 +176,7 @@ if(avatarH2_vendu == 1){
     });
 }
 
+//fonction pour afficher la photo de profil choisi
 function test_profil_fonction(){
     if(photo_profil_player == 1){
         let newIMG = document.createElement('img');
@@ -247,6 +252,7 @@ function test_profil_fonction(){
         imgProfil.appendChild(newIMG);
     }
 };
+//rajout des images achete dans l'inventaire
 function test_inv_img_vendu(){
     if(avatarF2_vendu == 1){
         let newIMG = document.createElement('img');
@@ -333,28 +339,14 @@ function test_inv_img_vendu(){
 
 // fonctions du jeu
 
-
-function RemoveElementPlus1() {
-  var removeID = document.getElementById(`plus${Compteur_score}`)
-  Compteur_score ++
-  removeID.remove();
-};
-function AddElement () {
-  var newSpan = document.createElement("span");
-  newSpan.className = "plus1";
-  newSpan.id = `plus${Compteur_score}`;
-  var newContent = document.createTextNode('+1');
-  newSpan.appendChild(newContent);
-  var currentSpan = document.getElementById('span1');
-  div.insertBefore(newSpan, currentSpan);
-
-};
+// fonction pour aficher l'étoile derriere la fuse
 function HiddenStar() {
   star.style.visibility = "hidden"
   if(bonus_timer <= 0.4 ){
     clearInterval(myVar2);
   };
 };
+// definition du boost jusqu'a que la bare verte soit vide
 function BoostCompteur(){
   bonus_timer -= 0.2;
   bare_boost_vert.style.height = `${bonus_timer}%` 
@@ -366,9 +358,7 @@ function BoostCompteur(){
   };
 };
 
-window.addEventListener('mousedown', function (e) {
-  // console.log(`x: ${ e.x } | y: ${ e.y }`)
-  
+// betection du clique sur le bouton
 button.onmousedown = function() {
   button.setAttribute("src", "../Images/boutton_on.png");
   score += point;
@@ -396,8 +386,7 @@ button.onmouseleave = function() {
   button.setAttribute("src", "../Images/boutton_off.png")
 };
 
-});
-
+// detection du clique sur la fuse + animation de tremblement quand le boost n'est pas pret
 fuse.onmousedown = function() {
   if(bonus_timer == 100){
     star.style.visibility = "hidden"

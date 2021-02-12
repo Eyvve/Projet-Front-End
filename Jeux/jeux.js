@@ -28,6 +28,7 @@ var inv = document.getElementById("inv");
 // profil 
 var gold_score_deffine = 0;
 gold_score_deffine = localStorage.getItem("gold_score_deffine_save");
+//detection des sauvegarde pour les charger ou non
 if(save_or_not == 1) {
     pseudo = localStorage.getItem("pseudo_save");
     if(pseudo == null) {
@@ -57,6 +58,7 @@ if(save_or_not == 1) {
 }
 
 
+//detection du clique sur la nav pour ouvrir le profil
 profil.addEventListener('click', event => {
     profil_print.style.display = "flex";
 });
@@ -81,6 +83,7 @@ var change_avatarH5 = document.getElementById("img_inv_H5")
 var change_avatarF6 = document.getElementById("img_inv_F6")
 var change_avatarH6 = document.getElementById("img_inv_H6")
 
+//rajout des photo de profile achete dans l'inventaire
 change_avatarF1.addEventListener('click', event => {
     photo_profil_player = 1
     localStorage.setItem("photo_profil_player_save", photo_profil_player);
@@ -154,6 +157,7 @@ if(avatarH2_vendu == 1){
     });
 }
 
+//fonction pour afficher la photo de profil choisi
 function test_profil_fonction(){
     if(photo_profil_player == 1){
         let newIMG = document.createElement('img');
@@ -229,6 +233,7 @@ function test_profil_fonction(){
         imgProfil.appendChild(newIMG);
     }
 };
+//rajout des images achete dans l'inventaire
 function test_inv_img_vendu(){
     if(avatarF2_vendu == 1){
         let newIMG = document.createElement('img');

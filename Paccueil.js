@@ -34,6 +34,8 @@ var inv = document.getElementById("inv");
 save_or_not = localStorage.getItem("save_or_not_save");
 gold_score_deffine = localStorage.getItem("gold_score_deffine_save");
 
+
+// detection de la premiere connexion ou  non + chargement des sauvgarde
 if (save_or_not != 1) {
     connect_page.style.display = "flex";
 }else {
@@ -64,7 +66,37 @@ if (save_or_not != 1) {
 
 }
 
+// fenettre d'inscription
+// default photo profil
+img_select1.className = "img_profil_select";
+photo_profil_player = 1;
 
+// chois de la photo de profil
+img_select1.addEventListener('click', event => {
+    img_select1.className = "img_profil_select";
+    img_select2.className = "";
+    photo_profil_player = 1;
+    
+});
+img_select2.addEventListener('click', event => {
+    img_select2.className = "img_profil_select";
+    img_select1.className = "";
+    photo_profil_player = 2;
+});
+
+// detection du bouton d'inscription
+boutton_inscription.addEventListener('click', event => {
+    localStorage.setItem("pseudo_save",pseudo_player.value);
+    localStorage.setItem("photo_profil_player_save", photo_profil_player);
+    save_or_not = 1;
+    localStorage.setItem("save_or_not_save", save_or_not);
+    connect_page.style.display = "none";
+    document.location.reload();
+});
+
+
+
+//detection du clique sur la nav pour ouvrir le profil
 profil.addEventListener('click', event => {
     profil_print.style.display = "flex";
     console.log("profil afficher");
@@ -91,6 +123,7 @@ var change_avatarH5 = document.getElementById("img_inv_H5")
 var change_avatarF6 = document.getElementById("img_inv_F6")
 var change_avatarH6 = document.getElementById("img_inv_H6")
 
+//rajout des photo de profile achete dans l'inventaire
 change_avatarF1.addEventListener('click', event => {
     photo_profil_player = 1
     localStorage.setItem("photo_profil_player_save", photo_profil_player);
@@ -163,6 +196,7 @@ if(avatarH2_vendu == 1){
         document.location.reload();
     });
 }
+//rajout des images achete dans l'inventaire
 function test_inv_img_vendu(){
     if(avatarF2_vendu == 1){
         let newIMG = document.createElement('img');
@@ -246,22 +280,7 @@ function test_inv_img_vendu(){
     };
 };
 
-// default img profil
-img_select1.className = "img_profil_select";
-photo_profil_player = 1;
-
-img_select1.addEventListener('click', event => {
-    img_select1.className = "img_profil_select";
-    img_select2.className = "";
-    photo_profil_player = 1;
-    
-});
-img_select2.addEventListener('click', event => {
-    img_select2.className = "img_profil_select";
-    img_select1.className = "";
-    photo_profil_player = 2;
-});
-
+//fonction pour afficher la photo de profil choisi
 function test_profil_fonction(){
     if(photo_profil_player == 1){
         let newIMG = document.createElement('img');
@@ -338,14 +357,7 @@ function test_profil_fonction(){
     }
 };
 
-boutton_inscription.addEventListener('click', event => {
-    localStorage.setItem("pseudo_save",pseudo_player.value);
-    localStorage.setItem("photo_profil_player_save", photo_profil_player);
-    save_or_not = 1;
-    localStorage.setItem("save_or_not_save", save_or_not);
-    connect_page.style.display = "none";
-    document.location.reload();
-});
+
 
 
 // fonctions slider ////////////////////////////////////////////
