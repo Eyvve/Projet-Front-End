@@ -81,4 +81,7 @@ var reset = document.querySelector("#reset")
 
 reset.addEventListener("click", () => {
     console.log("réinitialisation du compte")
+    localStorage.clear()
+    document.location.href='../index.html'
+
 })
