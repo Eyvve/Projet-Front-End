@@ -320,7 +320,11 @@ function test_inv_img_vendu(){
     };
 };
 
-////////////////////////////// valeurs par défaut //////////////////////////////
+
+////////////////////////////// CODE DU JEU ////////////////////////////////
+
+
+////////////////////////////// variables par défaut //////////////////////////////
 
 
 var pickedColor = "black";
@@ -702,3 +706,93 @@ grivide.addEventListener("click", () => {
         encadreNumOn.style.opacity = "100%"
     })
 })
+
+function changecolortemp1(){
+    if (slider == 0){
+        pickedColor = "#add8e6"
+    }
+    if (slider == 1){
+        pickedColor = "#ff8fab"
+    }
+    if (slider == 2){
+        pickedColor = "#80f587"
+    }
+}
+
+function changecolortemp2(){
+    if (slider == 0){
+        pickedColor = "#000"
+    }
+    if (slider == 1){
+        pickedColor = "#ffc0cb"
+    }
+    if (slider == 2){
+        pickedColor = "#000"
+    }
+}
+
+function changecolortemp3(){
+    if (slider == 0){
+        pickedColor = "#46C36C"
+    }
+    if (slider == 1){
+        pickedColor = "#000"
+    }
+    if (slider == 2){
+        pickedColor = "#F00"
+    }
+}
+
+function changecolortemp4(){
+    if (slider == 0){
+        pickedColor = "#FF0"
+    }
+    if (slider == 1){
+        pickedColor = "#4279c2"
+    }
+    if (slider == 2){
+        pickedColor = "#FFF"
+    }
+}
+
+function changecolortemp5(){
+    if (slider == 0){
+        pickedColor = "#ffc933"
+    }
+    if (slider == 1){
+        pickedColor = "#5bd1e6"
+    }
+    if (slider == 2){
+        pickedColor = "#c4c4c4"
+    }
+}
+
+function changecolortemp6(){
+    if (slider == 0){
+        pickedColor = "#fffab3"
+    }
+    if (slider == 1){
+        pickedColor = "#eed5a0"
+    }
+}
+
+function changecolortemp7(){
+    if (slider == 0){
+        pickedColor = "#808080"
+    }
+    if (slider == 1){
+        pickedColor = "#FFF" 
+    }
+}
+
+function changecolortemp8(){
+    if (slider == 0){
+        pickedColor = "#636145"
+    }
+}
+
+function changecolortemp9(){
+    if (slider == 0){
+        pickedColor = "#2af477"
+    }
+}
