@@ -559,25 +559,28 @@ slidingModel.addEventListener("click", () => {
         linkTemplateOn.style.display = "grid"
 
         temp1.style.backgroundColor = "#add8e6";
-        temp1.innerHTML = "1 : #add8e6";
+        temp1.innerHTML = "1: #add8e6";
 
-        temp2.style.backgroundColor = "#46C36C";
-        temp2.innerHTML = "#46C36C";
+        temp2.style.backgroundColor = "#000";
+        temp2.innerHTML = "2: #000";
 
-        temp3.style.backgroundColor = "#FF0";
-        temp3.innerHTML = "#FF0";
+        temp3.style.backgroundColor = "#46C36C";
+        temp3.innerHTML = "3: #46C36C";
 
-        temp4.style.backgroundColor = "#ffc933";
-        temp4.innerHTML = "#ffc933";
+        temp4.style.backgroundColor = "#FF0";
+        temp4.innerHTML = "4: #FF0";
 
-        temp5.style.backgroundColor = "#fffab3";
-        temp5.innerHTML = "#fffab3";
+        temp5.style.backgroundColor = "#ffc933";
+        temp5.innerHTML = "5: #ffc933";
 
-        temp6.style.backgroundColor = "#2af477";
-        temp6.innerHTML = "#2af477";
+        temp6.style.backgroundColor = "#fffab3";
+        temp6.innerHTML = "6: #fffab3";
 
         temp7.style.backgroundColor = "#636145";
-        temp7.innerHTML = "#636145";
+        temp7.innerHTML = "7: #636145";
+
+        temp8.style.backgroundColor = "#2af477";
+        temp8.innerHTML = "8: #2af477";
     }
 
     if(slider == 1){
@@ -601,6 +604,9 @@ slidingModel.addEventListener("click", () => {
 
         temp7.style.backgroundColor = "";
         temp7.innerHTML = "";
+
+        temp8.style.backgroundColor = "";
+        temp8.innerHTML = "";
     }
 
     if(slider == 2){
