@@ -316,7 +316,7 @@ function test_inv_img_vendu(){
 };
 
 
-
+//fontion pour acheter les avatar da,s l'ordre affiche
 
 var avatarF2 = document.getElementById("avatarF2");
 var avatarF2_achat = document.getElementById("avatarF2_achat");
