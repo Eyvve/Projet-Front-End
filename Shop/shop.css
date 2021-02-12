@@ -12,6 +12,7 @@ body{
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 /* HEADER */
@@ -491,7 +492,7 @@ footer{
     text-align: center;
     text-transform: uppercase;
     color: #E5E5E5; 
-    height: 400px;
+    height: 200px;
 }
 
 .footer_nav {  
