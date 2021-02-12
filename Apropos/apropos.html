@@ -11,74 +11,76 @@
   <div class="loadingpage" id="loadingpage">
     <img class="loadingcoins" src="../Images/loader_jetons_V2.gif">
   </div>
-
+  
   <header>
     <div id="profil_flex">
       <div class="profilpopup popup" id="profilpopup">
-        <div class="imageprofil popup" id="imageprofil"></div>
-        <div class="nomprofil popup" id="nomprofil">
-          <span id="nomProfil"></span>
-        </div>
-        <div class="coinsprofil popup" id="coinsprofil">
-          <img class="coinimage popup" src="Hetic_coins.png" alt="hetic coins"></img>
-          <div class="montantprofil popup score_gold" id="gold_profil"></div>
-        </div>
+          <div class="imageprofil popup" id="imageprofil"></div>
+          <div class="nomprofil popup" id="nomprofil">
+            <span id="nomProfil"></span>
+          </div>
+          <div class="coinsprofil popup" id="coinsprofil">
+            <img class="coinimage popup" src="../Images/Hetic_coins.png" alt="hetic coins"></img>
+            <div class="montantprofil popup score_gold" id="gold_profil"></div>
+          </div>
+          <div class="invprofil popup" id="invprofil" >
+              <span class="text_inv">Inventaire :</span>
+              <div class="inv" id="inv">
+                  <img class="img_inv" id="img_inv_F1" src="../avatars/avatarF1.png" alt="avatarF1">
+                  <img class="img_inv" id="img_inv_H1" src="../avatars/avatarH1.png" alt="avatarH1">
+              </div>
+          </div>
       </div>
     </div>
     <nav class="header_nav">
-      <div class="profil_nav headerfont" id="button_profil">profil</div>
-      <a class="jeux headerfont" href="../Jeux/jeux.html">jeux</a>
-      <a class="logo headerfont" href="../index.html">
-        <img class="logo" src="../Images/logo_site.png" alt=""><img>
-      </a>
-      <a class="a_propos_de headerfont" href="../Apropos/apropos.html">à propos</a>
-      <a class="aide headerfont" href="">shop</a>
-      <div class="score">
-        <img class="coins" src="../Images/Hetic_coins.png" alt="hetic coins"></img>
-        <div class="score_gold headerfont" id="gold_nav"></div>
-      </div>
-    </nav>
-</header>
+        <div class="profil_nav headerfont" id="button_profil">profil</div>
+        <a class="jeux headerfont" href="../Jeux/jeux.html">jeux</a>
+        <a class="logo headerfont" href="../index.html">
+          <img class="logo" src="../Images/logo_site.png" alt=""><img>
+        </a>
+        <a class="a_propos_de headerfont" href="../Apropos/apropos.html">à propos</a>
+        <a class="aide headerfont" href="../Shop/shop.html">shop</a>
+        <div class="score">
+          <img class="coins" src="../Images/Hetic_coins.png" alt="hetic coins"></img>
+          <div class="score_gold headerfont" id="gold_nav"></div>
+        </div>
+      </nav>
+  </header>
+  <main>
+    <h1>À propos</h1>
+    <hr>
+      <section class="aidesection">
+        <h2 class="faq_titre">FAQ</h2>
+        <ul class="faq_txt">
+          <li>COMMENT PUIS-je utiliser mes <span class="verthetic"> heticoins</span> ?</li>
+          <p> - Les heticoins servent pour le moment à acheter des avatars sur le shop. Ils servent aussi en 
+            théorie à acheter de nouveaux modèles pour le pixel drawer mais cette fonctionnalité est en développement.</p>
+            <br>
+          <li>comment fonctionne le <span class="verthetic">shop</span> ?</li>
+          <p> - Le shop sert à acheter de nouveaux avatars. Il suffit de cliquer sur le visage de l'avatar choisit pour l'ajouter à son inventaire consultable dans l'encart "profil". 
+            Toute ressemblance avec des personnes existantes n'est absolument pas fortuite.</p>
+            <br>
+          <li>comment puis-je <span class="verthetic">réinitialiser</span> mon compte ?</li>
+          <p> - Rien de plus simple, le bouton "réinitialiser le compte" tout en bas de cette page. Si vous le souhaitez, vous pouvez aussi consulter ce site sur un autre
+            navigateur ou bien une autre session de votre navigateur actuel.
+          </p>
+          <br>
+          <li>comment puis-je reporter des <span class="verthetic">bugs</span> sur le site ?</li>
+          <p> - Si vous repérez un bug sur le site, veuillez contacter :</p>
+          <ul>
+            <li>Si c'est un problème lié au <span class="verthetic">JavaScript</span> de la page, le <span class="verthetic">MASTERMIND</span> ou le <span class="verthetic">CLICKER</span>: 
+              contactez <span class="greenunderline">GABRIEL GOLDBRONN</span> sur son linkedin accessible <a class="verthetic" href="https://www.linkedin.com/in/gabriel-goldbronn/" target="_blank">ici</a></li>
+            <br>
+            <li>Si c'est un problème lié au <span class="verthetic">HTML / CSS</span> de la page, le <span class="verthetic">PIXEL-DRAWER</span> ou le <span class="verthetic">PUISSANCE 4</span> : 
+              contactez <span class="greenunderline">DORIAN CANONNE</span> sur son linkedin accessible <a class="verthetic" href="https://www.linkedin.com/in/dorian-canonne/" target="_blank">ici</a></li>
+          </ul>
 
-<main>
-  <h1>À propos</h1>
-  <hr>
-    <section class="aidesection">
-      <h2 class="faq_titre">FAQ</h2>
-      <ul class="faq_txt">
-        <li>COMMENT PUIS-je utiliser mes <span class="verthetic"> heticoins</span> ?</li>
-        <p> - Les heticoins servent pour le moment à acheter des avatars sur le shop. Ils servent aussi en 
-          théorie à acheter de nouveaux modèles pour le pixel drawer mais cette fonctionnalité est en développement.</p>
-          <br>
-        <li>comment fonctionne le <span class="verthetic">shop</span> ?</li>
-        <p> - Le shop sert à acheter de nouveaux avatars. Il suffit de cliquer sur le visage de l'avatar choisit pour l'ajouter à son inventaire consultable dans l'encart "profil". 
-          Toute ressemblance avec des personnes existantes n'est absolument pas fortuite.</p>
-          <br>
-        <li>comment puis-je <span class="verthetic">réinitialiser</span> mon compte ?</li>
-        <p> - Rien de plus simple, le bouton "réinitialiser le compte" tout en bas de cette page. Si vous le souhaitez, vous pouvez aussi consulter ce site sur un autre
-          navigateur ou bien une autre session de votre navigateur actuel.
-        </p>
-        <br>
-        <li>comment puis-je reporter des <span class="verthetic">bugs</span> sur le site ?</li>
-        <p> - Si vous repérez un bug sur le site, veuillez contacter :</p>
-        <ul>
-          <li>Si c'est un problème lié au <span class="verthetic">JavaScript</span> de la page, le <span class="verthetic">MASTERMIND</span> ou le <span class="verthetic">CLICKER</span>: 
-            contactez <span class="greenunderline">GABRIEL GOLDBRONN</span> sur son linkedin accessible <a class="verthetic" href="https://www.linkedin.com/in/gabriel-goldbronn/" target="_blank">ici</a></li>
-          <br>
-          <li>Si c'est un problème lié au <span class="verthetic">HTML / CSS</span> de la page, le <span class="verthetic">PIXEL-DRAWER</span> ou le <span class="verthetic">PUISSANCE 4</span> : 
-            contactez <span class="greenunderline">DORIAN CANONNE</span> sur son linkedin accessible <a class="verthetic" href="https://www.linkedin.com/in/dorian-canonne/" target="_blank">ici</a></li>
         </ul>
-        
-      </ul>
 
-    </section>
-    <section class="equipesection">
-
-    
+      </section>
+      <section class="equipesection">
         <div class="equipe">
-
             <span class="titre2">présentation de l'équipe</span>
-
             <div class="profil profil1" id="profil1">
                 <div class="photo photo1" id="photo1"></div>
                 <div class="nom nom1" id="nom1">Amin Bentani</div>
@@ -89,8 +91,6 @@
                 </ul>
                 <div class="role role1" id="role1">DESIGN / HTML / CSS</div>
             </div>
-
-            
             <div class="profil profil2" id="profil2">
                 <div class="photo photo2" id="photo2"></div>
                 <div class="nom nom2" id="nom2">Dorian Canonne</div>
@@ -102,8 +102,6 @@
                 </ul>
                 <div class="role role2" id="role2">JEUX / HTML / <br>CSS</div>
             </div>
-
-            
             <div class="profil profil3" id="profil3"> 
                 <div class="photo photo3" id="photo3"></div>
                 <div class="nom nom3" id="nom3">Julie Cesana</div>
@@ -114,7 +112,6 @@
                 </ul>
                 <div class="role role3" id="role3">DESIGN / JAVASCRIPT</div>
             </div>
-
             <div class="profil profil4" id="profil4">
                 <div class="photo photo4" id="photo4"></div>
                 <div class="nom nom4" id="nom4">Gabriel Goldbronn</div>
@@ -127,8 +124,6 @@
                 </ul>
                 <div class="role role4" id="role4">JEUX / JAVASCRIPT</div>
             </div>
-
-            
             <div class="profil profil5" id="profil5">
                 <div class="photo photo5" id="photo5"></div>
                 <div class="nom nom5" id="nom5">Thomas Latour</div>
@@ -139,8 +134,6 @@
                 </ul>
                 <div class="role role5" id="role5">DESIGN / JAVASCRIPT</div>
             </div>
-
-            
             <div class="profil profil6" id="profil6"> 
                 <div class="photo photo6" id="photo6"></div>
                 <div class="nom nom6" id="nom6">Amira Rechid</div>
@@ -150,14 +143,9 @@
                 </ul>
                 <div class="role role6" id="role6">DESIGN / HTML / CSS</div>
             </div>
-
             <img class="reset" id="reset" src="../Images/reset.png" alt="reinitialisez votre compte">
-
         </div>
-      
-
-        
-    </section>
+      </section>
   </main>
   <footer>
       <nav class="footer_nav">

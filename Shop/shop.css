@@ -201,6 +201,16 @@ a{
     grid-template-rows: 1fr;
     grid-template-areas: "coinimage montantprofil";
 }
+.montantprofil{
+    grid-area: montantprofil;
+    /* justify-self: center; */
+    padding-left: 18%;
+    align-self: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    
+}
 
 .coinimage{
     grid-area: coinimage;
@@ -243,16 +253,7 @@ a{
     width: 100px;
 }
 
-.montantprofil{
-    grid-area: montantprofil;
-    /* justify-self: center; */
-    padding-left: 18%;
-    align-self: center;
-    font-size: 45px;
-    font-weight: bold;
-    color: white;
-    
-}
+
 
 /* GRID MAIN */
 
