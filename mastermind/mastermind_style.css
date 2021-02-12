@@ -251,6 +251,10 @@ a{
 .inv img{
     width: 100px;
 }
+.img_inv:hover{
+    border: 3px solid #46C36C;
+    border-radius: 15px;
+}
 
 /* debut de la page principal */
 .gridgamecontainer{
