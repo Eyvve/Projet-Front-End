@@ -643,25 +643,32 @@ slidingModel.addEventListener("click", () => {
         pokeballTemplateOn.style.display = "grid"
 
         temp1.style.backgroundColor = "#80f587";
-        temp1.innerHTML = "#80f587";
+        temp1.innerHTML = "1: #80f587";
 
-        temp2.style.backgroundColor = "#ffebf9";
-        temp2.innerHTML = "#ffebf9";
+        temp2.style.backgroundColor = "#000";
+        temp2.innerHTML = "2: #000";
+        temp2.style.color = "white"
 
-        temp3.style.backgroundColor = "#c4c4c4";
-        temp3.innerHTML = "#c4c4c4";
+        temp3.style.backgroundColor = "#F00";
+        temp3.innerHTML = "3: #F00";
 
-        temp4.style.backgroundColor = "#F00";
-        temp4.innerHTML = "#F00";
+        temp4.style.backgroundColor = "#FFF";
+        temp4.innerHTML = "4: #FFF";
 
-        temp5.style.backgroundColor = "";
-        temp5.innerHTML = "";
+        temp5.style.backgroundColor = "#c4c4c4";
+        temp5.innerHTML = "5: #c4c4c4";
 
         temp6.style.backgroundColor = "";
         temp6.innerHTML = "";
 
         temp7.style.backgroundColor = "";
         temp7.innerHTML = "";
+
+        temp8.style.backgroundColor = "";
+        temp8.innerHTML = "";
+
+        temp9.style.backgroundColor = "";
+        temp9.innerHTML = "";
     }
 
 })
@@ -685,8 +692,11 @@ grivide.addEventListener("click", () => {
         temp7.innerHTML = "";
         temp8.style.backgroundColor = "";
         temp8.innerHTML = "";
+        temp9.style.backgroundColor = "";
+        temp9.innerHTML = "";
         linkTemplateOn.style.display = "none"
         megamanTemplateOn.style.display = "none"
         pokeballTemplateOn.style.display = "none"
         encadreNumOn.style.opacity = "100%"
+    })
 })
