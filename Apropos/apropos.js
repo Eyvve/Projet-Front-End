@@ -322,17 +322,3 @@ reset.addEventListener("click", () => {
     document.location.href='../index.html'
 
 })
-
-// LOADING /////////////////////////////////////
-
-var loadingpage = document.querySelector("#loadingpage")
-
-function loading(){
-        console.log("chargement...")
-        loadingpage.style.display = "grid";
-    if(document.readyState == "complete"){
-        loadingpage.style.display = "none";
-        console.log("chargement terminé !")
-    }
-    
-}
