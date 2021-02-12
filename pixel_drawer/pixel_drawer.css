@@ -575,9 +575,11 @@ footer{
     text-align: center;
     text-transform: uppercase;
     color: #E5E5E5; 
+    height: 400px;
 }
 
 .footer_nav {  
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -586,13 +588,12 @@ footer{
     ". copyright ."
     ". droit1 ."
     ". . .";
-    height: 15vh;
+    height: 100%;
     width: 100%;
     
     background-color: rgba(80, 81, 79, 1);
-    position: relative;
-    bottom: 0px;
-    left: 0px;
+    top: 0%;
+    
 
 }    
 

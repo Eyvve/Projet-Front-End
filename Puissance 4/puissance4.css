@@ -236,7 +236,7 @@ img{
     height: auto;
     display: grid;
     grid-template-columns: auto 1100px auto;
-    grid-template-rows: 85px 800px 50px;
+    grid-template-rows: 85px 800px 100px;
     grid-template-areas: " . . . "" . interface . "" . . .";
 }
 
@@ -597,6 +597,7 @@ footer{
     text-align: center;
     text-transform: uppercase;
     color: #E5E5E5; 
+    height: 400px;
 }
 
 .footer_nav {  
@@ -609,15 +610,16 @@ footer{
     ". copyright ."
     ". droit1 ."
     ". . .";
-    height: 15vh;
+    height: 100%;
     width: 100%;
     
     background-color: rgba(80, 81, 79, 1);
-    /* position: relative; */
-    bottom: 0px;
-    left: 0px;
+    top: 0%;
+    
 
 }    
+
+
 
 .copyright {
     grid-area: copyright;

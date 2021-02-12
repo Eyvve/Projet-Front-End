@@ -1,0 +1,355 @@
+html{
+    background-color: #262c2c;
+}
+
+body{
+    margin: 0;
+    background-image: url(../Images/BG2.png);
+    background-repeat:repeat-y;
+    background-size: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.headerfont{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;    
+    text-transform: uppercase;
+    color: white;
+}
+
+.header_nav{ 
+    z-index: 500;
+    position: fixed;
+    background: rgba(80, 81, 79, 1);
+    display: grid;
+    border-bottom: 5px solid #333;
+    top: 0%;
+    right: 0px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: ". profil jeux logo a_propos aide coins";
+    width : 100%;
+    height: 80px;
+} 
+
+.profil_nav{
+    display: block;
+    grid-area: profil;
+    align-self: center;
+    justify-self: center;
+}
+.jeux {
+    display: block;
+    grid-area: jeux;
+    align-self: center;
+    justify-self: center;
+}
+
+.logo {
+    display: block;
+    grid-area: logo;
+    height: 58px;
+    align-self: center;
+    justify-self: center;
+}
+.jeux:hover {
+    color:#46C36C;
+}
+.profil_nav:hover {
+    color:#46C36C;
+    cursor:  pointer;
+}
+.a_propos_de:hover {
+    color:#46C36C;
+}
+.aide:hover {
+    color:#46C36C;
+}
+
+.a_propos_de {
+    display: block;
+    grid-area: a_propos;
+    align-self: center;
+    justify-self: center;
+}
+.aide { 
+    display: block;
+    grid-area: aide;
+    align-self: center;
+    justify-self: center;
+}
+.score {
+    display: block;
+    grid-area: coins;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "coin score";
+    align-self: center;
+    justify-self: center;
+
+}
+
+.coins {
+    display: block;
+    grid-area: coin;
+    width: 20px;
+    align-self: center;
+    justify-self: center;
+  
+}
+
+.score_gold{
+    display: block;
+    grid-area: score;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* MAIN */
+
+#profil_flex{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1000000;
+}
+
+
+.profilpopup{
+    z-index: 150;
+    position: fixed;
+    top: 12%;
+    left: 25%;
+    right: 25%;
+    background-color: rgba(38, 44, 44, 0.96);
+    border: 3px solid #46C36C;
+    border-radius: 15px;
+    width: 950px;
+    height: 750px;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 2fr 2fr 0.5fr;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas:
+        ". . ."
+        ". imageprofil ."
+        ". nomprofil ."
+        ". coinsprofil ."
+        ". . .";
+}
+
+.imageprofil{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    grid-area: imageprofil;
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+    justify-self: center;
+    align-self: center;
+}
+.imageprofil img{
+    width: 220px;
+    border: 3px solid #46C36C;
+    border-radius: 100%;
+    
+}
+#nomProfil {
+    justify-self: center;
+    align-self: center;
+
+}
+.nomprofil{
+    grid-area: nomprofil;
+    
+    padding-bottom: 10px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(80, 81, 79, 1);
+    width: 60%;
+    height: 80%;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 4em;
+}
+
+.coinsprofil{
+    grid-area: coinsprofil;
+    display: grid;
+    width: 40%;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "coinimage montantprofil";
+}
+
+.coinimage{
+    grid-area: coinimage;
+    justify-self: center;
+    align-self: center;
+    width: 40px;
+}
+
+.montantprofil{
+    grid-area: montantprofil;
+    /* justify-self: center; */
+    padding-left: 18%;
+    align-self: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+/* GRID MAIN */
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-rows: 115px auto 100px;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". . ."
+    ". shop ."
+    ". . .";
+}
+
+.shop{
+    grid-area: shop;
+    background-color: grey;
+    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-rows: 1fr 12fr 1fr;
+    grid-template-areas:
+        ". informations ."
+        ". espace-shop ."
+        ". . .";
+    grid-area: shop;
+    border: 3px solid #46C36C;
+    border-radius: 10px;
+}
+
+.informations { 
+    grid-area: informations; 
+    /* border-bottom: 3px solid #46C36C; */
+}
+
+.espace-shop { 
+    /* padding: 25px; */
+    grid-area: espace-shop; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.carte{
+    display: grid;
+    margin: 28px;
+    grid-template-columns: 180px;
+    grid-template-rows: 200px 50px;
+    gap: 5px;
+    grid-template-areas:
+        "image_avatar"
+        "prix_avatar";
+    background-color: #46C36C;
+    flex: 0 1 auto;
+}
+
+.image_avatar{
+    grid-area: image_avatar;
+    width: 180px;
+    height: 200px;
+    background: #262c2c;
+}
+
+.prix_avatar{
+    grid-area: prix_avatar;
+    background-color: #46C36C;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr ;
+    grid-template-areas: "coinshop prix";
+    padding-bottom: 5px;
+    
+
+}
+
+.coinshop{
+    grid-area: coinshop;
+    padding-left: 10px;
+    align-self: center;
+
+}
+
+.prix{
+    grid-area: prix;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    color: #262c2c;
+    font-size: 25px;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* FOOTER */
+
+footer{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E5E5E5; 
+    height: 400px;
+}
+
+.footer_nav {  
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . . "
+    ". copyright ."
+    ". droit1 ."
+    ". . .";
+    height: 100%;
+    width: 100%;
+    
+    background-color: rgba(80, 81, 79, 1);
+    top: 0%;
+    
+
+}    
+
+
+
+.copyright {
+    grid-area: copyright;
+}
+
+.droit1 {
+    grid-area: droit1;
+}
