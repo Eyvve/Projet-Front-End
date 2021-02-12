@@ -10,16 +10,23 @@
     <header>
         <div id="profil_flex">
             <div class="profilpopup popup" id="profilpopup">
-              <div class="imageprofil popup" id="imageprofil"></div>
-              <div class="nomprofil popup" id="nomprofil">
-                <span id="nomProfil"></span>
-              </div>
-              <div class="coinsprofil popup" id="coinsprofil">
-                <img class="coinimage popup" src="./Images/Hetic_coins.png" alt="hetic coins"></img>
-                <div class="montantprofil popup score_gold" id="gold"></div>
-              </div>
+                <div class="imageprofil popup" id="imageprofil"></div>
+                <div class="nomprofil popup" id="nomprofil">
+                  <span id="nomProfil"></span>
+                </div>
+                <div class="coinsprofil popup" id="coinsprofil">
+                  <img class="coinimage popup" src="../Images/Hetic_coins.png" alt="hetic coins"></img>
+                  <div class="montantprofil popup score_gold" id="gold_profil"></div>
+                </div>
+                <div class="invprofil popup" id="invprofil" >
+                    <span class="text_inv">Inventaire :</span>
+                    <div class="inv" id="inv">
+                        <img class="img_inv" id="img_inv_F1" src="../avatars/avatarF1.png" alt="avatarF1">
+                        <img class="img_inv" id="img_inv_H1" src="../avatars/avatarH1.png" alt="avatarH1">
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
         <nav class="header_nav">
             <div class="profil_nav headerfont" id="button_profil">profil</div>
             <a class="jeux headerfont" href="../Jeux/jeux.html">jeux</a>
@@ -27,10 +34,10 @@
               <img class="logo" src="../Images/logo_site.png" alt=""><img>
             </a>
             <a class="a_propos_de headerfont" href="../Apropos/apropos.html">à propos</a>
-            <a class="aide headerfont" href="#">shop</a>
+            <a class="aide headerfont" href="">shop</a>
             <div class="score">
               <img class="coins" src="../Images/Hetic_coins.png" alt="hetic coins"></img>
-              <div class="score_gold headerfont"></div>
+              <div class="score_gold headerfont" id="gold_nav"></div>
             </div>
           </nav>
     </header>
@@ -41,93 +48,143 @@
                 <div class="informations"></div>
                 <div class="espace-shop">
 
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
+                    <div class="carte" id="carteF2">
+                        <div class="avatar" id="avatarF2">
+                            <div class="button_vendu" id="avatarF2_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarF2_achat">
+                              <img id="button_centre_F2" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
                         </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
-                        </div>
-                    </div>
-
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
-                        </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
+                        <div class="prix_avatar" id="prix_avatarF2">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">2000</span>
                         </div>
                     </div>
 
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
+                    <div class="carte" id="carteH2">
+                        <div class="avatar" id="avatarH2">
+                            <div class="button_vendu" id="avatarH2_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarH2_achat">
+                              <img id="button_centre_H2" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
                         </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
-                        </div>
-                    </div>
-
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
-                        </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
+                        <div class="prix_avatar" id="prix_avatarH2">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">2000</span>
                         </div>
                     </div>
 
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
+                    <div class="carte" id="carteF3">
+                        <div class="avatar" id="avatarF3">
+                            <div class="button_vendu" id="avatarF3_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarF3_achat">
+                              <img id="button_centre_F3" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
                         </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
-                        </div>
-                    </div>
-
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
-                        </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
+                        <div class="prix_avatar" id="prix_avatarF3">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">2000</span>
                         </div>
                     </div>
 
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
+                    <div class="carte" id="carteH3">
+                        <div class="avatar" id="avatarH3">
+                            <div class="button_vendu" id="avatarH3_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarH3_achat">
+                              <img id="button_centre_H3" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
                         </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
-                        </div>
-                    </div>
-
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
-                        </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
+                        <div class="prix_avatar" id="prix_avatarH3">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">2000</span>
                         </div>
                     </div>
 
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
+                    <div class="carte" id="carteF4">
+                        <div class="avatar" id="avatarF4">
+                            <div class="button_vendu" id="avatarF4_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarF4_achat">
+                              <img id="button_centre_F4" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
                         </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
+                        <div class="prix_avatar" id="prix_avatarF4">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">2000</span>
                         </div>
                     </div>
 
-                    <div class="carte" id="carte">
-                        <div class="avatar" id="avatar">
-                            <img class="image_avatar" id="image_avatar" src="../avatars/avatarHroux.png" alt="hetic coins"></img>
+                    <div class="carte" id="carteH4">
+                        <div class="avatar" id="avatarH4">
+                            <div class="button_vendu" id="avatarH4_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarH4_achat">
+                              <img id="button_centre_H4" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
                         </div>
-                        <div class="prix_avatar" id="prix_avatar">
-                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">500</span>
+                        <div class="prix_avatar" id="prix_avatarH4">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">2000</span>
+                        </div>
+                    </div>
+
+                    <div class="carte" id="carteF5">
+                        <div class="avatar" id="avatarF5">
+                            <div class="button_vendu" id="avatarF5_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarF5_achat">
+                              <img id="button_centre_F5" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
+                        </div>
+                        <div class="prix_avatar" id="prix_avatarF5">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">2000</span>
+                        </div>
+                    </div>
+
+                    <div class="carte" id="carteH5">
+                        <div class="avatar" id="avatarH5">
+                            <div class="button_vendu" id="avatarH5_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarH5_achat">
+                              <img id="button_centre_H5" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
+                        </div>
+                        <div class="prix_avatar" id="prix_avatarH5">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">2000</span>
+                        </div>
+                    </div>
+
+                    <div class="carte" id="carteF6">
+                        <div class="avatar" id="avatarF6">
+                            <div class="button_vendu" id="avatarF6_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarF6_achat">
+                              <img id="button_centre_F6" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
+                        </div>
+                        <div class="prix_avatar" id="prix_avatarF6">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">3000</span>
+                        </div>
+                    </div>
+
+                    <div class="carte" id="carteH6">
+                        <div class="avatar" id="avatarH6">
+                            <div class="button_vendu" id="avatarH6_vendu">
+                              <img class="button_centre" src="../Images/vendu.png" alt="bouton_vendu">
+                            </div>
+                            <div class="button_acheter" id="avatarH6_achat">
+                              <img id="button_centre_H6" class="button_centre" src="../Images/acheter.png" alt="bouton_acheter">
+                            </div>
+                        </div>
+                        <div class="prix_avatar" id="prix_avatarH6">
+                            <img class="coinshop" src="../Images/Hetic_coins.png" alt="hetic coins" height="35px"></img><span class="prix" id="prix">3000</span>
                         </div>
                     </div>
 

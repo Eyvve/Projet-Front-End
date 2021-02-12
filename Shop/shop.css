@@ -131,22 +131,20 @@ a{
 .profilpopup{
     z-index: 150;
     position: fixed;
-    top: 12%;
-    left: 25%;
-    right: 25%;
     background-color: rgba(38, 44, 44, 0.96);
     border: 3px solid #46C36C;
     border-radius: 15px;
     width: 950px;
-    height: 750px;
+    height: 900px;
     display: grid;
-    grid-template-rows: 0.5fr 3fr 2fr 2fr 0.5fr;
+    grid-template-rows: 0.1fr 3fr 2fr 2fr 1fr 0.5fr;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-areas:
         ". . ."
         ". imageprofil ."
         ". nomprofil ."
         ". coinsprofil ."
+        ". invprofil ."
         ". . .";
 }
 
@@ -164,7 +162,7 @@ a{
 .imageprofil img{
     width: 220px;
     border: 3px solid #46C36C;
-    border-radius: 100%;
+    border-radius: 15PX;
     
 }
 #nomProfil {
@@ -188,6 +186,8 @@ a{
     color: white;
     text-align: center;
     line-height: 4em;
+    border-radius: 15px;
+    border: 3px solid #46C36C;
 }
 
 .coinsprofil{
@@ -206,6 +206,40 @@ a{
     justify-self: center;
     align-self: center;
     width: 40px;
+}
+
+.invprofil {
+    grid-area: invprofil;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "text_inv"
+    "inv";
+}
+
+.text_inv{
+    justify-self: center;
+    align-self: center;
+    grid-area: text_inv;
+    color: white;
+    font-size: 50px;
+}
+.inv{
+    justify-content: flex-start;
+    width: 326px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-self: center;
+    grid-area: inv;
+    overflow-y: scroll;
+}
+.inv img{
+    width: 100px;
 }
 
 .montantprofil{
@@ -310,6 +344,141 @@ a{
     align-self: center;
     justify-self: center;
 }
+
+.buttton_centre {
+    align-self: center;
+    justify-self: center;
+}
+
+.button_acheter {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+}
+.button_vendu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+}
+#avatarF2_achat{
+    display: none;
+}
+#avatarH2_achat{
+    display: none;
+}
+#avatarF3_achat{
+    display: none;
+}
+#avatarH3_achat{
+    display: none;
+}
+#avatarF4_achat{
+    display: none;
+}
+#avatarH4_achat{
+    display: none;
+}
+#avatarF5_achat{
+    display: none;
+}
+#avatarH5_achat{
+    display: none;
+}
+#avatarF6_achat{
+    display: none;
+}
+#avatarH6_achat{
+    display: none;
+}
+
+#avatarF2_vendu{
+    display: none;
+}
+#avatarH2_vendu{
+    display: none;
+}
+#avatarF3_vendu{
+    display: none;
+}
+#avatarH3_vendu{
+    display: none;
+}
+#avatarF4_vendu{
+    display: none;
+}
+#avatarH4_vendu{
+    display: none;
+}
+#avatarF5_vendu{
+    display: none;
+}
+#avatarH5_vendu{
+    display: none;
+}
+#avatarF6_vendu{
+    display: none;
+}
+#avatarH6_vendu{
+    display: none;
+}
+#avatarF2 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarF2.png);
+    background-size: 105%;
+}
+#avatarH2 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarH2.png);
+    background-size: 105%;
+}
+#avatarF3 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarF3.png);
+    background-size: 105%;
+}
+#avatarH3 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarH3.png);
+    background-size: 105%;
+}
+#avatarF4 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarF4.png);
+    background-size: 105%;
+}
+#avatarH4 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarH4.png);
+    background-size: 105%;
+}
+#avatarF5 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarF5.png);
+    background-size: 105%;
+}
+#avatarH5 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarH5.png);
+    background-size: 105%;
+}
+#avatarF6 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarF6.png);
+    background-size: 105%;
+}
+#avatarH6 {
+    background: #262c2c ;
+    background-image: url(../avatars/avatarH6.png);
+    background-size: 105%;
+}
+
+
 
 
 /* FOOTER */

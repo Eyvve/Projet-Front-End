@@ -1,7 +1,6 @@
 
 var img_select1 = document.getElementById("img_profil1");
 var img_select2 = document.getElementById("img_profil2");
-var img_select3 = document.getElementById("img_profil3");
 const test_profil = document.getElementById("test_profil");
 var pseudo_player = document.getElementById("pseudo_player_texte");
 var boutton_inscription = document.getElementById("inscrire");
@@ -68,42 +67,90 @@ photo_profil_player = 1;
 img_select1.addEventListener('click', event => {
     img_select1.className = "img_profil_select";
     img_select2.className = "";
-    img_select3.className = "";
     photo_profil_player = 1;
     
 });
 img_select2.addEventListener('click', event => {
     img_select2.className = "img_profil_select";
     img_select1.className = "";
-    img_select3.className = "";
     photo_profil_player = 2;
 });
-img_select3.addEventListener('click', event => {
-    img_select3.className = "img_profil_select";
-    img_select1.className = "";
-    img_select2.className = "";
-    photo_profil_player = 3;
-});
+
 function test_profil_fonction(){
+    console.log(photo_profil_player)
     if(photo_profil_player == 1){
         let newIMG = document.createElement('img');
-        newIMG.setAttribute('src', './images/photo_profil_1.png');
+        newIMG.setAttribute('src', './avatars/avatarF1.png');
         newIMG.setAttribute('alt', 'img_profil1');
         newIMG.setAttribute('class', 'img_profil');
         imgProfil.appendChild(newIMG);
     }else if (photo_profil_player == 2){
         let newIMG = document.createElement('img');
-        newIMG.setAttribute('src', './images/photo_profil_2.png');
+        newIMG.setAttribute('src', './avatars/avatarH1.png');
         newIMG.setAttribute('alt', 'img_profil2');
         newIMG.setAttribute('class', 'img_profil');
         imgProfil.appendChild(newIMG);
-    }else {
+    }else if (photo_profil_player == 3){
         let newIMG = document.createElement('img');
-        newIMG.setAttribute('src', './images/photo_profil_3.png');
-        newIMG.setAttribute('alt', 'img_profil3');
+        newIMG.setAttribute('src', './avatars/avatarF2.png');
+        newIMG.setAttribute('alt', 'img_profil2');
         newIMG.setAttribute('class', 'img_profil');
         imgProfil.appendChild(newIMG);
-    };
+    }else if (photo_profil_player == 4){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarH2.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 5){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarF3.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 6){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarH3.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 7){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarF4.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 8){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarH4.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 9){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarF5.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 10){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarH5.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 11){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarF6.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }else if (photo_profil_player == 12){
+        let newIMG = document.createElement('img');
+        newIMG.setAttribute('src', './avatars/avatarH6.png');
+        newIMG.setAttribute('alt', 'img_profil2');
+        newIMG.setAttribute('class', 'img_profil');
+        imgProfil.appendChild(newIMG);
+    }
 };
 
 boutton_inscription.addEventListener('click', event => {

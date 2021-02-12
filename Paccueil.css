@@ -27,7 +27,6 @@ a{
 .img_profil_select {
     border: 2px solid #5FF070;
     box-sizing: border-box;
-    border-radius: 1500px;
 }
 
 #connect_page_flex{
@@ -62,13 +61,13 @@ a{
 #photo_profil{
     grid-area: img;
     display: grid;
-    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-columns: 5% 45% 45% 5%;
     grid-template-rows: 5% 25% 65% 5% ;
     grid-template-areas:
-      " . . . . . "
-      " . titre_img titre_img titre_img . "
-      " . img_profil1 img_profil2 img_profil3 . "
-      " . . . . . ";
+      " . . . . "
+      " . titre_img titre_img . "
+      " . img_profil1 img_profil2 . "
+      " . . . . ";
 
 }
 #img_profil1 {
@@ -78,11 +77,6 @@ a{
 }
 #img_profil2 {
     grid-area: img_profil2;
-    align-self: center;
-    justify-self: center;
-}
-#img_profil3 {
-    grid-area: img_profil3;
     align-self: center;
     justify-self: center;
 }
