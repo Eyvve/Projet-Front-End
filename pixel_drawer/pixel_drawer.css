@@ -67,7 +67,6 @@ img{
     display: block;
     grid-area: logo;
     height: 58px;
-    align-self: center;
     justify-self: center;
 }
 .jeux:hover {
@@ -171,11 +170,11 @@ img{
     height: 220px;
     justify-self: center;
     align-self: center;
+    border: 3px solid #46C36C;
+    border-radius: 15PX;
 }
 .imageprofil img{
     width: 220px;
-    border: 3px solid #46C36C;
-    border-radius: 15PX;
     
 }
 #nomProfil {
@@ -252,7 +251,6 @@ img{
 }
 .inv{
     justify-content: flex-start;
-    width: 326px;
     height: 100px;
     display: flex;
     flex-wrap: wrap;
