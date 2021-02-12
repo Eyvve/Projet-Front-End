@@ -161,7 +161,7 @@ button{
     right: 0px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
-    grid-template-areas: ". profil jeux logo a_propos aide coins";
+    grid-template-areas: ". profil jeux logo aide a_propos coins";
     width : 100vw;
     height: 80px;
 } 
