@@ -145,8 +145,9 @@ var role3 = document.querySelector("#role3")
 
 slidedroit.addEventListener("click", () => {
     console.log("slide droit")
-    if (slider >= 0 && slider <= 2){
+    if (slider >= 0 && slider <= 6){
         slider += 1
+        if (slider == 6){slider = 0}
         console.log("slide n°" + slider)
         if (slider == 0){ 
             photo1.style.backgroundImage = "url(./Images/photoamin.jpg)"; 
@@ -165,7 +166,8 @@ slidedroit.addEventListener("click", () => {
             role2.innerHTML = "JEUX / HTML / <br>CSS"
             role3.innerHTML = "DESIGN / JAVASCRIPT"
 
-            stuckleft = true
+            stuckright = false; 
+            stuckleft = false;
         }
 
         if (slider == 1){ 
@@ -186,7 +188,7 @@ slidedroit.addEventListener("click", () => {
             role3.innerHTML = "JEUX / JAVASCRIPT"
 
             stuckright = false; 
-            stuckleft = false
+            stuckleft = false;
         }
 
         if (slider == 2){ 
@@ -227,15 +229,62 @@ slidedroit.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / JAVASCRIPT"
             role3.innerHTML = "DESIGN / HTML / CSS"
 
-            stuckright = true
+            stuckright = false; 
+            stuckleft = false;
+        }
+
+        if (slider == 4){ 
+            photo1.style.backgroundImage = "url(./Images/photothomas.jpg)"
+            photo2.style.backgroundImage = "url(./Images/photoamira.jpg)"
+            photo3.style.backgroundImage = "url(./Images/photoamin.jpg)"
+
+            nom1.innerHTML = "Thomas Latour"
+            nom2.innerHTML = "Amira Rechid";
+            nom3.innerHTML = "Amin Bentani"
+
+            txtprofil1.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+            txtprofil2.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li>"
+            txtprofil3.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li><li>Meilleur tryharder 2021</li>";
+
+            role1.innerHTML = "DESIGN / JAVASCRIPT"
+            role2.innerHTML = "DESIGN / HTML / CSS"
+            role3.innerHTML = "DESIGN / HTML / CSS"
+
+            stuckright = false; 
+            stuckleft = false;
+        }
+
+        if (slider == 5){ 
+            photo1.style.backgroundImage = "url(./Images/photoamira.jpg)"
+            photo2.style.backgroundImage = "url(./Images/photoamin.jpg)"
+            photo3.style.backgroundImage = "url(./Images/photodorian.png)";
+
+            nom1.innerHTML = "Amira Rechid";
+            nom2.innerHTML = "Amin Bentani";
+            nom3.innerHTML = "Dorian Canonne"; 
+
+            txtprofil1.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li>"
+            txtprofil2.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li><li>Meilleur tryharder 2021</li>";
+            txtprofil3.innerHTML = "<li>Direction de projet</li><li>Jeu : Puissance 4</li><li>Jeu : Pixel Drawer</li><li>Supervision, intégration & correction HTML/CSS</li>"
+
+            role1.innerHTML = "DESIGN / HTML / CSS"
+            role2.innerHTML = "DESIGN / HTML / CSS"
+            role3.innerHTML = "JEUX / HTML / <br>CSS"
+
+            stuckright = false; 
+            stuckleft = false;
         }
     }
 })
 
+
+
+
 slidegauche.addEventListener("click", () => {
     console.log("slide gauche")
-    if (slider >= 1 && slider <= 3){
+    if (slider >= -1 && slider <= 6){
         slider -= 1
+        if (slider == -1){slider = 5}
         console.log("slide n°" + slider)
         if (slider == 0){ 
             photo1.style.backgroundImage = "url(./Images/photoamin.jpg)"; 
@@ -254,7 +303,8 @@ slidegauche.addEventListener("click", () => {
             role2.innerHTML = "JEUX / HTML / <br>CSS"
             role3.innerHTML = "DESIGN / JAVASCRIPT"
 
-            stuckleft = true
+            stuckright = false; 
+            stuckleft = false;
         }
 
         if (slider == 1){ 
@@ -275,7 +325,7 @@ slidegauche.addEventListener("click", () => {
             role3.innerHTML = "JEUX / JAVASCRIPT"
 
             stuckright = false; 
-            stuckleft = false
+            stuckleft = false;
         }
 
         if (slider == 2){ 
@@ -316,7 +366,50 @@ slidegauche.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / JAVASCRIPT"
             role3.innerHTML = "DESIGN / HTML / CSS"
 
-            stuckright = true
+            stuckright = false; 
+            stuckleft = false;
+        }
+
+        if (slider == 4){ 
+            photo1.style.backgroundImage = "url(./Images/photothomas.jpg)"
+            photo2.style.backgroundImage = "url(./Images/photoamira.jpg)"
+            photo3.style.backgroundImage = "url(./Images/photoamin.jpg)"
+
+            nom1.innerHTML = "Thomas Latour"
+            nom2.innerHTML = "Amira Rechid";
+            nom3.innerHTML = "Amin Bentani"
+
+            txtprofil1.innerHTML = "<li>JavaScript du site</li><li>Maquette</li><li>Recherches design</li>"
+            txtprofil2.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li>"
+            txtprofil3.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li><li>Meilleur tryharder 2021</li>";
+
+            role1.innerHTML = "DESIGN / JAVASCRIPT"
+            role2.innerHTML = "DESIGN / HTML / CSS"
+            role3.innerHTML = "DESIGN / HTML / CSS"
+
+            stuckright = false; 
+            stuckleft = false;
+        }
+
+        if (slider == 5){ 
+            photo1.style.backgroundImage = "url(./Images/photoamira.jpg)"
+            photo2.style.backgroundImage = "url(./Images/photoamin.jpg)"
+            photo3.style.backgroundImage = "url(./Images/photodorian.png)";
+
+            nom1.innerHTML = "Amira Rechid";
+            nom2.innerHTML = "Amin Bentani";
+            nom3.innerHTML = "Dorian Canonne"; 
+
+            txtprofil1.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li>"
+            txtprofil2.innerHTML = "<li>HTML / CSS du site</li><li>Recherches design</li><li>Meilleur tryharder 2021</li>";
+            txtprofil3.innerHTML = "<li>Direction de projet</li><li>Jeu : Puissance 4</li><li>Jeu : Pixel Drawer</li><li>Supervision, intégration & correction HTML/CSS</li>"
+
+            role1.innerHTML = "DESIGN / HTML / CSS"
+            role2.innerHTML = "DESIGN / HTML / CSS"
+            role3.innerHTML = "JEUX / HTML / <br>CSS"
+
+            stuckright = false; 
+            stuckleft = false;
         }
     }
 })
