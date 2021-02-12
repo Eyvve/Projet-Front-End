@@ -3,11 +3,11 @@ var save_or_not = 0;
 var score = 0;
 var bonus = 0;
 var point = 1;
-var compteur_score = 0;
+var Compteur_score = 0;
 var bonus_timer = 0
 const div = document.getElementById('score_click');
 const button = document.getElementById("click_boutton");
-const print_score = document.getElementById("score");
+const printScore = document.getElementById("score");
 const bare_boost_vert = document.getElementById("boost_barre_vert");
 const plus1 = document.getElementsByClassName('plus1');
 const fuse = document.getElementById('fuse_button')
@@ -95,29 +95,31 @@ function test_profil_fonction(){
 };
 
 
+// fonctions du jeu
 
-function remouveElementPlus1() {
-  var remouveID = document.getElementById(`plus${compteur_score}`)
-  compteur_score ++
-  remouveID.remove();
+
+function RemoveElementPlus1() {
+  var removeID = document.getElementById(`plus${Compteur_score}`)
+  Compteur_score ++
+  removeID.remove();
 };
-function addElement () {
+function AddElement () {
   var newSpan = document.createElement("span");
   newSpan.className = "plus1";
-  newSpan.id = `plus${compteur_score}`;
+  newSpan.id = `plus${Compteur_score}`;
   var newContent = document.createTextNode('+1');
   newSpan.appendChild(newContent);
-  var currentspan = document.getElementById('span1');
-  div.insertBefore(newSpan, currentspan);
+  var currentSpan = document.getElementById('span1');
+  div.insertBefore(newSpan, currentSpan);
 
 };
-function hidden_star() {
+function HiddenStar() {
   star.style.visibility = "hidden"
   if(bonus_timer <= 0.4 ){
     clearInterval(myVar2);
   };
 };
-function boost_compteur(){
+function BoostCompteur(){
   bonus_timer -= 0.2;
   bare_boost_vert.style.height = `${bonus_timer}%` 
   bonus = 4 
@@ -135,11 +137,11 @@ button.onmousedown = function() {
   button.setAttribute("src", "../Images/boutton_on.png");
   score += point;
   score += bonus;
-  print_score.innerText = score;
+  printScore.innerText = score;
   gold += point;
   gold += bonus;
   localStorage.setItem('gold_save', gold);
-  // addElement()
+  // AddElement()
   bonus_timer += 0.5;
   gold_score_deffine = 1
   localStorage.setItem('gold_score_deffine_save', gold_score_deffine);
@@ -166,8 +168,8 @@ fuse.onmousedown = function() {
     fuse.className = "fuse_fire";
     setTimeout(function(){ fuse.className = "fuse_return";}, 1000);
     setTimeout(function(){ fuse.className = "";}, 3000);
-    myVar = setInterval(boost_compteur, 50);
-    myVar2 = setInterval(hidden_star, 0);
+    myVar = setInterval(BoostCompteur, 50);
+    myVar2 = setInterval(HiddenStar, 0);
     
     
   }

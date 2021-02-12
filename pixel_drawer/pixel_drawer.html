@@ -44,22 +44,22 @@
                 <div class="boutons">
                     <h3 class="message" >Sélectionnez une couleur</h3>
                     <input class="boutondessin palette" id ="palette" type="color" value="#000000">
-                    <input type="button" class="validcolor" id="validcolor" value="Changez la couleur" onclick="changeColor()">
-                    <input class="boutondessin pipette" id="pipette" type="button" width="30" height="30" alt="pipette"  onclick="pipette()">
-                    <input class="boutondessin resetButton" id="resetButton" type="button" value="reset" onclick="reset()">
+                    <input type="button" class="validcolor" id="validcolor" value="Changez la couleur" onclick="ChangeColor()">
+                    <input class="boutondessin pipette" id="pipette" type="button" width="30" height="30" alt="pipette"  onclick="Pipette()">
+                    <input class="boutondessin resetButton" id="resetButton" type="button" value="reset" onclick="Reset()">
                     <div class="palettemanuelle">
-                        <div class="rouge" onclick="manualrouge()"></div>
-                        <div class="violet" onclick="manualviolet()"></div>
-                        <div class="rose" onclick="manualrose()"></div>
-                        <div class="bleu" onclick="manualbleu()"></div>
-                        <div class="bleuclair" onclick="manualbleuclair()"></div>
-                        <div class="vert" onclick="manualvert()"></div>
-                        <div class="verthetic" onclick="manualverthetic()"></div>
-                        <div class="jaune" onclick="manualjaune()"></div>
-                        <div class="orange" onclick="manualorange()"></div>
-                        <div class="blanc" onclick="manualblanc()"></div>
-                        <div class="gris" onclick="manualgris()"></div>
-                        <div class="noir" onclick="manualnoir()"></div>
+                        <div class="rouge" onclick="Manualrouge()"></div>
+                        <div class="violet" onclick="Manualviolet()"></div>
+                        <div class="rose" onclick="Manualrose()"></div>
+                        <div class="bleu" onclick="Manualbleu()"></div>
+                        <div class="bleuclair" onclick="Manualbleuclair()"></div>
+                        <div class="vert" onclick="Manualvert()"></div>
+                        <div class="verthetic" onclick="Manualverthetic()"></div>
+                        <div class="jaune" onclick="Manualjaune()"></div>
+                        <div class="orange" onclick="Manualorange()"></div>
+                        <div class="blanc" onclick="Manualblanc()"></div>
+                        <div class="gris" onclick="Manualgris()"></div>
+                        <div class="noir" onclick="Manualnoir()"></div>
                     </div>
                 </div>
                 <div class="encadre">
@@ -515,13 +515,13 @@
                 <div class="template">
                     <div class="nommodele">Modèle numéroté</div>
                     <div class="flecheG">
-                        <img id="FG" class="flecheGB" src="pixelImages/flecheGB.png" alt="Flèche Gauche" onmouseover="boutonGhover()" onmouseout="boutonGout()">
+                        <img id="FG" class="flecheGB" src="pixelImages/flecheGB.png" alt="Flèche Gauche" onmouseover="BoutonGaucheHover()" onmouseout="BoutonGaucheOut()">
                     </div>
                     <div class="modele">
                         <img id="slidingmodel" class="grivide" src="pixelImages/Link.png" alt="Modelelink">
                     </div>
                     <div class="flecheD">
-                        <img id="FD" class="flecheGD" src="pixelImages/flecheDB.png" alt="Flèche Droite" onmouseover="boutonDhover()" onmouseout="boutonDout()">
+                        <img id="FD" class="flecheGD" src="pixelImages/flecheDB.png" alt="Flèche Droite" onmouseover="BoutonDroitHover()" onmouseout="BoutonDroitOut()">
                     </div>
                     <div class="nomlibre">Mode Libre</div>
                     <div class="libre">

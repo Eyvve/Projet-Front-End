@@ -165,12 +165,12 @@ boutton_inscription.addEventListener('click', event => {
 
 // fonctions slider ////////////////////////////////////////////
 
-var stuckright = false
-var stuckleft = false
+var stuckRight = false
+var stuckLeft = false
 
 var slider = 0
 
-var slidingmodel = document.querySelector("#slidingmodel")
+var slidingModel = document.querySelector("#slidingmodel")
 var slidedroit = document.querySelector("#FD")
 var slidegauche = document.querySelector("#FG")
 
@@ -213,8 +213,8 @@ slidedroit.addEventListener("click", () => {
             role2.innerHTML = "JEUX / HTML / <br>CSS"
             role3.innerHTML = "DESIGN / JAVASCRIPT"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 1){ 
@@ -234,8 +234,8 @@ slidedroit.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / JAVASCRIPT"
             role3.innerHTML = "JEUX / JAVASCRIPT"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 2){ 
@@ -255,8 +255,8 @@ slidedroit.addEventListener("click", () => {
             role2.innerHTML = "JEUX / <br> JAVASCRIPT"
             role3.innerHTML = "DESIGN / JAVASCRIPT"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 3){ 
@@ -276,8 +276,8 @@ slidedroit.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / JAVASCRIPT"
             role3.innerHTML = "DESIGN / HTML / CSS"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 4){ 
@@ -297,8 +297,8 @@ slidedroit.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / HTML / CSS"
             role3.innerHTML = "DESIGN / HTML / CSS"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 5){ 
@@ -318,8 +318,8 @@ slidedroit.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / HTML / CSS"
             role3.innerHTML = "JEUX / HTML / <br>CSS"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
     }
 })
@@ -350,8 +350,8 @@ slidegauche.addEventListener("click", () => {
             role2.innerHTML = "JEUX / HTML / <br>CSS"
             role3.innerHTML = "DESIGN / JAVASCRIPT"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 1){ 
@@ -371,8 +371,8 @@ slidegauche.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / JAVASCRIPT"
             role3.innerHTML = "JEUX / JAVASCRIPT"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 2){ 
@@ -392,8 +392,8 @@ slidegauche.addEventListener("click", () => {
             role2.innerHTML = "JEUX / <br> JAVASCRIPT"
             role3.innerHTML = "DESIGN / JAVASCRIPT"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 3){ 
@@ -413,8 +413,8 @@ slidegauche.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / JAVASCRIPT"
             role3.innerHTML = "DESIGN / HTML / CSS"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 4){ 
@@ -434,8 +434,8 @@ slidegauche.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / HTML / CSS"
             role3.innerHTML = "DESIGN / HTML / CSS"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
 
         if (slider == 5){ 
@@ -455,35 +455,35 @@ slidegauche.addEventListener("click", () => {
             role2.innerHTML = "DESIGN / HTML / CSS"
             role3.innerHTML = "JEUX / HTML / <br>CSS"
 
-            stuckright = false; 
-            stuckleft = false;
+            stuckRight = false; 
+            stuckLeft = false;
         }
     }
 })
 
-function boutonGhover(){
-    if(stuckleft == false){
+function BoutonGaucheHover(){
+    if(stuckLeft == false){
         var img = document.querySelector("#FG")
         // console.log("check")
         FG.setAttribute("src", "./pixel_drawer/pixelImages/flecheGV.png")
     }
 }
 
-function boutonGout(){
+function BoutonGaucheOut(){
     var img = document.querySelector("#FG")
     // console.log("check")
     FG.setAttribute("src", "./pixel_drawer/pixelImages/flecheGB.png")
 }
 
-function boutonDhover(){
-    if(stuckright == false){
+function BoutonDroitHover(){
+    if(stuckRight == false){
         var img = document.querySelector("#FD")
         // console.log("check")
         FD.setAttribute("src", "./pixel_drawer/pixelImages/flecheDV.png")
     }
 }
 
-function boutonDout(){
+function BoutonDroitOut(){
     var img = document.querySelector("#FD")
     // console.log("check")
     FD.setAttribute("src", "./pixel_drawer/pixelImages/flecheDB.png")

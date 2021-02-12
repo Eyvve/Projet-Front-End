@@ -78,18 +78,18 @@ function test_profil_fonction(){
 // déclaration des variables de base////////////////////////////////
 
 // Jeton/////////////////////////
-var wingreencount = 0
-var winredcount = 0
-var wincount = 0
-var tourcount = 1
+var winGreenCount = 0
+var WinRedCount = 0
+var winCount = 0
+var roundCount = 1
 var finished = false
 
 var tour = true
 var win = ""
 var game = true
 
-const tourvert = "Au tour du joueur vert"
-const tourrouge = "Au tour du joueur rouge"
+const tourVert = "Au tour du joueur vert"
+const tourRouge = "Au tour du joueur rouge"
 
 var message = document.querySelector("#message")
 
@@ -417,10 +417,10 @@ bouton1.addEventListener("click", function(){
             console.log("impossible")
         }
         if(tour == true){
-            message.innerHTML = tourvert
+            message.innerHTML = tourVert
             jeton.src = "P4Images/jeton_vert.png"
         }else{
-            message.innerHTML = tourrouge
+            message.innerHTML = tourRouge
             jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
@@ -514,10 +514,10 @@ bouton2.addEventListener("click", function(){
             console.log("impossible")
         }
         if(tour == true){
-            message.innerHTML = tourvert
+            message.innerHTML = tourVert
             jeton.src = "P4Images/jeton_vert.png"
         }else{
-            message.innerHTML = tourrouge
+            message.innerHTML = tourRouge
             jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
@@ -611,10 +611,10 @@ bouton3.addEventListener("click", function(){
             console.log("impossible")
         }
         if(tour == true){
-            message.innerHTML = tourvert
+            message.innerHTML = tourVert
             jeton.src = "P4Images/jeton_vert.png"
         }else{
-            message.innerHTML = tourrouge
+            message.innerHTML = tourRouge
             jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
@@ -708,10 +708,10 @@ bouton4.addEventListener("click", function(){
             console.log("impossible")
         }
         if(tour == true){
-            message.innerHTML = tourvert
+            message.innerHTML = tourVert
             jeton.src = "P4Images/jeton_vert.png"
         }else{
-            message.innerHTML = tourrouge
+            message.innerHTML = tourRouge
             jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
@@ -805,10 +805,10 @@ bouton5.addEventListener("click", function(){
             console.log("impossible")
         }
         if(tour == true){
-            message.innerHTML = tourvert
+            message.innerHTML = tourVert
             jeton.src = "P4Images/jeton_vert.png"
         }else{
-            message.innerHTML = tourrouge
+            message.innerHTML = tourRouge
             jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
@@ -902,10 +902,10 @@ bouton6.addEventListener("click", function(){
             console.log("impossible")
         }
         if(tour == true){
-            message.innerHTML = tourvert
+            message.innerHTML = tourVert
             jeton.src = "P4Images/jeton_vert.png"
         }else{
-            message.innerHTML = tourrouge
+            message.innerHTML = tourRouge
             jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
@@ -999,10 +999,10 @@ bouton7.addEventListener("click", function(){
             console.log("impossible")
         }
         if(tour == true){
-            message.innerHTML = tourvert
+            message.innerHTML = tourVert
             jeton.src = "P4Images/jeton_vert.png"
         }else{
-            message.innerHTML = tourrouge
+            message.innerHTML = tourRouge
             jeton.src = "P4Images/jeton_rouge.png"
         }
         wincheck()
@@ -1112,7 +1112,7 @@ boutonreset.addEventListener("click", function(){
     message.innerHTML = "Au tour du joueur vert de commencer"
     jeton.src = "P4Images/jeton_vert.png"
     game = true
-    round.innerHTML = tourcount
+    round.innerHTML = roundCount
     message.style.color = "#46c36c"
     if (finished == true){
         manche1.display = "none"
@@ -1130,10 +1130,10 @@ boutonreset.addEventListener("click", function(){
         m3 = false
         m4 = false
         m5 = false
-        wingreencount = 0
-        winredcount = 0
-        wincount = 0
-        tourcount = 1
+        winGreenCount = 0
+        WinRedCount = 0
+        winCount = 0
+        roundCount = 1
         finished = false
     }
 });
@@ -1146,9 +1146,9 @@ function wingreen(){
     message.innerHTML = "Manche remportée par le joueur Vert !"
     game = false
     boutonreset.src = "P4Images/rejouer.png"
-    wingreencount += 1;
-    tourcount += 1
-    wincount += 1
+    winGreenCount += 1;
+    roundCount += 1
+    winCount += 1
     if (m1 == false){
         manche1.display = "block"
         jeton1.src = "P4Images/jeton_vert.png"
@@ -1174,16 +1174,16 @@ function wingreen(){
         jeton5.src = "P4Images/jeton_vert.png"
         m5 = true
     }
-    if (wingreencount >= 3 || winredcount >= 3){
+    if (winGreenCount >= 3 || WinRedCount >= 3){
         message.style.color = "yellow"
-        if (wingreencount >= 3){
+        if (winGreenCount >= 3){
             message.innerHTML = "Les verts gagnent la partie";
-        }else if (winredcount >= 3){
+        }else if (WinRedCount >= 3){
             message.innerHTML = "Les rouges gagnent la partie";
         }
         boutonreset.src = "P4Images/newgame.png"
-        wincount = 0
-        tourcount = 1
+        winCount = 0
+        roundCount = 1
         finished = true
     }
     console.log("finished = " + finished)
@@ -1195,9 +1195,9 @@ function winred(){
     message.innerHTML = "Manche remportée par le joueur Rouge !"
     game = false
     boutonreset.src = "P4Images/rejouer.png"
-    winredcount += 1;
-    tourcount += 1
-    wincount += 1
+    WinRedCount += 1;
+    roundCount += 1
+    winCount += 1
     if (m1 == false){
         manche1.display = "block"
         jeton1.src = "P4Images/jeton_rouge.png"
@@ -1223,16 +1223,16 @@ function winred(){
         jeton5.src = "P4Images/jeton_rouge.png"
         m5 = true
     }
-    if (wingreencount >= 3 || winredcount >= 3){
+    if (winGreenCount >= 3 || WinRedCount >= 3){
         message.style.color = "yellow"
-        if (wingreencount >= 3){
+        if (winGreenCount >= 3){
             message.innerHTML = "Les verts gagnent la partie";
-        }else if (winredcount >= 3){
+        }else if (WinRedCount >= 3){
             message.innerHTML = "Les rouges gagnent la partie";
         }
         boutonreset.src = "P4Images/newgame.png"
-        wincount = 0
-        tourcount = 1
+        winCount = 0
+        roundCount = 1
         finished = true
     }
     console.log("finished = " + finished)

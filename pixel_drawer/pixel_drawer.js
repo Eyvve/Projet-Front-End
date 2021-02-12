@@ -77,32 +77,32 @@ function test_profil_fonction(){
 ////////////////////////////// valeurs par défaut //////////////////////////////
 
 
-var color_picked = "black";
-const cases_color = "white";
-var activatedpicker = false;
+var pickedColor = "black";
+const casesColor = "white";
+var activatedPicker = false;
 let click = false;
 
 
 const repere = document.querySelector("#colordiv");
 
-var classchaser = document.querySelectorAll(".cases").style;
+var classChaser = document.querySelectorAll(".cases").style;
 
 
 ///////////////////// fonction pour selectionner la couleur ////////////////////
 
 
-function changeColor(){
+function ChangeColor(){
         var color = document.getElementById("palette").value;
-        color_picked = color;
-        repere.style.backgroundColor = color_picked
-        console.log(color_picked)
+        pickedColor = color;
+        repere.style.backgroundColor = pickedColor
+        console.log(pickedColor)
 }
 
 
 ////////////////////////////// fonction de reset ///////////////////////////////
     
     
-function reset(){
+function Reset(){
     const allcases = document.querySelectorAll(".cases");
     // console.log(allcases);
     allcases.forEach((idcases) => {
@@ -119,19 +119,19 @@ function reset(){
 
 document.querySelectorAll( ".cases" ).forEach( div => {
 div.addEventListener( "click", () => {
-    if(activatedpicker == false){
-        div.style.backgroundColor = color_picked;
-        repere.style.backgroundColor = color_picked
+    if(activatedPicker == false){
+        div.style.backgroundColor = pickedColor;
+        repere.style.backgroundColor = pickedColor
     } else{
-        color_picked = div.style.backgroundColor 
-        repere.style.backgroundColor = color_picked
-        activatedpicker = false
+        pickedColor = div.style.backgroundColor 
+        repere.style.backgroundColor = pickedColor
+        activatedPicker = false
     }
     
 } )
 div.addEventListener( "mouseover", () => {
     console.log(click);
-    if ( click ) div.style.backgroundColor = color_picked;
+    if ( click ) div.style.backgroundColor = pickedColor;
 } )
 } )
 
@@ -146,85 +146,85 @@ document.querySelector( "html" ).addEventListener( "mouseup", () => {
 
 ////////////////////////// fonction de pipette /////////////////////////////////
 
-function pipette(){
-    activatedpicker = true;
+function Pipette(){
+    activatedPicker = true;
     click = false
-    console.log("activatedpicker = " + activatedpicker)
+    console.log("activatedPicker = " + activatedPicker)
     console.log(click)
 }
 
 
 //////////////////////// fonctions de palette manuelle /////////////////////////
 
-function manualrouge(){
-    color_picked = "red";
-    repere.style.backgroundColor = color_picked
+function Manualrouge(){
+    pickedColor = "red";
+    repere.style.backgroundColor = pickedColor
     console.log("nouvelle couleur !")
 }
 
-function manualviolet(){
-    color_picked = "violet";
-    repere.style.backgroundColor = color_picked
+function Manualviolet(){
+    pickedColor = "violet";
+    repere.style.backgroundColor = pickedColor
     console.log("nouvelle couleur !")
 }
 
-function manualrose(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "pink";
+function Manualrose(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "pink";
     console.log("nouvelle couleur !")
 }
 
-function manualbleu(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "blue";
+function Manualbleu(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "blue";
     console.log("nouvelle couleur !")
 }
 
-function manualbleuclair(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "lightblue";
+function Manualbleuclair(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "lightblue";
     console.log("nouvelle couleur !")
 }
 
-function manualvert(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "green"
+function Manualvert(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "green"
     console.log("nouvelle couleur !")
 }
 
-function manualverthetic(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "#46C36C"
+function Manualverthetic(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "#46C36C"
     console.log("nouvelle couleur !")
 }
 
-function manualjaune(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "yellow"
+function Manualjaune(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "yellow"
     console.log("nouvelle couleur !")
 }
 
-function manualorange(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "orange"
+function Manualorange(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "orange"
     console.log("nouvelle couleur !")
 }
 
-function manualblanc(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "white"
+function Manualblanc(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "white"
     console.log("nouvelle couleur !")
 }
 
-function manualgris(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "grey"
+function Manualgris(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "grey"
     console.log("nouvelle couleur !")
 }
 
-function manualnoir(){
-    repere.style.backgroundColor = color_picked
-    color_picked = "black"
+function Manualnoir(){
+    repere.style.backgroundColor = pickedColor
+    pickedColor = "black"
     console.log("nouvelle couleur !")
 }
 
@@ -233,12 +233,12 @@ function manualnoir(){
 
 var image = "link"
 
-var stuckright = false
-var stuckleft = false
+var stuckRight = false
+var stuckLeft = false
 
 var slider = 0
 
-var slidingmodel = document.querySelector("#slidingmodel")
+var slidingModel = document.querySelector("#slidingmodel")
 var slidedroit = document.querySelector("#FD")
 var slidegauche = document.querySelector("#FG")
 
@@ -247,9 +247,9 @@ slidedroit.addEventListener("click", () => {
     if (slider >= 0 && slider <= 1){
         slider += 1
         console.log("slide n°" + slider)
-        if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
-        if (slider == 1){ slidingmodel.src = "pixelImages/Megaman.png"; stuckright = false; stuckleft = false}
-        if (slider == 2){ slidingmodel.src = "pixelImages/Pokeball.png"; stuckright = true;}
+        if (slider == 0){ slidingModel.src = "pixelImages/Link.png"; stuckLeft = true}
+        if (slider == 1){ slidingModel.src = "pixelImages/Megaman.png"; stuckRight = false; stuckLeft = false}
+        if (slider == 2){ slidingModel.src = "pixelImages/Pokeball.png"; stuckRight = true;}
     }
 })
 
@@ -258,41 +258,41 @@ slidegauche.addEventListener("click", () => {
     if (slider >= 1 && slider <= 4){
         slider -= 1
         console.log("slide n°" + slider)
-        if (slider == 0){ slidingmodel.src = "pixelImages/Link.png"; stuckleft = true}
-        if (slider == 1){ slidingmodel.src = "pixelImages/Megaman.png"; stuckright = false; stuckleft = false}
-        if (slider == 2){ slidingmodel.src = "pixelImages/Pokeball.png"; stuckright = true;}
+        if (slider == 0){ slidingModel.src = "pixelImages/Link.png"; stuckLeft = true}
+        if (slider == 1){ slidingModel.src = "pixelImages/Megaman.png"; stuckRight = false; stuckLeft = false}
+        if (slider == 2){ slidingModel.src = "pixelImages/Pokeball.png"; stuckRight = true;}
     }
 })
 
-function boutonGhover(){
-    if(stuckleft == false){
+function BoutonGaucheHover(){
+    if(stuckLeft == false){
         var img = document.querySelector("#FG")
         // console.log("check")
         FG.setAttribute("src", "pixelImages/flecheGV.png")
     }
 }
 
-function boutonGout(){
+function BoutonGaucheOut(){
     var img = document.querySelector("#FG")
     // console.log("check")
     FG.setAttribute("src", "pixelImages/flecheGB.png")
 }
 
-function boutonDhover(){
-    if(stuckright == false){
+function BoutonDroitHover(){
+    if(stuckRight == false){
         var img = document.querySelector("#FD")
         // console.log("check")
         FD.setAttribute("src", "pixelImages/flecheDV.png")
     }
 }
 
-function boutonDout(){
+function BoutonDroitOut(){
     var img = document.querySelector("#FD")
     // console.log("check")
     FD.setAttribute("src", "pixelImages/flecheDB.png")
 }
 
-slidingmodel.addEventListener("click", () => {
+slidingModel.addEventListener("click", () => {
     if(slider == 0){}
     if(slider == 1){}
     if(slider == 2){}

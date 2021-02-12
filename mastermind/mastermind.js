@@ -1,28 +1,33 @@
+// variables jeu
+
 "use strict"
-const rouge = document.getElementById("jeton_rouge");
-const bleu = document.getElementById("jeton_bleu");
-const marron = document.getElementById("jeton_marron");
-const vert = document.getElementById("jeton_vert");
-const rose = document.getElementById("jeton_rose");
-const violet = document.getElementById("jeton_violet");
-const orange = document.getElementById("jeton_orange");
-const jaune = document.getElementById("jeton_jaune");
-const print_choix_color = document.getElementById("color_select");
-const print_choix_vrai_faux = document.getElementById("black_white");
-const print_score = document.getElementById("score");
-const print_win = document.getElementById("win_flex");
-const continuer_button_win = document.getElementById("button_win");
-const print_defete = document.getElementById("defete_flex");
-const continuer_button_defete = document.getElementById("button_defete");
-var compteur = 0; // compteur pour verifier tout les 5 jetons
+const Rouge = document.getElementById("jeton_rouge");
+const Bleu = document.getElementById("jeton_bleu");
+const Marron = document.getElementById("jeton_marron");
+const Vert = document.getElementById("jeton_vert");
+const Rose = document.getElementById("jeton_rose");
+const Violet = document.getElementById("jeton_violet");
+const Orange = document.getElementById("jeton_orange");
+const Jaune = document.getElementById("jeton_jaune");
+const printChoixColor = document.getElementById("color_select");
+const printChoixVraiFaux = document.getElementById("black_white");
+const printScore = document.getElementById("score");
+const printWin = document.getElementById("win_flex");
+const continueWinButton = document.getElementById("button_win");
+const printDefeat = document.getElementById("defete_flex");
+const continueDefeatButton = document.getElementById("button_defete");
+var Compteur = 0; // Compteur pour verifier tout les 5 jetons
 var vie = 12;//nombre de vie
 var verif = [0,0,0]; // liste [nombre de jeton validé, nombre de jeton mal plasé, nombre de jeton nul]
-var colors_player = [0,0,0,0,0];
-var colors_ia = [0,0,0,0,0];
+var colorsPlayer = [0,0,0,0,0];
+var colorsIa = [0,0,0,0,0];
 var copy = [0,0,0,0,0];
 var score = 0;
-var vie_copy = 0;
+var vieCopy = 0;
 var save_or_not = parseInt(localStorage.getItem('save_or_not_save'));
+
+// variables profil
+
 var pseudo;
 var save_or_not = 0;
 var photo_profil_player = 1;
@@ -37,7 +42,7 @@ var gold_profil = document.getElementById("gold_profil")
 gold_nav.innerHTML = 100;
 gold_profil.innerHTML = 100;
 save_or_not = localStorage.getItem("save_or_not_save");
-print_score.innerHTML = parseInt(localStorage.getItem("gold_save"));
+printScore.innerHTML = parseInt(localStorage.getItem("gold_save"));
 
 var gold_score_deffine = 0;
 gold_score_deffine = localStorage.getItem("gold_score_deffine_save");
@@ -100,37 +105,39 @@ function test_profil_fonction(){
     };
 };
 
+
+// fonctions jeu
     
-function ia_select_color() {
+function IaSelectColor() {
     for(let i = 0; i <= 4; i++){
-        colors_ia[i] = Math.floor(Math.random() * 8) + 1  
+        colorsIa[i] = Math.floor(Math.random() * 8) + 1  
     };
 };
-function ia_verif() {
-    let colors_ia_copy = [].concat(colors_ia)
+function IaVerif() {
+    let colorsIaCopy = [].concat(colorsIa)
     for(let i = 0; i <= 4; i++){
-        if(colors_ia[i] == colors_player[i]){
+        if(colorsIa[i] == colorsPlayer[i]){
             verif[0] += 1;
         }; 
     };
 
     
     for(let i = 0; i <= 4; i++){
-        if(colors_player[i] == colors_ia_copy[0]){
+        if(colorsPlayer[i] == colorsIaCopy[0]){
             verif[1] += 1;
-            colors_ia_copy[0] = 0;
-        }else if(colors_player[i] == colors_ia_copy[1]){
+            colorsIaCopy[0] = 0;
+        }else if(colorsPlayer[i] == colorsIaCopy[1]){
             verif[1] += 1;
-            colors_ia_copy[1] = 0;
-        }else if(colors_player[i] == colors_ia_copy[2]){
+            colorsIaCopy[1] = 0;
+        }else if(colorsPlayer[i] == colorsIaCopy[2]){
             verif[1] += 1;
-            colors_ia_copy[2] = 0;
-        }else if(colors_player[i] == colors_ia_copy[3]){
+            colorsIaCopy[2] = 0;
+        }else if(colorsPlayer[i] == colorsIaCopy[3]){
             verif[1] += 1;
-            colors_ia_copy[3] = 0;
-        }else if(colors_player[i] == colors_ia_copy[4]){
+            colorsIaCopy[3] = 0;
+        }else if(colorsPlayer[i] == colorsIaCopy[4]){
             verif[1] += 1;
-            colors_ia_copy[4] = 0;
+            colorsIaCopy[4] = 0;
         };
     };
 
@@ -147,108 +154,108 @@ function ia_verif() {
         newIMG.setAttribute('src', '../Images/noir.png');
         newIMG.setAttribute('alt', 'colors_noir');
         newIMG.setAttribute('id', 'noir');
-        print_choix_vrai_faux.appendChild(newIMG);
+        printChoixVraiFaux.appendChild(newIMG);
     };
     for(let i = 0; i <= verif[1]-1; i++){
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../Images/blanc.png');
         newIMG.setAttribute('alt', 'colors_blanc');
         newIMG.setAttribute('id', 'blanc');
-        print_choix_vrai_faux.appendChild(newIMG);
+        printChoixVraiFaux.appendChild(newIMG);
     };
     for(let i = 0; i <= verif[2]-1; i++){
         let newIMG = document.createElement('img');
         newIMG.setAttribute('src', '../Images/vide.png');
         newIMG.setAttribute('alt', 'colors_vide');
         newIMG.setAttribute('id', 'vide');
-        print_choix_vrai_faux.appendChild(newIMG);
+        printChoixVraiFaux.appendChild(newIMG);
     };
     
     
 };
-function lose_mastermind(){
-    print_defete.style.display = 'flex';
-    continuer_button_defete.onclick = function() {
-        print_defete.style.display = 'none';
+function LoseMastermind(){
+    printDefeat.style.display = 'flex';
+    continueDefeatButton.onclick = function() {
+        printDefeat.style.display = 'none';
         document.location.reload();
     };
 };
-function win_mastermind(){
-    vie_copy = [].concat(vie)
-    score += 100 * vie_copy;
+function WinMastermind(){
+    vieCopy = [].concat(vie)
+    score += 100 * vieCopy;
     gold += score
     localStorage.setItem('gold_save', gold);
-    print_score.innerText = gold;
+    printScore.innerText = gold;
 
     localStorage.setItem('score_save', score);
     gold_score_deffine = 1
     localStorage.setItem('gold_score_deffine_save', gold_score_deffine);
     save_or_not = 1
     localStorage.setItem('save_or_not_save', save_or_not);
-    print_win.style.display = 'flex';
-    continuer_button_win.onclick = function() {
-        print_win.style.display = 'none';
+    printWin.style.display = 'flex';
+    continueWinButton.onclick = function() {
+        printWin.style.display = 'none';
         document.location.reload();
     };
 };
-function print_choix_color_fonc(color, id) {
+function PrintChoixColorFonc(color, id) {
     let newIMG = document.createElement('img');
     newIMG.setAttribute('src', '../Images/' + color + '.png');
     newIMG.setAttribute('alt', 'colors_' + color);
     newIMG.setAttribute('id', color);
-    print_choix_color.appendChild(newIMG);
-    colors_player[compteur] = id
-    compteur ++;
+    printChoixColor.appendChild(newIMG);
+    colorsPlayer[Compteur] = id
+    Compteur ++;
     
-    if( compteur == 5 ){
-        ia_verif()
+    if( Compteur == 5 ){
+        IaVerif()
 
         if(verif[0] == 5){
-            win_mastermind();
+            WinMastermind();
         }else{
             verif = [0,0,0]
-            compteur = 0;
+            Compteur = 0;
             vie -= 1;
         }
     }
     if(vie <= 0){
-        lose_mastermind()
+        LoseMastermind()
     }
     
 } 
 
-rouge.onclick = function() {
-    console.log("rouge")
-    print_choix_color_fonc("rouge", 1)
+Rouge.onclick = function() {
+    console.log("Rouge")
+    PrintChoixColorFonc("Rouge", 1)
 }
-bleu.onclick = function() {
-    console.log("bleu")
-    print_choix_color_fonc("bleu", 2)
+Bleu.onclick = function() {
+    console.log("Bleu")
+    PrintChoixColorFonc("Bleu", 2)
 }
-marron.onclick = function() {
-    console.log("marron")
-    print_choix_color_fonc("marron", 3)
+Marron.onclick = function() {
+    console.log("Marron")
+    PrintChoixColorFonc("Marron", 3)
 }
-vert.onclick = function() {
-    console.log("vert")
-    print_choix_color_fonc("vert", 4)
+Vert.onclick = function() {
+    console.log("Vert")
+    PrintChoixColorFonc("Vert", 4)
 }
-rose.onclick = function() {
-    console.log("rose")
-    print_choix_color_fonc("rose", 5)
+Rose.onclick = function() {
+    console.log("Rose")
+    PrintChoixColorFonc("Rose", 5)
 }
-violet.onclick = function() {
-    console.log("violet")
-    print_choix_color_fonc("violet", 6)
+Violet.onclick = function() {
+    console.log("Violet")
+    PrintChoixColorFonc("Violet", 6)
 }
-orange.onclick = function() {
-    console.log("orange")
-    print_choix_color_fonc("orange", 7)
+Orange.onclick = function() {
+    console.log("Orange")
+    PrintChoixColorFonc("Orange", 7)
 }
-jaune.onclick = function() {
-    console.log("jaune")
-    print_choix_color_fonc("jaune", 8)
+Jaune.onclick = function() {
+    console.log("Jaune")
+    PrintChoixColorFonc("Jaune", 8)
 }
 
-ia_select_color();
-console.log(colors_ia)
+IaSelectColor();
+console.log(colorsIa)
