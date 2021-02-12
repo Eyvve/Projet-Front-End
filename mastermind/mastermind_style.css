@@ -581,7 +581,7 @@ a{
 }
 
 /* fenetre de la defaite du joueur */
-#defaitee_flex {
+#defaite_flex {
     position: fixed;
     display: none;
     width: 100%;
@@ -591,7 +591,7 @@ a{
     background-color: rgba(0, 0, 0, .4);
     z-index: 1000;
 }
-.defaitee {
+.defaite {
     align-content: center;
     width: 700px;
     height: 400px;
@@ -605,12 +605,12 @@ a{
     grid-template-rows: 5% 40% 40% 5%;
     grid-template-areas: 
         " . . . "
-        " . defaitee_text . "
-        " . defaitee_button . "
+        " . defaite_text . "
+        " . defaite_button . "
         " . . . ";
 }
-.defaitee_titre {
-    grid-area: defaitee_text;
+.defaite_titre {
+    grid-area: defaite_text;
     align-self: center;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -620,9 +620,9 @@ a{
     line-height: 25px;
     color: white;
 }
-#button_defaitee {
+#button_defaite {
     
-    grid-area: defaitee_button;
+    grid-area: defaite_button;
     align-self: center;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

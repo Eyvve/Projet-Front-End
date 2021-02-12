@@ -23,6 +23,8 @@ var avatarH5_vendu = 0;
 var avatarF6_vendu = 0;
 var avatarH6_vendu = 0;
 var inv = document.getElementById("inv");
+var manque_gold = document.getElementById('manque_gold_flex')
+var button_manque_gold = document.getElementById('button_manque_gold')
 
 var gold_score_deffine = 0;
 gold_score_deffine = localStorage.getItem("gold_score_deffine_save");
@@ -353,7 +355,10 @@ button_achat_F2.addEventListener('click', event => {//detection du clique sur le
         document.location.reload();
         
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -391,7 +396,10 @@ button_achat_H2.addEventListener('click', event => {
         console.log(avatarH2_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -429,7 +437,10 @@ button_achat_F3.addEventListener('click', event => {
         console.log(avatarF3_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -467,7 +478,10 @@ button_achat_H3.addEventListener('click', event => {
         console.log(avatarH3_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -505,7 +519,10 @@ button_achat_F4.addEventListener('click', event => {
         console.log(avatarF4_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -543,7 +560,10 @@ button_achat_H4.addEventListener('click', event => {
         console.log(avatarH4_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -581,7 +601,10 @@ button_achat_F5.addEventListener('click', event => {
         console.log(avatarF5_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -619,7 +642,10 @@ button_achat_H5.addEventListener('click', event => {
         console.log(avatarH5_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -657,7 +683,10 @@ button_achat_F6.addEventListener('click', event => {
         console.log(avatarF6_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
 
@@ -695,6 +724,9 @@ button_achat_H6.addEventListener('click', event => {
         console.log(avatarH6_vendu)
         document.location.reload();
     }else{
-        alert("Vous n'avez pas assez d'Hetic Coins !")
+        manque_gold.style.display = 'flex'
+        button_manque_gold.onclick = function() {
+            manque_gold.style.display = 'none';
+        };
     }
 });
