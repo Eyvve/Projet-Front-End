@@ -394,10 +394,16 @@ img{
 
 .libre{
     grid-area: libre;
+    align-self: center;
+    justify-self: center;
+}
+
+.slidingmodel{
+    width: 90%;
 }
 
 .grivide{
-    width: 100%;
+    width: 90%;
 }
 
 .message{

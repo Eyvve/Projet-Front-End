@@ -559,7 +559,7 @@ slidingModel.addEventListener("click", () => {
         linkTemplateOn.style.display = "grid"
 
         temp1.style.backgroundColor = "#add8e6";
-        temp1.innerHTML = "#add8e6";
+        temp1.innerHTML = "1 : #add8e6";
 
         temp2.style.backgroundColor = "#46C36C";
         temp2.innerHTML = "#46C36C";
