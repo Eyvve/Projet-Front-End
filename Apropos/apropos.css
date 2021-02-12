@@ -316,7 +316,7 @@ p{
     ". prez ."
     "profil1 profil2 profil3 "
     "profil4 profil5 profil6 "
-    ". . .";
+    ". reset .";
 
     width: 100%;
     height: 100%;
@@ -472,6 +472,11 @@ p{
     background-position-y: -10px;
     background-size: 13em;
     background-repeat: no-repeat;
+}
+
+.reset{
+    grid-area: reset;
+    width: 400px;
 }
 
 

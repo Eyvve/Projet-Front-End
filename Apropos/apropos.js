@@ -74,3 +74,11 @@ function test_profil_fonction(){
         imgProfil.appendChild(newIMG);
     };
 };
+
+// FONCTION RESET /////////////////////////////////////
+
+var reset = document.querySelector("#reset")
+
+reset.addEventListener("click", () => {
+    console.log("réinitialisation du compte")
+})
