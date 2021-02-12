@@ -16,6 +16,15 @@ a{
     color: inherit;
 }
 
+img{
+    user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; -webkit-user-select: none; 
+    -moz-user-drag: none;
+    margin: 10px;
+}
+
 /* HEADER */
 
 .headerfont{
@@ -347,6 +356,14 @@ a{
         ". watermark .";
 }
 
+/* .grilletemplate{
+    z-index: 10000;
+    display: none;
+    position: absolute;
+    top: 168px;
+    left: 33.5%;
+} */
+
 .nommodele{
     grid-area: nommodele;
     font-weight: bold;
@@ -578,9 +595,23 @@ a{
     border-radius: 15px;
     margin: 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: " temp1 temp2 temp3 temp4 temp5 ";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    " temp1 temp3 temp5 temp7 "
+    " temp2 temp4 temp6 temp8 "
+    ;
+}
+
+.temp{
+    width: 50%;
+    height: 50%;
+    /* border: 1px solid black; */
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
 }
 
 .temp1{
@@ -601,6 +632,18 @@ a{
 
 .temp5{
     grid-area: temp5;
+}
+
+.temp6{
+    grid-area: temp6;
+}
+
+.temp7{
+    grid-area: temp7;
+}
+
+.temp8{
+    grid-area: temp8;
 }
 
 

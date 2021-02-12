@@ -488,6 +488,8 @@ var slidingModel = document.querySelector("#slidingmodel")
 var slidedroit = document.querySelector("#FD")
 var slidegauche = document.querySelector("#FG")
 
+var grivide = document.querySelector("#grivide")
+
 slidedroit.addEventListener("click", () => {
     console.log("slide droit")
     if (slider >= 0 && slider <= 1){
@@ -538,8 +540,110 @@ function BoutonDroitOut(){
     FD.setAttribute("src", "pixelImages/flecheDB.png")
 }
 
+
+var temp1 = document.querySelector("#temp1")
+var temp2 = document.querySelector("#temp2")
+var temp3 = document.querySelector("#temp3")
+var temp4 = document.querySelector("#temp4")
+var temp5 = document.querySelector("#temp5")
+var temp6 = document.querySelector("#temp6")
+var temp7 = document.querySelector("#temp7")
+var temp8 = document.querySelector("#temp8")
+
+
 slidingModel.addEventListener("click", () => {
-    if(slider == 0){}
-    if(slider == 1){}
-    if(slider == 2){}
+    console.log("selection")
+    if(slider == 0){
+        temp1.style.backgroundColor = "#add8e6";
+        temp1.innerHTML = "#add8e6";
+
+        temp2.style.backgroundColor = "#46C36C";
+        temp2.innerHTML = "#46C36C";
+
+        temp3.style.backgroundColor = "#FF0";
+        temp3.innerHTML = "#FF0";
+
+        temp4.style.backgroundColor = "#ffc933";
+        temp4.innerHTML = "#ffc933";
+
+        temp5.style.backgroundColor = "#fffab3";
+        temp5.innerHTML = "#fffab3";
+
+        temp6.style.backgroundColor = "#2af477";
+        temp6.innerHTML = "#2af477";
+
+        temp7.style.backgroundColor = "#636145";
+        temp7.innerHTML = "#636145";
+    }
+
+    if(slider == 1){
+        temp1.style.backgroundColor = "#ff8fab";
+        temp1.innerHTML = "#ff8fab";
+
+        temp2.style.backgroundColor = "#ffc0cb";
+        temp2.innerHTML = "#ffc0cb";
+
+        temp3.style.backgroundColor = "#5bd1e6";
+        temp3.innerHTML = "#5bd1e6";
+
+        temp4.style.backgroundColor = "#4279c2";
+        temp4.innerHTML = "#4279c2";
+
+        temp5.style.backgroundColor = "#eed5a0";
+        temp5.innerHTML = "#eed5a0";
+
+        temp6.style.backgroundColor = "";
+        temp6.innerHTML = "";
+
+        temp7.style.backgroundColor = "";
+        temp7.innerHTML = "";
+    }
+
+    if(slider == 2){
+        temp1.style.backgroundColor = "#80f587";
+        temp1.innerHTML = "#80f587";
+
+        temp2.style.backgroundColor = "#ffebf9";
+        temp2.innerHTML = "#ffebf9";
+
+        temp3.style.backgroundColor = "#c4c4c4";
+        temp3.innerHTML = "#c4c4c4";
+
+        temp4.style.backgroundColor = "#F00";
+        temp4.innerHTML = "#F00";
+
+        temp5.style.backgroundColor = "";
+        temp5.innerHTML = "";
+
+        temp6.style.backgroundColor = "";
+        temp6.innerHTML = "";
+
+        temp7.style.backgroundColor = "";
+        temp7.innerHTML = "";
+    }
+
+})
+
+grivide.addEventListener("click", () => {
+    console.log("vide")
+    temp1.style.backgroundColor = "";
+        temp1.innerHTML = "";
+
+        temp2.style.backgroundColor = "";
+        temp2.innerHTML = "";
+
+        temp3.style.backgroundColor = "";
+        temp3.innerHTML = "";
+
+        temp4.style.backgroundColor = "";
+        temp4.innerHTML = "";
+
+        temp5.style.backgroundColor = "";
+        temp5.innerHTML = "";
+
+        temp6.style.backgroundColor = "";
+        temp6.innerHTML = "";
+
+        temp7.style.backgroundColor = "";
+        temp7.innerHTML = "";
 })
