@@ -549,6 +549,7 @@ var temp5 = document.querySelector("#temp5")
 var temp6 = document.querySelector("#temp6")
 var temp7 = document.querySelector("#temp7")
 var temp8 = document.querySelector("#temp8")
+var temp9 = document.querySelector("#temp9")
 var encadreNumOn = document.getElementById("encadre")
 var linkTemplateOn = document.getElementById("linktemplate")
 var megamanTemplateOn = document.getElementById("megamantemplate")
@@ -559,56 +560,82 @@ slidingModel.addEventListener("click", () => {
     linkTemplateOn.style.display = "none"
     megamanTemplateOn.style.display = "none"
     pokeballTemplateOn.style.display = "none"
+    temp1.style.color = "black"
+    temp2.style.color = "black"
+    temp3.style.color = "black"
+    temp4.style.color = "black"
+    temp5.style.color = "black"
+    temp6.style.color = "black"
+    temp7.style.color = "black"
+    temp8.style.color = "black"
+    temp9.style.color = "black"
 
     if(slider == 0){
         encadreNumOn.style.opacity = "80%"
         linkTemplateOn.style.display = "grid"
 
         temp1.style.backgroundColor = "#add8e6";
-        temp1.innerHTML = "1 : #add8e6";
+        temp1.innerHTML = "1: #add8e6";
 
-        temp2.style.backgroundColor = "#46C36C";
-        temp2.innerHTML = "#46C36C";
+        temp2.style.backgroundColor = "#000";
+        temp2.innerHTML = "2: #000";
+        temp2.style.color = "white"
 
-        temp3.style.backgroundColor = "#FF0";
-        temp3.innerHTML = "#FF0";
+        temp3.style.backgroundColor = "#46C36C";
+        temp3.innerHTML = "3: #46C36C";
 
-        temp4.style.backgroundColor = "#ffc933";
-        temp4.innerHTML = "#ffc933";
+        temp4.style.backgroundColor = "#FF0";
+        temp4.innerHTML = "4: #FF0";
 
-        temp5.style.backgroundColor = "#fffab3";
-        temp5.innerHTML = "#fffab3";
+        temp5.style.backgroundColor = "#ffc933";
+        temp5.innerHTML = "5: #ffc933";
 
-        temp6.style.backgroundColor = "#2af477";
-        temp6.innerHTML = "#2af477";
+        temp6.style.backgroundColor = "#fffab3";
+        temp6.innerHTML = "6: #fffab3";
 
-        temp7.style.backgroundColor = "#636145";
-        temp7.innerHTML = "#636145";
+        temp7.style.backgroundColor = "#808080";
+        temp7.innerHTML = "7: #6808080";
+        temp7.style.color = "white"
+
+        temp8.style.backgroundColor = "#636145";
+        temp8.innerHTML = "8: #636145";
+        temp8.style.color = "white"
+
+        temp9.style.backgroundColor = "#2af477";
+        temp9.innerHTML = "9: #2af477";
     }
 
     if(slider == 1){
         encadreNumOn.style.opacity = "80%"
         megamanTemplateOn.style.display = "grid"
+
         temp1.style.backgroundColor = "#ff8fab";
-        temp1.innerHTML = "#ff8fab";
+        temp1.innerHTML = "1: #ff8fab";
 
         temp2.style.backgroundColor = "#ffc0cb";
-        temp2.innerHTML = "#ffc0cb";
+        temp2.innerHTML = "2: #ffc0cb";
 
-        temp3.style.backgroundColor = "#5bd1e6";
-        temp3.innerHTML = "#5bd1e6";
+        temp3.style.backgroundColor = "#000";
+        temp3.innerHTML = "3: #000";
+        temp3.style.color = "white"
 
         temp4.style.backgroundColor = "#4279c2";
-        temp4.innerHTML = "#4279c2";
+        temp4.innerHTML = "4: #4279c2";
 
-        temp5.style.backgroundColor = "#eed5a0";
-        temp5.innerHTML = "#eed5a0";
+        temp5.style.backgroundColor = "#5bd1e6";
+        temp5.innerHTML = "5: #5bd1e6";
 
-        temp6.style.backgroundColor = "";
-        temp6.innerHTML = "";
+        temp6.style.backgroundColor = "#eed5a0";
+        temp6.innerHTML = "6: #eed5a0";
 
-        temp7.style.backgroundColor = "";
-        temp7.innerHTML = "";
+        temp7.style.backgroundColor = "#FFF";
+        temp7.innerHTML = "7: #FFF";
+
+        temp8.style.backgroundColor = "";
+        temp8.innerHTML = "";
+
+        temp9.style.backgroundColor = "";
+        temp9.innerHTML = "";
     }
 
     if(slider == 2){
@@ -656,4 +683,5 @@ grivide.addEventListener("click", () => {
     temp7.style.backgroundColor = "";
     temp7.innerHTML = "";
     encadreNumOn.style.opacity = "100%"
+
 })

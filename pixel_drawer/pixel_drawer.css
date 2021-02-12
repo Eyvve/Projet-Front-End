@@ -700,17 +700,18 @@ img{
     border-radius: 15px;
     margin: 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-    " temp1 temp3 temp5 temp7 "
-    " temp2 temp4 temp6 temp8 "
+    " temp1 temp4 temp7 "
+    " temp2 temp5 temp8 "
+    " temp3 temp6 temp9 "
     ;
 }
 
 .temp{
-    width: 50%;
-    height: 50%;
+    width: 90%;
+    height: 80%;
     /* border: 1px solid black; */
     align-self: center;
     justify-self: center;
@@ -749,6 +750,9 @@ img{
 
 .temp8{
     grid-area: temp8;
+}
+.temp9{
+    grid-area: temp9;
 }
 
 
