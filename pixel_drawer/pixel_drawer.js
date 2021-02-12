@@ -667,21 +667,26 @@ slidingModel.addEventListener("click", () => {
 })
 
 grivide.addEventListener("click", () => {
-    console.log("vide")
-    temp1.style.backgroundColor = "";
-    temp1.innerHTML = "";
-    temp2.style.backgroundColor = "";
-    temp2.innerHTML = "";
-    temp3.style.backgroundColor = "";
-    temp3.innerHTML = "";
-    temp4.style.backgroundColor = "";
-    temp4.innerHTML = "";
-    temp5.style.backgroundColor = "";
-    temp5.innerHTML = "";
-    temp6.style.backgroundColor = "";
-    temp6.innerHTML = "";
-    temp7.style.backgroundColor = "";
-    temp7.innerHTML = "";
-    encadreNumOn.style.opacity = "100%"
-
+    grivide.addEventListener("click", () => {
+        console.log("vide")
+        temp1.style.backgroundColor = "";
+        temp1.innerHTML = "";
+        temp2.style.backgroundColor = "";
+        temp2.innerHTML = "";
+        temp3.style.backgroundColor = "";
+        temp3.innerHTML = "";
+        temp4.style.backgroundColor = "";
+        temp4.innerHTML = "";
+        temp5.style.backgroundColor = "";
+        temp5.innerHTML = "";
+        temp6.style.backgroundColor = "";
+        temp6.innerHTML = "";
+        temp7.style.backgroundColor = "";
+        temp7.innerHTML = "";
+        temp8.style.backgroundColor = "";
+        temp8.innerHTML = "";
+        linkTemplateOn.style.display = "none"
+        megamanTemplateOn.style.display = "none"
+        pokeballTemplateOn.style.display = "none"
+        encadreNumOn.style.opacity = "100%"
 })
